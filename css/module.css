@@ -1,0 +1,85 @@
+:root{
+    --gs1: #fff;
+    --gs2: #fefefe;
+    --gs3: #f4F4F4;
+    --gs4: #DADADA;
+    --gs5: #A1A1A1;
+    --gs6: #868686;
+    --gs7: #353535;
+    --gs8: #1C1C1C;
+    --gs9: #111111;
+    --gs10: #0F0F0F;
+    --gs11: #000000;
+    --ocs1:#FF7354;
+    --ocs2:#FE7354;
+    --ocs3:#F26C4F;
+    --ocs4:#DA6348;
+    --ocs5:#A14935;
+    --ocs6:#863D2C;
+    --ocs7:#863D2C;
+    --ocs8:#1C0D09;
+    --ocs9:#110806;
+    --ocs10:#0F0705;
+    --rcs1:#FF0303;
+    --rcs2:#FE0303;
+    --rcs3:#D60303;
+    --rcs4:#DA0202;
+    --rcs5:#A10202;
+    --rcs6:#860101;
+    --rcs7:#350101;
+    --rcs8:#1C0000;
+    --rcs9:#110000;
+    --rcs10:#0F0000;
+    --gcs1:#00FF19;
+    --gcs2:#00FE19;
+    --gcs3:#00F418;
+    --gcs4:#00DA16;
+    --gcs5:#00A510;
+    --gcs6:#00860D;
+    --gcs7:#003505;
+    --gcs8:#001C03;
+    --gcs9:#001102;
+    --gcs10:#000F01;
+}
+/* ? color Scale*/
+
+
+.msb60{font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 60px;} 
+.mbk45{font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 45px;}
+.mb35{font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 35px;}
+.meb30{font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 30px;}
+.mrg20{font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 20px;}
+.msb20{font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 20px;}
+.msb18{font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px;}
+.mbk18{font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 18px;}
+
+.qsb80{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 80px;}
+.qb68{font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 68px;}
+.qsb68{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 68px;}
+.qsb65{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 65px;}
+.qb50{font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 50px;}
+.qsb50{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 50px;}
+.qsb40{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 40px;}
+.qsb38{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 38px;}
+.qsb35{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 35px;}
+.qsb33{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 33px;}
+.qsb25{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 25px;}
+.qsb23{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 23px;}
+.qb23{font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 23px;}
+.qm20{font-family: 'Quicksand', sans-serif; font-weight: 500; font-size: 20px;}
+.qsb20{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 20px;}
+.qm23{font-family: 'Quicksand', sans-serif; font-weight: 500; font-size: 23px;}
+.qsb18{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 18px;}
+.qb18{font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 18px;}
+.qm18{font-family: 'Quicksand', sans-serif; font-weight: 500; font-size: 18px;}
+.qsb17{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 17px;}
+.qsb16{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 16px;}
+.qm16{font-family: 'Quicksand', sans-serif; font-weight: 500; font-size: 16px;}
+.qrg16{font-family: 'Quicksand', sans-serif; font-weight: 400; font-size: 16px;}
+.qm15{font-family: 'Quicksand', sans-serif; font-weight: 500; font-size: 15px;}
+.qsb15{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 15px;}
+.qsb14{font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 14px;}
+.qrg14{font-family: 'Quicksand', sans-serif; font-weight: 400; font-size: 14px;}
+/* ?FontCase */
+
+

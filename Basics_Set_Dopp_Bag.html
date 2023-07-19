@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.fitvids.js"></script>
+    <script src="js/anthony.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="searchBar" class="searchPanel qsb18">
+        <input type="search" class="qm18" placeholder="Search Our Store">
+        <input type="button" value="close" class="btn_close">
+    </div>
+    <!-- ? searchBar Panel -->
+    <div id="cartPanel" class="cartFill">
+        <h2 class="qsb35">
+            Shopping Cart
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <ul>
+            <li>
+                <img src="images/cart_panel_sample_product_01.png" alt="cart panel product IMG">
+                <div>
+                    <h3 class="qsb16">
+                        Day Cream SPF 30 
+                        <input type="button" value="delete">
+                    </h3>
+                    <strong class="qsb20">$49.40</strong>
+                </div>
+            </li>
+        </ul>
+        <form>
+            <input class="qsb15" type="text" placeholder="Enter Discount Code" title="write code name">
+            <input type="button" value="APPLY" class="qsb15" title="code submit" data-panel="apply">
+        </form>
+        <p class="qsb15" id="apply">*Correct Code Number</p>
+        <div class="qm23">
+            <span>Sub total:</span>
+            <strong>$49.40</strong>
+        </div>
+        <a class="qsb23" href="CartPage.html">View Cart</a>
+    </div>
+    <!-- ? cartPanel Open -->
+
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Welcome to Anthony!">
+                </a>
+            </h1>
+            <div>
+                <input type="button" value="searchBar" data-panel="searchBar">
+                <input type="button" value="cartPanel" data-panel="cartPanel">
+                <a href="SignIn.html" class="qm23">Account</a>
+                <input type="button" value="gnbPanel" data-panel="gnbPanel">
+            </div>
+            <aside id="gnbPanel" class="qsb50">
+                <input type="button" value="close" class="btn_close">
+                <nav>
+                    <ul>
+                        <li><a href="FaceList.html">Face</a></li>
+                        <li><a href="ShaveList.html">Shave</a></li>
+                        <li><a href="BodyList.html">Body</a></li>
+                        <li><a href="ShopAll.html">Shop All</a></li>
+                        <li><a href="KitsList.html">Kits</a></li>
+                        <li><a href="WishList.html">Wish List</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </header>
+    <!-- ? header Fin -->
+
+    <div class="detailContainer">
+        <div>
+            <div class="big_Content">
+                <img src="images/Basics_Set_Dopp_Bag_01_big.png" alt="product big Img">
+            </div>
+            <ul class="thumb_Content">
+                <li><img src="images/Basics_Set_Dopp_Bag_01_small.png" alt="product small Img"></li>
+                <li><img src="images/Basics_Set_Dopp_Bag_02_small.png" alt="product small Img"></li>
+                <li><img src="images/Basics_Set_Dopp_Bag_03_small.png" alt="product small Img"></li>
+                <li><img src="images/Basics_Set_Dopp_Bag_04_small.png" alt="product small Img"></li>
+                <li><img src="images/Basics_Set_Dopp_Bag_05_small.png" alt="product small Img"></li>
+                <li><img src="images/Basics_Set_Dopp_Bag_06_small.png" alt="product small Img"></li>
+            </ul>
+        </div>
+        <!-- ? ImgGallery Fin -->
+
+        <div>
+            <h2 class="qsb33">Back To Basics Set with Dopp Bag</h2>
+            <div>
+                <strong class="qsb33" id="targetPrice">$123.49</strong>
+                <p class="qsb16">or 4 interest-free payments of $30.87 with afterpay</p>
+            </div>
+            <div class="qsb18">
+                <h3>Size</h3>
+                <span>237 ml, 200 ml, 90 ml</span>
+            </div>
+            <div class="qm23">
+                <div class="count">
+                    <input type="button" value="-" class="countMinus qm23">
+                    <input type="number" class="qc qm23" id="countNumb" value="1" min="1" max="99" step="1">
+                    <input type="button" value="+" class="countPlus qm23">
+                </div>
+                <input type="button" value="Add to cart" class="detail_addCart qm23" data-panel="cartPanel">
+                <input type="button" class="heartIco" value="like">
+            </div>
+            <div class="detail_panel">
+                <ul>
+                    <li><input type="button" value="HOW TO USE" data-panel="usePanel" class="qm16"></li>
+                    <li><input type="button" value="INGREDIENTS" data-panel="ingredientsPanel" class="qm16"></li>
+                    <li><input type="button" value="WHO'S IT FOR?" data-panel="whoPanel" class="qm16"></li>
+                </ul>
+                <div id="usePanel">
+                    <h3 class="mb35">How To Use</h3>
+                    <input type="button" value="close" class="btn_close">
+                    <p class="msb20">
+                        Plese refer to the products below.    
+                    </p>
+                    <p class="mrg20">
+                        Glycolic Facial Cleanser, All Purpose Facial Moisturizer, Kind Cleansing Water    
+                    </p>
+                </div>
+                <div id="ingredientsPanel">
+                    <h3 class="mb35">INGREDIENTS</h3>
+                    <input type="button" value="close" class="btn_close">
+                    <p class="msb20">
+                        Please refer to the products below. 
+                    </p>
+                    <p class="mrg20">
+                        Glycolic Facial Cleanser, All Purpose Facial Moisturizer, Kind Cleansing Water
+                    </p>
+                </div>
+                <div id="whoPanel">
+                    <h3 class="mb35">WHO'S IT FOR?</h3>
+                    <input type="button" value="close" class="btn_close">
+                    <p class="mrg20">
+                        Free of sulfates, parabens, phthalates, GMOs, DEA, triclosan, and gluten. Allergy and dermatologist tested. Cruelty-free. Made in USA.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ? product detail Fin -->
+
+        <article>
+            <h3 class="msb60">DESCRIPTION</h3>
+            <div class="qm23">
+                <p>
+                    We're taking it Back to Basics with this 3 step system. Designed to keep your skin refreshed, hydrated, balanced and nourished, these skincare essentials are a must-have.
+                </p>
+            </div>
+            <ul class="qm23">
+                <li>
+                    • Glycolic Facial Cleanser: Deep clean your skincare routine by adding our #1 selling cleanser. This triple-threat essential gently exfoliates, eliminatesdirt, pollution, oil, and impurities—and works as a pre-shave softener toremove dead skin cells and lift stubble and hairs for a better, closer, shave.
+                </li>
+                <li>
+                    • Kind Cleansing Water: Kind and gentle. This multi-benefit 2-in-1 cleanser and toner gently works (without water!) to lift-away dirt and impurities, while balancing, soothing, and hydrating your skin. Add this innovative one-step formulation of rose water, witch hazel, and sodium PCA to your daily routine to make life super easy.
+                </li>
+                <li>
+                    • All Purpose Facial Moisturizer: Formulated with a high-performance blend of nourishing antioxidants, vitamins and natural exfoliators, simply add this lightweight, fast-absorbing cream to your daily routine and bask in the multi-benefits.
+                </li>
+            </ul>
+        </article>
+        <!-- ? Description Fin-->
+
+        <div>
+            <h3 class="msb60">PAIRS WELL WITH</h3>
+            <ul class="listBox way4">
+                <li>
+                    <div>
+                        <img src="images/list/shopAll/all/sample_product_14.png" alt="detail sample list product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Kind_Cleansing_Water.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Kind Cleansing Water</h3>
+                    <div class="qsb17">
+                        <span>$38.42</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/list/shopAll/all/sample_product_04.png" alt="detail sample list product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="All_Purpose_Facial_Moisturizer.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">All Purpose Facial Moisturizer</h3>
+                    <div class="qsb17">
+                        <span>$43.91</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/list/shopAll/all/sample_product_02.png" alt="detail sample list product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Glycolic_Facial_Cleanser.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Glycolic Facial Cleanser</h3>
+                    <div class="qsb17">
+                        <span>From $24.90</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="images/list/shopAll/all/sample_product_59.png" alt="detail sample list product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Body_Bundle.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Body Bundle</h3>
+                    <div class="qsb17">
+                        <span>$192.65</span>                    
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- ? product listbox Fin -->
+    </div>
+    <!-- ? detailContainer -->
+
+    <footer>
+        <div class="qrg16">
+            <div>
+                <h3 class="qsb16">ABOUT US</h3>
+                <ul>
+                    <li><a href="Our_Story.html">OUR STORY</a></li>
+                    <li><a href="Contact_Us.html">CONTACT US</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">ONLINE SERVICES</h3>
+                <ul>
+                    <li><a href="Auto_Replenishment.html">AUTO REPLENISHMENT</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">SUPPORT</h3>
+                <ul>
+                    <li><a href="Shipping_Returns.html">SHIPPING &#43; RETURNS</a></li>
+                    <li><a href="Privacy_Policy.html">PRIVACY POLICY</a></li>
+                    <li><a href="Terms_Of_Use.html">TERMS OF USE</a></li>
+                    <li><a href="Become_Retailer.html">BECOME A RETAILER</a></li>
+                    <li><a href="Accessibility.html">ACCESSIBILITY</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">CONNECT WITH US</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/AnthonySkincare">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/anthonyskincare/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@anthony.skincare">Tiktok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb25">JOIN ANTHONY'S MAILING LIST</h3>
+                <p>Be the first one to know about new products & promotions</p>
+                <form>
+                    <input type="email" placeholder="Enter Email" title="Enter Email" class="qrg14">
+                    <input type="button" value="submit" title="submit" class="qrg14" data-panel="submit"> 
+                </form>
+                <p id="submit">Thanks, Subscribe Successed!</p>
+            </div>
+            <div>
+                <h3>
+                    <img src="images/logo.png" alt="Anthony Logo">
+                </h3>
+                <span>© 2023, Anthony</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ? footer Fin -->

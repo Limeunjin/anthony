@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.fitvids.js"></script>
+    <script src="js/anthony.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="searchBar" class="searchPanel qsb18">
+        <input type="search" class="qm18" placeholder="Search Our Store">
+        <input type="button" value="close" class="btn_close">
+    </div>
+    <!-- ? searchBar Panel -->
+    <div id="cartPanel" class="cartFill">
+        <h2 class="qsb35">
+            Shopping Cart
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <ul>
+            <li>
+                <img src="images/cart_panel_sample_product_01.png" alt="cart panel product IMG">
+                <div>
+                    <h3 class="qsb16">
+                        Day Cream SPF 30 
+                        <input type="button" value="delete">
+                    </h3>
+                    <strong class="qsb20">$49.40</strong>
+                </div>
+            </li>
+        </ul>
+        <form>
+            <input class="qsb15" type="text" placeholder="Enter Discount Code" title="write code name">
+            <input type="button" value="APPLY" class="qsb15" title="code submit" data-panel="apply">
+        </form>
+        <p class="qsb15" id="apply">*Correct Code Number</p>
+        <div class="qm23">
+            <span>Sub total:</span>
+            <strong>$49.40</strong>
+        </div>
+        <a class="qsb23" href="CartPage.html">View Cart</a>
+    </div>
+    <!-- ? cartPanel Open -->
+
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Welcome to Anthony!">
+                </a>
+            </h1>
+            <div>
+                <input type="button" value="searchBar" data-panel="searchBar">
+                <input type="button" value="cartPanel" data-panel="cartPanel">
+                <a href="SignIn.html" class="qm23">Account</a>
+                <input type="button" value="gnbPanel" data-panel="gnbPanel">
+            </div>
+            <aside id="gnbPanel" class="qsb50">
+                <input type="button" value="close" class="btn_close">
+                <nav>
+                    <ul>
+                        <li><a href="FaceList.html">Face</a></li>
+                        <li><a href="ShaveList.html">Shave</a></li>
+                        <li><a href="BodyList.html">Body</a></li>
+                        <li><a href="ShopAll.html">Shop All</a></li>
+                        <li><a href="KitsList.html">Kits</a></li>
+                        <li><a href="WishList.html">Wish List</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </header>
+    <!-- ? header Fin -->
+
+    <article class="supportContainer shippingReturns">
+        <h2 class="qsb68">SHIPPING + RETURNS</h2>
+        <ol>
+            <li>
+                <h3 class="qsb35">1. Shipping</h3>
+                <p class="qsb23">
+                    We offer free shipping and free samples on orders $50.00 & above in the U.S. We currently do not offer free shipping for International. We process orders Monday through Friday, excluding US federal holidays. Orders placed before 3:00pm EST will ship the same day. Orders placed on Saturday and Sunday will be processed on the following Monday. Orders are delivered with in 2-5 business days from the order&#39;s ship date.
+                </p>
+                <p class="qsb23">
+                    We offer ground shipping and if you&#39;d prefer a faster delivery, you have the option to select two day shipping.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">2. Cancellations</h3>
+                <p class="qsb23">
+                    If you&#39;d like to cancel an order, you must cancel it before 3:00PM on the day you purchased. If you placed an order after 3:00PM you must cancel before 10:00AM the following day. Cancellations or delivery fee refunds cannot be processed after 3pm. You can cancel your order by sending an email to info@anthony.com with your order number or by calling our customer specialists at 1.866.268.4669.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">3. Return Policy</h3>
+                <p class="qsb23">
+                    If, for any reason, you are not completely satisfied with your purchase from www.anthony.com, you may return within 30 days. You must provide the product(s) with your order number for a refund amount of the purchase. Shipping fees, including return shipping fees, are not refundable. Purchases, exchanges or returns made at a retail outlet other than www.anthony.com, must bereturned at the original point of purchase.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">4. Returns Mailing Address</h3>
+                <address class="qsb23">
+                    Anthony Skin<br>
+                    Attn: Returns Department<br>
+                    15 Holt Dr.<br>
+                    Stony Point NY 10980<br>
+                </address>
+                <p class="qb23">
+                    Please include packing slip and order number. Please ship via traceable method such as UPS, Fedex, USPS with tracking.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">5. Damaged Items</h3>
+                <p class="qsb23">
+                    If your package was damaged in shipment by the carrier, retain the box and the merchandise and notify us immediately by phone at <a href="tel:+18662684669" class="qb23">1.866.268.4669</a> or by email at <a href="mailto:info@anthony.com" class="qb23">info@anthony.com</a> with your order number. We will provide you with a label for a return. Once the damaged item is received, we will inspect it and the damaged items and your item will be replaced and shipped out to you as soon as possible.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">6. Out of Stock Items</h3>
+                <p class="qsb23">
+                    We do not accept orders placed for items on back order. We do let our customers know as soon as an out-of-stock item is back in stock. To be the first to know about any product updates, please join The Anthony Newsletter.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">7. APO/FPO/DPO Military Addresses</h3>
+                <p class="qsb23">
+                    We are proud to ship to our military customers. Orders to APO addresses will ship via Military Postal Service Agency, which is an extension of the United States Postal Service. Shipment times vary and the differences are based on the country in which they are stationed and the type of military operation in which they are involved. Some shipments can take up to 45 days.
+                </p>
+                <p class="qsb23">
+                    If your order will be shipped overseas it can take 7 to 10 days to go from the local post office to the U.S. Postal Service “gateway” (New York or San Francisco). 
+                    At the gateway, mail is sorted, bagged and tagged to arrive at a military postal unit overseas. While commercial aircraft are very consistent, there could be a 
+                    large variation in transit times due to military aircraft schedules, weather, transportation and military operations in theater, or movement of a service 
+                    member&#39;s unit.
+                </p>
+            </li>
+        </ol>
+    </article>
+    <!-- ?shippingReturnsContainer Fin -->
+
+    <footer>
+        <div class="qrg16">
+            <div>
+                <h3 class="qsb16">ABOUT US</h3>
+                <ul>
+                    <li><a href="Our_Story.html">OUR STORY</a></li>
+                    <li><a href="Contact_Us.html">CONTACT US</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">ONLINE SERVICES</h3>
+                <ul>
+                    <li><a href="Auto_Replenishment.html">AUTO REPLENISHMENT</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">SUPPORT</h3>
+                <ul>
+                    <li><a href="Shipping_Returns.html">SHIPPING &#43; RETURNS</a></li>
+                    <li><a href="Privacy_Policy.html">PRIVACY POLICY</a></li>
+                    <li><a href="Terms_Of_Use.html">TERMS OF USE</a></li>
+                    <li><a href="Become_Retailer.html">BECOME A RETAILER</a></li>
+                    <li><a href="Accessibility.html">ACCESSIBILITY</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">CONNECT WITH US</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/AnthonySkincare">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/anthonyskincare/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@anthony.skincare">Tiktok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb25">JOIN ANTHONY'S MAILING LIST</h3>
+                <p>Be the first one to know about new products & promotions</p>
+                <form>
+                    <input type="email" placeholder="Enter Email" title="Enter Email" class="qrg14">
+                    <input type="button" value="submit" title="submit" class="qrg14" data-panel="submit"> 
+                </form>
+                <p id="submit">Thanks, Subscribe Successed!</p>
+            </div>
+            <div>
+                <h3>
+                    <img src="images/logo.png" alt="Anthony Logo">
+                </h3>
+                <span>© 2023, Anthony</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ? footer Fin -->
+</body>
+</html>

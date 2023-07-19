@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.fitvids.js"></script>
+    <script src="js/anthony.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="searchBar" class="searchPanel qsb18">
+        <input type="search" class="qm18" placeholder="Search Our Store">
+        <input type="button" value="close" class="btn_close">
+    </div>
+    <!-- ? searchBar Panel -->
+    <div id="cartPanel" class="cartFill">
+        <h2 class="qsb35">
+            Shopping Cart
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <ul>
+            <li>
+                <img src="images/cart_panel_sample_product_01.png" alt="cart panel product IMG">
+                <div>
+                    <h3 class="qsb16">
+                        Day Cream SPF 30 
+                        <input type="button" value="delete">
+                    </h3>
+                    <strong class="qsb20">$49.40</strong>
+                </div>
+            </li>
+        </ul>
+        <form>
+            <input class="qsb15" type="text" placeholder="Enter Discount Code" title="write code name">
+            <input type="button" value="APPLY" class="qsb15" title="code submit" data-panel="apply">
+        </form>
+        <p class="qsb15" id="apply">*Correct Code Number</p>
+        <div class="qm23">
+            <span>Sub total:</span>
+            <strong>$49.40</strong>
+        </div>
+        <a class="qsb23" href="CartPage.html">View Cart</a>
+    </div>
+    <!-- ? cartPanel Open -->
+    <div id="retailerPopup" class="retailerPopup">
+        <input type="button" value="close" class="btn_close">
+        <p class="qsb18">
+            Thanks for contacting us. We'll get back to you 
+            as soon as possible.
+        </p>
+    </div>
+
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Welcome to Anthony!">
+                </a>
+            </h1>
+            <div>
+                <input type="button" value="searchBar" data-panel="searchBar">
+                <input type="button" value="cartPanel" data-panel="cartPanel">
+                <a href="SignIn.html" class="qm23">Account</a>
+                <input type="button" value="gnbPanel" data-panel="gnbPanel">
+            </div>
+            <aside id="gnbPanel" class="qsb50">
+                <input type="button" value="close" class="btn_close">
+                <nav>
+                    <ul>
+                        <li><a href="FaceList.html">Face</a></li>
+                        <li><a href="ShaveList.html">Shave</a></li>
+                        <li><a href="BodyList.html">Body</a></li>
+                        <li><a href="ShopAll.html">Shop All</a></li>
+                        <li><a href="KitsList.html">Kits</a></li>
+                        <li><a href="WishList.html">Wish List</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </header>
+    <!-- ? header Fin -->
+
+    <div class="retailerContainer">
+        <h2 class="qsb68">BECOME A RETAILER</h2>
+        <div>
+            <h3 class="qsb35">Business Information</h3>
+            <form>
+                <fieldset>
+                    <label for="rtFirstName" class="qm16">First Name</label>
+                    <input type="text" id="rtFirstName" placeholder="Enter your First Name" title="Enter your First Name" class="qsb18" required>
+                    <label for="rtLastName" class="qm16">Last Name</label>
+                    <input type="text" id="rtLastName" placeholder="Enter your Last Name" title="Enter your Last Name" class="qsb18" required>
+                    <label for="rtEmail" class="qm16">Business Email</label>
+                    <input type="email" id="rtEmail" placeholder="Enter your email" title="Enter your email" class="qsb18" required>
+                    <label for="rtPhone" class="qm16">Phone Optional</label>
+                    <input type="tel" id="rtPhone" placeholder="Enter your phone number" title="Enter your phone number" class="qsb18">
+                    <label for="rtWebsite" class="qm16">Website Address</label>
+                    <input type="url" id="rtWebsite" placeholder="Enter your website address" title="Enter your website address" class="qsb18" required>
+                </fieldset>
+            </form>
+        </div>
+        <div>
+            <h3 class="qsb35">Store Information</h3>
+            <form>
+                <fieldset>
+                    <ul>
+                        <li>
+                            <label for="rtStoreName" class="qm16">Store Name</label>
+                            <input type="text" id="rtStoreName" placeholder="Enter your store name" title="Enter your store name" class="qsb18" required>
+                        </li>
+                        <li>
+                            <label for="rtAddrInfo" class="qm16">Address Information</label>
+                            <input type="text" id="rtAddrInfo" placeholder="Enter your address information" title="Enter your address information" class="qsb18" required>
+                        </li>
+                        <li>
+                            <label for="rtStreetAddr" class="qm16">Street Address</label>
+                            <input type="text" id="rtStreetAddr" placeholder="Enter your street address" title="Enter your street address" class="qsb18" required>
+                        </li>
+                        <li>
+                            <label for="rtAddAddr" class="qm16">Additional Address Optional</label>
+                            <input type="text" id="rtAddAddr" placeholder="Enter your additional address" title="Enter your additional address" class="qsb18">
+                        </li>
+                        <li>
+                            <label for="rtCity" class="qm16">City</label>
+                            <input type="text" id="rtCity" class="qsb18" placeholder="Enter your city" title="Enter your city" required>
+                        </li>
+                        <li>
+                            <label for="rtZipCode" class="qm16">Zip/ Postal Code</label>
+                            <input type="text" id="rtZipCode" class="qsb18" placeholder="Enter your Zip/Postal Code" title="Enter your Zip/Postal Code" required>
+                        </li>
+                        <li>
+                            <label for="rtCountry_select" class="qm16">Country</label>
+                            <span class="selectBox retailerForm">
+                                <select id="rtCountry_select" class="qsb18">
+                                    <option disabled selected>--Please Choose--</option>
+                                    <option>United States</option>
+                                </select>
+                            </span>
+                        </li> 
+                        <li>
+                            <label for="rtState_select" class="qm16">Province / State</label>
+                            <span class="selectBox retailerForm">
+                                <select id="rtState_select" class="qsb18">
+                                    <option disabled selected>--Please Choose--</option>
+                                    <option>California</option>
+                                    <option>Texas</option>
+                                    <option>New York</option>
+                                    <option>Florida</option>
+                                    <option>Illinois</option>
+                                    <option>Pennsylvania</option>
+                                    <option>Ohio</option>
+                                    <option>Georgia</option>
+                                    <option>Michigan</option>
+                                    <option>Virginia</option>
+                                </select>
+                            </span>
+                        </li> 
+                    </ul>
+                </fieldset>
+            </form>
+        </div>
+        <input type="button" value="Submit" class="qsb18" data-panel="retailerPopup">
+    </div>
+    <!-- ?retailerContainer Fin-->
+
+    <footer>
+        <div class="qrg16">
+            <div>
+                <h3 class="qsb16">ABOUT US</h3>
+                <ul>
+                    <li><a href="Our_Story.html">OUR STORY</a></li>
+                    <li><a href="Contact_Us.html">CONTACT US</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">ONLINE SERVICES</h3>
+                <ul>
+                    <li><a href="Auto_Replenishment.html">AUTO REPLENISHMENT</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">SUPPORT</h3>
+                <ul>
+                    <li><a href="Shipping_Returns.html">SHIPPING &#43; RETURNS</a></li>
+                    <li><a href="Privacy_Policy.html">PRIVACY POLICY</a></li>
+                    <li><a href="Terms_Of_Use.html">TERMS OF USE</a></li>
+                    <li><a href="Become_Retailer.html">BECOME A RETAILER</a></li>
+                    <li><a href="Accessibility.html">ACCESSIBILITY</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">CONNECT WITH US</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/AnthonySkincare">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/anthonyskincare/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@anthony.skincare">Tiktok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb25">JOIN ANTHONY'S MAILING LIST</h3>
+                <p>Be the first one to know about new products & promotions</p>
+                <form>
+                    <input type="email" placeholder="Enter Email" title="Enter Email" class="qrg14">
+                    <input type="button" value="submit" title="submit" class="qrg14" data-panel="submit"> 
+                </form>
+                <p id="submit">Thanks, Subscribe Successed!</p>
+            </div>
+            <div>
+                <h3>
+                    <img src="images/logo.png" alt="Anthony Logo">
+                </h3>
+                <span>© 2023, Anthony</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ? footer Fin -->
+</body>
+</html>

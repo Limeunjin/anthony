@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.fitvids.js"></script>
+    <script src="js/anthony.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="searchBar" class="searchPanel qsb18">
+        <input type="search" class="qm18" placeholder="Search Our Store">
+        <input type="button" value="close" class="btn_close">
+    </div>
+    <!-- ? searchBar Panel -->
+    <div id="cartPanel" class="cartFill">
+        <h2 class="qsb35">
+            Shopping Cart
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <ul>
+            <li>
+                <img src="images/cart_panel_sample_product_01.png" alt="cart panel product IMG">
+                <div>
+                    <h3 class="qsb16">
+                        Day Cream SPF 30 
+                        <input type="button" value="delete">
+                    </h3>
+                    <strong class="qsb20">$49.40</strong>
+                </div>
+            </li>
+        </ul>
+        <form>
+            <input class="qsb15" type="text" placeholder="Enter Discount Code" title="write code name">
+            <input type="button" value="APPLY" class="qsb15" title="code submit" data-panel="apply">
+        </form>
+        <p class="qsb15" id="apply">*Correct Code Number</p>
+        <div class="qm23">
+            <span>Sub total:</span>
+            <strong>$49.40</strong>
+        </div>
+        <a class="qsb23" href="CartPage.html">View Cart</a>
+    </div>
+    <!-- ? cartPanel Open -->
+    <div id="refundPolicy" class="checkoutPopup refund">
+        <h2 class="qsb50">
+            Return Policy
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <div class="qsb23">
+            <p>
+                If, for any reason, you are not completely satisfied with your purchase from www.anthony.com, you may return within 30 days. You must provide the product(s) with your order number for a refund amount of the purchase. Shipping fees, including return shipping fees, are not refundable. Purchases, exchanges or returns made at a retail outlet other than www.anthony.com, must be returned at the original point of purchase.
+            </p>
+            <div>
+                <strong class="qb23">Returns Mailing Address:</strong><br>
+                <address>
+                    Anthony Skin<br>
+                    Attn: Returns Department<br>
+                    15 Holt Dr.<br>
+                    Stony Point NY 10980
+                </address>
+            </div>
+            <p>
+                Please include packing slip and order number. Please ship via traceable method such as UPS, Fedex, USPS with tracking.
+            </p>
+            <p>
+                <strong class="qb23">Damaged Items</strong>
+                If your package was damaged in shipment by the carrier, retain the box and the merchandise and notify us immediately by phone 
+                at 1.866.ANTHONY <a href="tel:866.268.4669">(1.866.268.4669)</a> or by email at info@anthony.com with your order number. We will provide you with a label for a return. Once the damaged item is received, we will inspect it and the damaged items and your item will be replaced and shipped out to you as soon as possible.
+            </p>
+            <p>
+                <strong class="qb23">Out of Stock Items</strong>
+                We do not accept orders placed for items on back order. We do let our customers know as soon as an out-of-stock item is back in stock. To be the first to know about any product updates, please join The Anthony Newsletter.
+            </p>
+            <p>
+                If your order will be shipped overseas it can take 7 to 10 days to go from the local post office to the U.S. Postal Service “gateway” (New York or San Francisco). At the gateway, mail is sorted, bagged and tagged to arrive at a military postal unit overseas. While commercial aircraft arevery consistent, there could be a large variation in transit times due to military aircraft schedules, weather, transportation and military operations in theater, or movement of a service member&#39;sunit.
+            </p>
+        </div>
+    </div>
+    <div id="termsofService" class="checkoutPopup termOfsvc">
+        <h2 class="qsb50">
+            Terms of service
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <div class="qsb23">
+            <p>
+                <strong class="qb23">ACCEPTANCE OF THE TERMS OF USE</strong>
+                Please read the following terms of use and disclaimers carefuly before using this website(the “site”)an all of the information, advice, descriptions and date contained the site.
+            </p>
+            <p>
+                These general terms and conditions of use (“Terms of Use”) are entered into by and between you
+                and Anthony Skin, LLC (“Anthony”). In consideration of your use of and access to this Internet 
+                website ( the “Site”) and the promises and obligations herein, and intending to be legally bound, 
+                you and Anthony hereby agree that your access to and use of the Site is subject to these Terms of
+                Use, as well as any modifications issued by Anthony to these Terms of Use, and all applicable laws 
+                and regulations.
+            </p>
+            <p>
+                By accessing or using this site or donwloading or copying materials from this site, you agree to the
+                se terms of use, contitions and all applicable laws. If you do not agree with these terms of use and
+                conditions you may not use this site or download or copy materials from this site.                 
+            </p>
+            <p>
+                <strong class="qb23">CHANGES TO THE TERMS OF USE</strong>
+                We reserve the right at any time and without prior notice to revise and update these Terms of Use or impose new terms and conditions with respect to access and use of this Site from time to time in our sole discretion. All such revisions or additions are effective immediately when we post them on the Site, ANY ACCESS OR USE OF THIS SITE BY YOU AFTER NOTICE OF REVISIONS OR ADDITIONS TO THESE TERMS OF USE SHALL CONSTITUTE AND BE DEEMED TO BE YOUR ACCEPT-ANCE OF SUCH REVISIONS OR ADDITIONS. You are responsible to reviewing these Terms of Use periodically so you are aware of any changes, as they are binding on you and affect your rights and obligations hereunder.  You agree to be and will be deemed apprised of and bound by and modifications or additions to these Terms of Use. No modification to these Terms of Use by any party other than Anthony shall be valid or enforceable against Anthony unless expressly agreed to by Anthony in a writing signed by a duly authorized officer of Anthony.
+            </p>
+            <p>
+                <strong class="qb23">TERMINATION</strong>
+                Anthony reserves the right to immediately terminate your access to and use of the Site or any portion thereof, at any time and for any reason, with or without cause. Anthony shall have no lia-bility for any such termination. Upon termination, your right to use the Site shall immediately cease.
+            </p>
+        </div>
+    </div>
+    <div id="subscribtionPolicy" class="checkoutPopup subscribtion">
+        <h2 class="qsb50">
+            Subscription policy
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <div class="qsb23">
+            <p>
+                <strong class="qb23">Cancellation Policy</strong>
+                Some items in our store may be offered to you as a subscription, a pre-order or try before you 
+                buy. This cancellation policy lays out how you can change or cancel these kinds of purchases.</p> 
+            <p>
+                <strong class="qb23">Subscriptions</strong>
+                When you purchase a subscription you'll receive repeat deliveries. These are based on the subscri-ption duration and frequency that you select. Your payment details will be stored securely and you'll be charged for each of these deliveries, unless you choose to pay in advance. Some subscr-iptions may auto-renew at the end of their duration. If you don't want to renew a subscription you can cancel it. If you want to cancel or change your subscription, you can do it at any time. Your order confirmation emails have links to your order. You can manage your subscription from there. See our returns policy for more details on returns and refunds.
+            </p>
+            <p>
+                <strong class="qb23">Pre-orders</strong>
+                When you purchase a pre-order, you are buying an out-of-stock or soon-to-be-available product not yet in inventory. We may collect no payment or a partial deposit at checkout, store your pay-ent method, then fulfill and charge the full or remaining payment at a future date.ou can cancel a partially paid pre-order order that has not yet been fulfilled. If the order has een fulfilled, then you can't cancel the order, but you can request a full or partial refund. See our eturns policy for more details on returns and refunds.
+            </p> 
+            <p>
+                <strong class="qb23">Try before you buy</strong>
+                When you purchase a try before you buy item, we authorize your payment method before fulfilli-ng the order. You will have a certain amount of time to decide if you want to keep the item. Once the time period has passed, if you have not returned the item, we will charge your payment meth-od for the full amount.
+            </p> 
+        </div>
+    </div>
+    <!--? policy Popup-->
+
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Welcome to Anthony!">
+                </a>
+            </h1>
+            <div>
+                <input type="button" value="searchBar" data-panel="searchBar">
+                <input type="button" value="cartPanel" data-panel="cartPanel">
+                <a href="SignIn.html" class="qm23">Account</a>
+                <input type="button" value="gnbPanel" data-panel="gnbPanel">
+            </div>
+            <aside id="gnbPanel" class="qsb50">
+                <input type="button" value="close" class="btn_close">
+                <nav>
+                    <ul>
+                        <li><a href="FaceList.html">Face</a></li>
+                        <li><a href="ShaveList.html">Shave</a></li>
+                        <li><a href="BodyList.html">Body</a></li>
+                        <li><a href="ShopAll.html">Shop All</a></li>
+                        <li><a href="KitsList.html">Kits</a></li>
+                        <li><a href="WishList.html">Wish List</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </header>
+    <!-- ? header Fin -->
+
+    <div class="checkout informationContainer">
+        <div>
+            <ol class="qm16">
+                <li>
+                    <a href="CartPage.html">Cart</a>
+                </li>
+                <li class="active">
+                    Information
+                </li>
+                <li>
+                    <a href="Checkout_Payment.html">Payment</a>
+                </li>
+            </ol>
+            <div>
+                <h2 class="qsb18">Contact</h2>
+                <span class="qm16">Lim Eunjin(lej03254@gmail.com)</span>
+                <a href="index.html" class="qm16">Log Out</a>
+            </div>
+            <div>
+                <h2 class="qsb18">Shipping address</h2>
+                <form action="Checkout_Payment.html">
+                    <fieldset>
+                        <ul class="CheckoutaddrForm">
+                            <li>
+                                <input type="text" placeholder="Enter a address" title="Enter a address" class="qm16" required>
+                            </li>
+                            <li>
+                                <span class="selectBox paymentForm">
+                                    <select class="qm16">
+                                        <option disabled selected>--Choose Country/Region--</option>
+                                        <option>United States</option>
+                                    </select>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="text" placeholder="Enter first name" title="Enter first name" class="qm16" required> 
+                            </li>
+                            <li>
+                                <input type="text" placeholder="Enter last name" title="Enter last name" class="qm16" required>
+                            </li>
+                            <li>
+                                <input type="text" placeholder="Enter apartment, suite, etc.(optional)" title="Enter apartment, suite, etc.(optional)" class="qm16">
+                            </li>
+                            <li>
+                                <input type="text" placeholder="Enter city" title="Enter city" class="qm16" required>
+                            </li>
+                            <li>
+                                <span class="selectBox paymentForm">
+                                    <select class="qm16">
+                                        <option disabled selected>--Choose State--</option>
+                                        <option>California</option>
+                                        <option>Texas</option>
+                                        <option>New York</option>
+                                        <option>Florida</option>
+                                        <option>Illinois</option>
+                                        <option>Pennsylvania</option>
+                                        <option>Ohio</option>
+                                        <option>Georgia</option>
+                                        <option>Michigan</option>
+                                        <option>Virginia</option>
+                                    </select>
+                                </span>
+                            </li>
+                            <li>
+                                <input type="text" placeholder="Enter zip code" title="Enter zip code" class="qm16" required>
+                            </li>
+                            <li>
+                                <input type="tel" placeholder="Enter phone number(optional)" title="Enter phone number(optional)" class="qm16">   
+                            </li>
+                        </ul>
+                        <input type="submit" value="Continue to payment" class="qsb18" title="Continue to payment">
+                    </fieldset>
+                </form>
+            </div>
+            <ul>
+                <li>
+                    <input type="button" data-panel="refundPolicy" value="Refund policy" title="policy popup" class="qm16">
+                </li>
+                <li>
+                    <input type="button" data-panel="termsofService" value="Terms of service" title="terms of service popup" class="qm16">
+                </li>
+                <li>
+                    <input type="button" data-panel="subscribtionPolicy" value="Subscription policy" title="subscription popup" class="qm16">
+                </li>
+            </ul>
+        </div>
+        <aside>
+            <ul>
+                <li>
+                   <img src="images/payment_product_list_01.png" alt="checkout product Img">
+                    <dl>
+                        <dt class="qsb16">Day Cream SPF 30</dt>
+                        <dd class="qsb18">
+                            <strong>$49.40</strong>
+                        </dd>
+                        <dd>
+                            <span class="qsb14">90ml</span>
+                            <span class="qsb14">Qty : 1</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="images/payment_product_list_02.png" alt="checkout product Img">
+                     <dl>
+                         <dt class="qsb16">All Purpose Facial Moisturizer</dt>
+                         <dd class="qsb18">
+                            <strong>$43.91</strong>
+                        </dd>
+                         <dd>
+                             <span class="qsb14">90ml</span>
+                             <span class="qsb14">Qty : 1</span>
+                         </dd>
+                     </dl>
+                 </li>
+            </ul>
+            <ul>
+                <li class="qm16">
+                    <span>Shipping</span>
+                    <strong>Free</strong>
+                </li>
+                <li class="qsb18">
+                    <span>Total</span>
+                    <strong>$93.31</strong>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <!-- ?cartContainer Fin -->
+
+    <footer>
+        <div class="qrg16">
+            <div>
+                <h3 class="qsb16">ABOUT US</h3>
+                <ul>
+                    <li><a href="Our_Story.html">OUR STORY</a></li>
+                    <li><a href="Contact_Us.html">CONTACT US</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">ONLINE SERVICES</h3>
+                <ul>
+                    <li><a href="Auto_Replenishment.html">AUTO REPLENISHMENT</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">SUPPORT</h3>
+                <ul>
+                    <li><a href="Shipping_Returns.html">SHIPPING &#43; RETURNS</a></li>
+                    <li><a href="Privacy_Policy.html">PRIVACY POLICY</a></li>
+                    <li><a href="Terms_Of_Use.html">TERMS OF USE</a></li>
+                    <li><a href="Become_Retailer.html">BECOME A RETAILER</a></li>
+                    <li><a href="Accessibility.html">ACCESSIBILITY</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">CONNECT WITH US</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/AnthonySkincare">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/anthonyskincare/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@anthony.skincare">Tiktok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb25">JOIN ANTHONY'S MAILING LIST</h3>
+                <p>Be the first one to know about new products & promotions</p>
+                <form>
+                    <input type="email" placeholder="Enter Email" title="Enter Email" class="qrg14">
+                    <input type="button" value="submit" title="submit" class="qrg14" data-panel="submit"> 
+                </form>
+                <p id="submit">Thanks, Subscribe Successed!</p>
+            </div>
+            <div>
+                <h3>
+                    <img src="images/logo.png" alt="Anthony Logo">
+                </h3>
+                <span>© 2023, Anthony</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ? footer Fin -->
+</body>
+</html>

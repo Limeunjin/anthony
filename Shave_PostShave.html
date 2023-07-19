@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.fitvids.js"></script>
+    <script src="js/anthony.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="searchBar" class="searchPanel qsb18">
+        <input type="search" class="qm18" placeholder="Search Our Store">
+        <input type="button" value="close" class="btn_close">
+    </div>
+    <!-- ? searchBar Panel -->
+    <div id="cartPanel" class="cartFill">
+        <h2 class="qsb35">
+            Shopping Cart
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <ul>
+            <li>
+                <img src="images/cart_panel_sample_product_01.png" alt="cart panel product IMG">
+                <div>
+                    <h3 class="qsb16">
+                        Day Cream SPF 30 
+                        <input type="button" value="delete">
+                    </h3>
+                    <strong class="qsb20">$49.40</strong>
+                </div>
+            </li>
+        </ul>
+        <form>
+            <input class="qsb15" type="text" placeholder="Enter Discount Code" title="write code name">
+            <input type="button" value="APPLY" class="qsb15" title="code submit" data-panel="apply">
+        </form>
+        <p class="qsb15" id="apply">*Correct Code Number</p>
+        <div class="qm23">
+            <span>Sub total:</span>
+            <strong>$49.40</strong>
+        </div>
+        <a class="qsb23" href="CartPage.html">View Cart</a>
+    </div>
+    <!-- ? cartPanel Open -->
+
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Welcome to Anthony!">
+                </a>
+            </h1>
+            <div>
+                <input type="button" value="searchBar" data-panel="searchBar">
+                <input type="button" value="cartPanel" data-panel="cartPanel">
+                <a href="SignIn.html" class="qm23">Account</a>
+                <input type="button" value="gnbPanel" data-panel="gnbPanel">
+            </div>
+            <aside id="gnbPanel" class="qsb50">
+                <input type="button" value="close" class="btn_close">
+                <nav>
+                    <ul>
+                        <li><a href="FaceList.html">Face</a></li>
+                        <li><a href="ShaveList.html">Shave</a></li>
+                        <li><a href="BodyList.html">Body</a></li>
+                        <li><a href="ShopAll.html">Shop All</a></li>
+                        <li><a href="KitsList.html">Kits</a></li>
+                        <li><a href="WishList.html">Wish List</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </header>
+    <!-- ? header Fin -->
+
+    <div class="listContainer ShaveList">
+        <div>
+            <h2 class="qsb50">Shave</h2>
+            <p class="qsb18">Experience our cool and refreshing Shave Care System. Anthony Shave Gel creates a unique ultra-thin & lather-free gel barrier that helps guard against razor burns, bumps, ingrown hairs, and overall discomfort while our Aftershave Balm is a cooling & refreshing lotion that leaves your freshly shaven face feeling renewed and conditioned.</p>
+        </div>
+        <!-- ? banner Fin -->
+
+        <aside>
+            <div>
+                <nav>
+                    <h3 class="qsb40">Shave</h3>
+                    <ul class="qsb23">
+                        <li><a href="ShaveList.html">View All</a></li>
+                        <li><a href="Shave_BestSellers.html">Best Sellers</a></li>
+                        <li><a href="Shave_PreShave.html">Pre&#45;Shave</a></li>
+                        <li class="active">Post&#45;Shave</li>
+                        <li><a href="Shave_Gifts.html">Gifts &#38; Sets</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <h3 class="qsb40">Filter By</h3>
+                    <div class="foldComponent">
+                        <b class="qb23">Price</b>
+                        <ul class="qsb23">
+                            <li>
+                                <input type="checkbox" id="prc_op1">
+                                <label for="prc_op1">All Price</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="prc_op2">
+                                <label for="prc_op2">$10 &#126; $60</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="prc_op3">
+                                <label for="prc_op3">$60 &#126; $110</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="prc_op4">
+                                <label for="prc_op4">$110 &#126; $160</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="prc_op5">
+                                <label for="prc_op5">$160 &#126; $210</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="prc_op6">
+                                <label for="prc_op6">$210 &#126; $290</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="foldComponent">
+                        <b class="qb23">Skin Type</b>
+                        <ul class="qsb23">
+                            <li>
+                                <input type="checkbox" id="skin_op1">
+                                <label for="skin_op1">All Type</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="skin_op2">
+                                <label for="skin_op2">Dry SKin</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="skin_op3">
+                                <label for="skin_op3">Normal SKin</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="skin_op4">
+                                <label for="skin_op4">Oily SKin</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="skin_op5">
+                                <label for="skin_op5">Combination SKin</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="foldComponent">
+                        <b class="qb23">Formulation Type</b>
+                        <ul class="qsb23">
+                            <li>
+                                <input type="checkbox" id="fm_op1">
+                                <label for="fm_op1">All Formulation</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fm_op2">
+                                <label for="fm_op2">Cream</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fm_op3">
+                                <label for="fm_op3">Lotion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fm_op4">
+                                <label for="fm_op4">Gel</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fm_op5">
+                                <label for="fm_op5">Serum</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fm_op6">
+                                <label for="fm_op6">Clay</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fm_op7">
+                                <label for="fm_op7">Milk</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fm_op8">
+                                <label for="fm_op8">Balm</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fm_op9">
+                                <label for="fm_op9">Solid Type</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- ? filterPanel Fin -->
+
+        <ul class="listBox way3">
+            <li>
+                <div>
+                    <mark>Awards Winner</mark>
+                    <img src="images/list/shaveList/postShave/sample_product_01.png" alt="shave postshave sample product">
+                    <input type="button" class="heartIco" value="like">
+                    <span>
+                        <a href="Ingrown_Hair_Treatment.html" class="qsb15 btn_learnMore">Learn more</a>
+                        <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                    </span>
+                </div>
+                <h3 class="qsb18">Ingrown Hair Treatment</h3>
+                <div class="qsb17">
+                    <del>$60.37</del>
+                    <mark>-23%</mark>
+                    <span>$46.65</span>                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/list/shaveList/postShave/sample_product_02.png" alt="shave postshave sample product">
+                    <input type="button" class="heartIco" value="like">
+                    <span>
+                        <a href="After_Shave_Balm.html" class="qsb15 btn_learnMore">Learn more</a>
+                        <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                    </span>
+                </div>
+                <h3 class="qsb18">After Shave Balm</h3>
+                <div class="qsb17">
+                    <span>$32.93</span>                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <mark>Awards Winner</mark>
+                    <img src="images/list/shaveList/postShave/sample_product_03.png" alt="shave postshave sample product">
+                    <input type="button" class="heartIco" value="like">
+                    <span>
+                        <a href="Conditioning_Beard_Wash.html" class="qsb15 btn_learnMore">Learn more</a>
+                        <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                    </span>
+                </div>
+                <h3 class="qsb18">Conditioning Beard Wash</h3>
+                <div class="qsb17">
+                    <span>$35.68</span>                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/list/shaveList/postShave/sample_product_04.png" alt="shave postshave sample product">
+                    <input type="button" class="heartIco" value="like">
+                    <span>
+                        <a href="Hair_Beard_Tamer.html" class="qsb15 btn_learnMore">Learn more</a>
+                        <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                    </span>
+                </div>
+                <h3 class="qsb18">Hair &#43; Beard Tamer</h3>
+                <div class="qsb17">
+                    <span>$35.68</span>                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/list/shaveList/postShave/sample_product_05.png" alt="shave postshave sample product">
+                    <input type="button" class="heartIco" value="like">
+                    <span>
+                        <a href="Starter_Kit.html" class="qsb15 btn_learnMore">Learn more</a>
+                        <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                    </span>
+                </div>
+                <h3 class="qsb18">Starter Kit</h3>
+                <div class="qsb17">
+                    <span>$41.16</span>                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/list/shaveList/postShave/sample_product_06.png" alt="shave postshave sample product">
+                    <input type="button" class="heartIco" value="like">
+                    <span>
+                        <a href="Ingrown_Hair_Treatment_3-Pack.html" class="qsb15 btn_learnMore">Learn more</a>
+                        <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                    </span>
+                </div>
+                <h3 class="qsb18">Ingrown Hair Treatment 3&#45;Pack</h3>
+                <div class="qsb17">
+                    <span>$116.68</span>                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/list/shaveList/postShave/sample_product_07.png" alt="shave postshave sample product">
+                    <input type="button" class="heartIco" value="like">
+                    <span>
+                        <a href="Best_Seller_Bundle.html" class="qsb15 btn_learnMore">Learn more</a>
+                        <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                    </span>
+                </div>
+                <h3 class="qsb18">Best Seller Bundle</h3>
+                <div class="qsb17">
+                    <span>$394.80</span>                    
+                </div>
+            </li>
+        </ul>
+        <!-- ?listBox -->
+
+        <div class="qb18 paging">
+            <a href="#">&lt;</a>
+            <a href="#">&gt;</a>
+            <ol>
+                <li><a href="Shave_PostShave.html">1</a></li>
+            </ol>
+        </div>
+    </div>
+    <!-- ? listContainer Fin -->
+
+    <footer>
+        <div class="qrg16">
+            <div>
+                <h3 class="qsb16">ABOUT US</h3>
+                <ul>
+                    <li><a href="Our_Story.html">OUR STORY</a></li>
+                    <li><a href="Contact_Us.html">CONTACT US</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">ONLINE SERVICES</h3>
+                <ul>
+                    <li><a href="Auto_Replenishment.html">AUTO REPLENISHMENT</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">SUPPORT</h3>
+                <ul>
+                    <li><a href="Shipping_Returns.html">SHIPPING &#43; RETURNS</a></li>
+                    <li><a href="Privacy_Policy.html">PRIVACY POLICY</a></li>
+                    <li><a href="Terms_Of_Use.html">TERMS OF USE</a></li>
+                    <li><a href="Become_Retailer.html">BECOME A RETAILER</a></li>
+                    <li><a href="Accessibility.html">ACCESSIBILITY</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">CONNECT WITH US</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/AnthonySkincare">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/anthonyskincare/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@anthony.skincare">Tiktok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb25">JOIN ANTHONY'S MAILING LIST</h3>
+                <p>Be the first one to know about new products & promotions</p>
+                <form>
+                    <input type="email" placeholder="Enter Email" title="Enter Email" class="qrg14">
+                    <input type="button" value="submit" title="submit" class="qrg14" data-panel="submit"> 
+                </form>
+                <p id="submit">Thanks, Subscribe Successed!</p>
+            </div>
+            <div>
+                <h3>
+                    <img src="images/logo.png" alt="Anthony Logo">
+                </h3>
+                <span>© 2023, Anthony</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ? footer Fin -->
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.fitvids.js"></script>
+    <script src="js/anthony.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="searchBar" class="searchPanel qsb18">
+        <input type="search" class="qm18" placeholder="Search Our Store">
+        <input type="button" value="close" class="btn_close">
+    </div>
+    <!-- ? searchBar Panel -->
+    <div id="cartPanel" class="cartFill">
+        <h2 class="qsb35">
+            Shopping Cart
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <ul>
+            <li>
+                <img src="images/cart_panel_sample_product_01.png" alt="cart panel product IMG">
+                <div>
+                    <h3 class="qsb16">
+                        Day Cream SPF 30 
+                        <input type="button" value="delete">
+                    </h3>
+                    <strong class="qsb20">$49.40</strong>
+                </div>
+            </li>
+        </ul>
+        <form>
+            <input class="qsb15" type="text" placeholder="Enter Discount Code" title="write code name">
+            <input type="button" value="APPLY" class="qsb15" title="code submit" data-panel="apply">
+        </form>
+        <p class="qsb15" id="apply">*Correct Code Number</p>
+        <div class="qm23">
+            <span>Sub total:</span>
+            <strong>$49.40</strong>
+        </div>
+        <a class="qsb23" href="CartPage.html">View Cart</a>
+    </div>
+    <!-- ? cartPanel Open -->
+
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Welcome to Anthony!">
+                </a>
+            </h1>
+            <div>
+                <input type="button" value="searchBar" data-panel="searchBar">
+                <input type="button" value="cartPanel" data-panel="cartPanel">
+                <a href="SignIn.html" class="qm23">Account</a>
+                <input type="button" value="gnbPanel" data-panel="gnbPanel">
+            </div>
+            <aside id="gnbPanel" class="qsb50">
+                <input type="button" value="close" class="btn_close">
+                <nav>
+                    <ul>
+                        <li><a href="FaceList.html">Face</a></li>
+                        <li><a href="ShaveList.html">Shave</a></li>
+                        <li><a href="BodyList.html">Body</a></li>
+                        <li><a href="ShopAll.html">Shop All</a></li>
+                        <li><a href="KitsList.html">Kits</a></li>
+                        <li><a href="WishList.html">Wish List</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </header>
+    <!-- ? header Fin -->
+
+    <article class="supportContainer termsofUse">
+        <h2 class="qsb68">TERMS OF USE</h2>
+        <span class="qsb16">
+            Last Updated: <time datetime="2020-12-01">December 1, 2020</time>
+        </span>
+        <ul>
+            <li>
+                <h3 class="qsb35">ACCEPTANCE OF THE TERMS OF USE</h3>
+                <p class="qsb23">
+                    PLEASE READ THE FOLLOWING TERMS OF USE AND DISCLAIMERS CAREFULLY BEFORE USING THIS WEBSITE (THE “SITE”) AN ALL OF THE INFORMATION, ADVICE, DESCRIPTIONS AND DATA CONTAINED ON THE SITE. 
+                </p>
+                <p class="qsb23">
+                    These general terms and conditions of use (“Terms of Use”) are entered into by and between you and Anthony Skin, LLC (“Anthony”). In consideration of your 
+                    use of and access to this Internet website ( the “Site”) and the promises and obligations herein, and intending to be legally bound, you and Anthony hereby agree
+                    that your access to and use of the Site is subject to these Terms of Use, as well as any modifications issued by Anthony to these Terms of Use, and all applicable 
+                    laws and regulations.
+                </p>
+                <p class="qsb23">
+                    BY ACCESSING OR USING THIS SITE OR DOWNLOADING OR COPYING MATERIALS FROM THIS SITE, YOU AGREE TO THESE TERMS OF USE, CONDITIONS AND ALL 
+                    APPLICABLE LAWS. IF YOU DO NOT AGREE WITH THESE TERMS OF USE AND CONDITIONS YOU MAY NOT USE THIS SITE OR DOWNLOAD OR COPY MATERIALS 
+                    FROM THIS SITE. Among other things, Anthony provides information concerning various products and services and the opportunity to obtain additional 
+                    information concerning those products and services or to purchase them. These Terms of Use and the information provided by Anthony in no way override the 
+                    terms and conditions of your purchase of any product or service except as specifically provided herein. To the extent any area within the Site contains specific 
+                    terms and conditions concerning its use (“Specific Terms”), those Specific Terms are in addition to these Terms of Use. To the extent there is a direct conflict 
+                    between these Terms of Use and the Specific Terms, the Specific Terms shall prevail.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">CHANGES TO THE TERMS OF USE</h3>
+                <p class="qsb23">
+                    We reserve the right at any time and without prior notice to revise and update these Terms of Use or impose new terms and conditions with respect to access 
+                    and use of this Site from time to time in our sole discretion. All such revisions or additions are effective immediately when we post them on the Site, ANY ACCESS 
+                    OR USE OF THIS SITE BY YOU AFTER NOTICE OF REVISIONS OR ADDITIONS TO THESE TERMS OF USE SHALL CONSTITUTE AND BE DEEMED TO BE YOUR 
+                    ACCEPTANCE OF SUCH REVISIONS OR ADDITIONS. You are responsible to reviewing these Terms of Use periodically so you are aware of any changes, as they are 
+                    binding on you and affect your rights and obligations hereunder.  You agree to be and will be deemed apprised of and bound by and modifications or additions 
+                    to these Terms of Use. No modification to these Terms of Use by any party other than Anthony shall be valid or enforceable against Anthony unless expressly 
+                    agreed to by Anthony in a writing signed by a duly authorized officer of Anthony.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">TERMINATION</h3>
+                <p class="qsb23">
+                    Anthony reserves the right to immediately terminate your access to and use of the Site or any portion thereof, at any time and for any reason, with or without cause. Anthony shall have no liability for any such termination. Upon termination, your right to use the Site shall immediately cease.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">ACCURACY OF INFORMATION</h3>
+                <p class="qsb23">
+                    All design and content featured on the Site, including the text, images, photographs, graphics, logos, illustrations, descriptions, data, and other material, as well 
+                    as the selection, assembly and arrangement thereof, are referred to collectively as the “Content,” and are copyrights, trademarks, trade dress, and/or 
+                    intellectual property that are owned, controlled, or licensed by Anthony. This website in its entirety is protected by copyright and applicable trade dress. 
+                    The Content may contain errors, omissions, or typographical errors or may be out of date. Anthony may change, delete, or update any Content at any time and 
+                    without prior notice. The Content is provided for informational purposes only and is not binding on Anthony in any way except to the extent it is specifically 
+                    indicated to be so. You may view and use the Content only for your personal, noncommercial use, and for shopping and ordering on the Site, and for no other 
+                    purpose, and you shall remain intact all copyright and other proprietary notices. Except as provided in the foregoing, Anthony does not grant to you or any 
+                    person any right to use, reproduce, copy, modify, transmit, display, publish, sell, license, create derivative works, publicly perform, or distribute by any means, 
+                    method, or process whatsoever, now known or hereafter developed, any of the Content on or transmitted through the Site, including without limitation by 
+                    transferring, downloading or otherwise copying any Content onto any disk drive or other storage medium. Any use of the Content, except as specifically 
+                    permitted in these Terms, or as otherwise expressly permitted in the Content or in writing signed by Anthony, is strictly prohibited.
+                </p>
+                <p class="qsb23">
+                    Anthony is not responsible for communication malfunctions, failures, or difficulties, or lost, stolen, or misdirected, transmissions, messages or entries, or the 
+                    security of any such communications. Further, Anthony and any other providers of products or services related to this Site are not responsible for incorrect or 
+                    inaccurate entry information, whether caused by You or by any of the equipment or programming associated with the Site, or by any technical or human error 
+                    that may occur in the processing of any information related to the Site.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">COMPLIANCE WITH LAWS</h3>
+                <p class="qsb23">
+                    You agree to comply with all applicable laws, statutes, ordinances and regulations regarding your use of the Site and your purchase of items from Anthony (if applicable) on the Site.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">SITE USE</h3>
+                <p class="qsb23">
+                    The Site is to be used by you for your personal use only. Commercial uses of this Site by you are strictly prohibited unless prior written consent from Anthony has 
+                    been granted. You agree that you will not use any robot, spider, other automatic device or manual process to monitor or copy the Site or any Contents unless 
+                    you obtain prior express written consent from Anthony. You agree that you will not through any means interfere or attempt to interfere with the proper 
+                    functioning of the Site. You agree that you will not provide to Anthony or to this Site: (i) any viruses, worms, time bombs, and/or other computer programming 
+                    routines that are intended to damage, detrimentally interfere with, intercept or expropriate any system, data or information; and (ii) any content that may 
+                    create liability for Anthony or cause Anthony to lose (in whole or in part) the services of our suppliers.  When you send e-mails, and other communications from 
+                    your desktop or mobile device to us, you are communicating with us electronically. You consent to receive communications from us electronically. We will 
+                    communicate with you in a variety of ways, such as by e-mail, or by posting notices and messages on this Site or through social media. You agree that all notices, 
+                    disclosures, and other communications that we provide to you electronically, satisfy any legal requirement that such communications be in writing.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">COPYRIGHT/TRADEMARK</h3>
+                <p class="qsb23">
+                    Anthony, our suppliers, licensors, or the original creators of all materials on the Site, own all copyrightable subject matter on the Site and all trademarks, patents, 
+                    proprietary information, technologies, products, processes or other proprietary rights of Anthony and/or such other parties. The Anthony names mentioned or 
+                    shown at this Site are registered trademarks, tradenames or service marks of Anthony in the United States, Canada and other countries No license to or right in 
+                    any such copyrights, trademarks, patents, proprietary information, technologies, products, processes and other proprietary rights of Anthony and/or other 
+                    parties is granted to or conferred upon you. In addition, direct linking, deep linking, framing, page-jacking, meta-tagging, and using a robot, spider or automated 
+                    device of any kind to monitor or copy the Site is strictly prohibited.
+                </p>
+                <p class="qsb23">
+                    Notwithstanding the foregoing, Anthony hereby authorizes you only to copy the content herein solely for your personal and private use in learning about, 
+                    evaluating, or acquiring Anthony products. Except where expressly noted, no other permission is granted to print, copy, reproduce, distribute, transmit, upload, 
+                    download, store, display in public, alter, or modify the Content contained on the Site. Any unauthorized use of any material contained on the Site may violate 
+                    copyright laws, trademark laws, the laws of privacy and publicity, and communications regulations and statutes. Any other use of materials on the Site, including 
+                    reproduction for purposes other than those expressly permitted herein, modification, distribution, or republication, without prior written permission from Anthony 
+                    is strictly prohibited. Any copy made by you as permitted herein must retain all copyright and trademark notices, including any other proprietary notices, 
+                    contained in the materials. The use of such materials on any other website or in any environment of networked computers is prohibited.  You are also advised 
+                    that Anthony will aggressively enforce its intellectual property rights to the fullest extent of the law, including the seeking of criminal prosecution.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">PRODUCTS AND SERVICES; PRICES; ORDERS</h3>
+                <p class="qsb23">
+                    The products and services made available by Anthony on this Site are intended for personal use only. You may not assign, transfer, re-market, resell or 
+                    otherwise dispose of, such products and services without obtaining Anthony&#45; prior written consent. Other terms and conditions included on the Site, including 
+                    return and shipping policies, may apply to your purchase. All prices displayed on the Site are quoted in U.S. dollars unless a change in currency is selected. 
+                    Anthony restricts delivery to addresses within the United States and Canada. Anthony will add shipping and handling fees and applicable sales/use tax as 
+                    necessary. Anthony reserves the right without prior notice to discontinue or change specifications and prices on products and services offered on the Site 
+                    without incurring any obligation to you. Products displayed on the Site are available while supplies last. The receipt by you of an order confirmation does not 
+                    constitute Anthony&#45;s acceptance of an order. Prior to Anthony&#45;s acceptance of an order, verification of information may be required. Anthony reserves the right 
+                    at any time after receipt of your order to accept or decline your order, or any portion thereof, even after your receipt of an order confirmation from Anthony, 
+                    for any reason. Anthony reserves the right to limit the order quantity on any item and to refuse service to any customer without prior notification. In the event 
+                    that a product or service is listed at an incorrect price due to supplier pricing information or typographical error, Anthony shall have the right to refuse or cancel 
+                    orders placed for the product listed at the incorrect price, regardless of whether the order has been confirmed and your credit card charged. If your credit card 
+                    has already been charged for the purchase and your order is canceled, Anthony shall promptly issue a credit to your credit card account in the amount of the 
+                    incorrect price.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">LIMITED USE</h3>
+                <p class="qsb23">
+                    Subject to these Terms of Use, Anthony grants you a non-exclusive, non-transferable, limited license to access, display and use this Site and its Contents. 
+                    Anthony authorizes you to view and download the Contents for your personal, informational, non-commercial purposes only. The Contents may not be modified 
+                    or re-posted to other sites. You must retain all copyright and other proprietary notices on all copies of the Contents. You shall comply with all copyright laws 
+                    worldwide in your use of this Site and prevent unauthorized copying of the Contents. Except as provided in these Terms of Use, Anthony does not grant you any 
+                    express or implied right in or under any patents, trademarks, copyrights or trade secret information.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">YOUR ACCOUNT</h3>
+                <p class="qsb23">
+                    You may choose to register at our Site if you are over fifteen (15) years of age. Do not register if you are not over fifteen (15) years of age. If you are over fifteen 
+                    (15) years of age and do register, you will have an email address/username and password for your account. You are responsible for maintaining the 
+                    confidentiality of your account, username and password and for restricting access to your computer so that others may not access the password protected 
+                    portions of the Site using your credentials.  You agree to accept responsibility for all activities that occur under your account, username and/or password and 
+                    that you will not sell, transfer or assign your account, registration or any rights associated therewith.  You agree to provide only current, complete, accurate and 
+                    truthful information about yourself. If you are accessing and using the Site on someone else&#39;s behalf, you represent that you have the authority to bind that 
+                    person as the principal to all Terms of Use  provided herein, and to the extent you do not have such authority you agree to be bound to these Terms of Use and 
+                    to accept liability for harm caused by any wrongful use of the Site or Content resulting from such access or use.  The Site&#39;s practices governing your personal 
+                    information are disclosed in our Privacy Policy.
+                </p>
+                <p class="qsb23">We reserve the right to refuse service and/or terminate your account, password or registration with or without prior notice for any reason or no reason at all.</p>
+            </li>
+            <li>
+                <h3 class="qsb35">SPECIAL FEATURES, FUNCTIONALITY AND EVENTS</h3>
+                <p class="qsb23">
+                    The Site from time to time may offer certain special features and functionality or events (such as contests, sweepstakes or other offerings) which may (a) be 
+                    subject to terms of use, rules and/or policies in addition to or in lieu of these Terms of Use; and (b) be offered by us or by third parties. If so, we will notify you of 
+                    this, and, if you choose to take advantage of these offerings, you agree that your use of those offerings will be subject to such additional or separate terms of 
+                    use, rules and/or policies.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">SUBMISSIONS</h3>
+                <p class="qsb23">
+                    Anthony does not want and you should not send any information or materials via this Site that are defamatory, threatening, obscene, harassing, or otherwise 
+                    unlawful, or that contain or incorporate the proprietary material of another. Any information that you provide of a confidential personal nature will be handled 
+                    in accordance with the Privacy Policy set forth in this Web site.
+                </p>
+                <p class="qsb23">
+                    Anthony does not allow submission or consideration of suggestions, materials or ideas other than those we solicit. If at any time you submit to us through any 
+                    media either at our request, or without any solicitation, any inquiries, feedback, suggestions, ideas or other information you provide us (collectively, 
+                    “Submissions”) will be treated as non-proprietary and non-confidential. Subject to the terms of our Privacy Policy, by transmitting or posting any Submission, you 
+                    hereby grant Anthony and its affiliates a nonexclusive, royalty-free, perpetual, irrevocable and fully sublicensable right to use, reproduce, modify, adapt, publish, 
+                    translate, create derivative works from, distribute and display any such Submissions throughout the world in any form, technology or media,, alone or as part of 
+                    other works, and to use the Submission within or in connection with our products or services. You also acknowledge that your Submission will not be returned and 
+                    we may use your Submission, and any ideas, concepts or know how contained therein, without payment of money or any other form of consideration, for any 
+                    purpose including, without limitation, developing, manufacturing, distributing and marketing products.
+                </p>
+                <p class="qsb23">
+                    If you make a Submission, you represent and warrant that you own or otherwise control the rights to your Submission. You further represent and warrant that 
+                    such Submission does not constitute or contain software viruses, commercial solicitation, chain letters, mass mailings, or any form of “spam.” You may not use a 
+                    false email address, impersonate any person or entity, or otherwise mislead us as to the origin of any Submission. You agree to indemnify us for all claims, losses 
+                    or damages arising from or in connection with any Submission.
+                </p>
+                <p class="qsb23">
+                    We do not endorse or control any user content (“User Content”) transmitted or posted on the Site and therefore, we do not guarantee the accuracy, integrity or 
+                    quality of such. You understand that by using the Site, you may be exposed to User Content that is offensive, indecent or objectionable to you. Under no 
+                    circumstances will Anthony be liable in any way for any User Content, including, without limitation, for any errors or omissions in any User Content, or for any 
+                    loss or damage of any kind incurred by you as a result of the use of any User Content transmitted, uploaded, posted, e-mailed or otherwise made available via 
+                    the Site.
+                </p>
+                <p class="qsb23">
+                    You acknowledge and agree that Anthony has the right (but not the obligation) in our sole discretion to refuse to post or remove any Submission or User Content 
+                    and we reserve the right to change, condense, or delete any Submission or User Content. Without limiting the generality of the foregoing or any other provision 
+                    of these Terms of Use, we have the right to remove any Submission or User Content that violates these Terms of Use or is otherwise objectionable and we 
+                    reserve the right to refuse service and/or terminate accounts without prior notice for any users who violate these Terms of Use or infringe the rights of others. 
+                    You agree that all ideas, comments, suggestions or other information that you provide to Anthony regarding the Site or products and services provided on the 
+                    Site shall be Anthony	&#39; property, and may be used by Anthony on a non-confidential and unrestricted basis, without compensation to you.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">DISCLAIMER</h3>
+                <p class="qsb23">
+                    THE CONTENTS, ANY TESTIMONIALS, INFORMATION OR ADVICE PROVIDED ON THIS SITE, AND ALL PRODUCTS PURCHASED OR SOLD THROUGH THIS SITE ARE 
+                    PROVIDED “AS IS” WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, AND ANTHONY DISCLAIMS ALL WARRANTIES AND REPRESENTATIONS, 
+                    EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, TO THE 
+                    FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW.  Anthony does not warrant the accuracy, completeness or timeliness of the Contents or the reliability of 
+                    any advice, opinion, statement or information displayed or distributed through this Site. You acknowledge that any reliance on the Contents or any portion 
+                    thereof shall be at your sole risk.  The “AS IS” Condition of Content is expressly made a condition to any transactions arising through or as a result of the Site.
+                </p>
+                <p class="qsb23">
+                    You understand that we cannot and do not guarantee or warrant that files available for downloading from the internet or the Site will be free of viruses or other 
+                    destructive code. You are responsible for implementing sufficient procedures and checkpoints to satisfy your particular requirements for anti-virus protection 
+                    and accuracy of data input and output, and for maintaining a means external to our site for any reconstruction of any lost data. TO THE FULLEST EXTENT 
+                    PROVIDED BY LAW, WE WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGE CAUSED BY A DISTRIBUTED DENIAL-OF-SERVICE ATTACK, VIRUSES, OR OTHER 
+                    TECHNOLOGICALLY HARMFUL MATERIAL THAT MAY INFECT YOUR COMPUTER EQUIPMENT, COMPUTER PROGRAMS, DATA, OR OTHER PROPRIETARY MATERIAL 
+                    DUE TO YOUR USE OF THE SITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SITE OR TO YOUR DOWNLOADING OF ANY MATERIAL POSTED ON IT, OR 
+                    ON ANY WEBSITE LINKED TO  IT.
+                </p>
+                <p class="qsb23">
+                    Anthony does not and will not provide medical advice of any kind. All grooming tips or testimonials contained on this Web site and all Anthony responses to 
+                    questions you submit constitute non-medical grooming suggestions only and are not medical advice. The foregoing is provided solely for the purpose of 
+                    informing consumers on beauty, cosmetics and personal care topics.
+                </p>
+                <p class="qsb23">
+                    You should always consult with your physician or other qualified health care provider before commencing a new treatment, health or personal care program. 
+                    You should never disregard the advice of your personal physician or delay in seeking it because of something you have read on Anthony.com. This information is 
+                    not intended to be medical advice and is not a substitute for personal consultation with your medical professional and may be incomplete or include errors and 
+                    omissions. If any irritation or other adverse reaction occurs, discontinue use immediately.                
+                </p>
+                <p class="qsb23">
+                    ANTHONY BRANDS WILL NOT BE LIABLE FOR ANY COMPLICATIONS, INJURIES OR OTHER MEDICAL PROBLEMS ARISING FROM, OR IN CONNECTION WITH, THE USE 
+                    OF INFORMATION ON OUR SITE OR OUR PRODUCTS.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">THIRD-PARTY SITES</h3>
+                <p class="qsb23">
+                    This Site may contain links to other sites created, maintained or operated by entities other than Anthony; any such links are provided for your convenience only 
+                    and you access them at your own risk.   These Terms of Use apply only to this Site and not to any of these third-party sites.  If you use these links you will leave 
+                    our Site. The linked sites are not operated, controlled or maintained by Anthony, and Anthony is not responsible for the availability, content, security, policies or 
+                    practices of any linked site or any link contained in a linked site or any changes or updates to such sites. The existence of any link does not mean that Anthony 
+                    endorses, supports, approves the content, policies or practices of such linked sites. or use of such sites.  Anthony disclaims any liability for links (1) from another 
+                    website to the Site, and (2) to another website from the Site. Anthony cannot guarantee the standards of any website to which links are provided on the Site, nor 
+                    shall Anthony be held responsible for the contents of those websites, or any subsequent links.  For this reason, Anthony does not represent or warrant that the 
+                    contents of any third-party website are accurate, compliant with state or federal law, or compliant with copyright or other intellectual property laws. Anthony 
+                    does not endorse the contents of these third-party websites in any way. Also, Anthony is not responsible for web casting or any other form of transmission 
+                    received from any linked website. Any reliance on the contents of a third-party website is done at your own risk, and you assume all responsibilities and 
+                    consequences resulting from such reliance.                
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">RULES REGARDING THIRD-PARTY LINKING TO THIS SITE (“RULES”)</h3>
+                <p class="qsb23">No person may link to the Site without written consent of Anthony, execution of a copy of these Rules and registration with Anthony.</p>
+                <p class="qsb23">
+                    Third-party links to this Site shall use only the term “Anthony” (the “Text Link”) to create such links. By displaying the Text Link, whether or not you have executed 
+                    a copy of these Rules, you agree to be bound by these Rules.                
+                </p>
+                <ul class="qsb23">
+                    <li>
+                        • You shall not use any Anthony logo, trade mark, service mark or other similar feature in the creation of any link to this Site.
+                    </li>
+                    <li>
+                        • You shall only use the Text Link on a site you own and not in any other manner. Any text Link must only be an active link to the home page of this Site at 
+                        http://www.Anthony.com or such other universal resource locator as Anthony may designate.                    
+                    </li>
+                    <li>
+                        • You shall not create any direct link to any secondary or sub-page of this Site. A link to this Site shall not conceal or alter any portion of this Site.
+                    </li>
+                    <li>
+                        • You shall only use the Text Link on Web pages that make accurate references to Anthony and its products and services. You must display the Text Link 
+                        adjacent to any Anthony reference or at the bottom of the same page. Your Web page title and other trademarks and logos must appear at least as prominent 
+                        as the Text Link. You shall not display the Text Link in any manner that: (i) implies sponsorship, endorsement, or license by Anthony; or (ii) conceals, disguises or 
+                        creates confusion about the identity of Anthony as the source of the linked site.
+                    </li>
+                    <li>
+                        • You shall not use this Site to create a link directly to a third-party site without the written consent of Anthony and the owner of the third-party site.
+                    </li>
+                    <li>
+                        • You shall not use the Text Link as a feature or design element of any other logo, trade mark, service mark, or other similar feature.
+                    </li>
+                    <li>
+                        • You shall display the Text Link in a font size at least as large as all surrounding text and you shall not modify or distort the Text Link in any manner.
+                    </li>
+                    <li>
+                        • You shall not use the Text Link on any site that refers to Anthony or its products or services in a negative manner, infringes any Anthony intellectual property 
+                        or other rights, or violates any applicable law.                    
+                    </li>
+                    <li>
+                        • You shall defend and indemnify Anthony against any claims, liability, damages, and costs suffered by Anthony as a result of your violation of these Rules.
+                    </li>
+                </ul>
+                <p class="qsb23">
+                    These Rules do not grant a license or any other right in any Anthony logo or trademark. Anthony reserves the right in its sole discretion to terminate or modify 
+                    permission to use the Text Link at any time. Anthony reserves the right to take action against any use that does not conform to these Rules, infringes any 
+                    Anthony intellectual property or other right, or violates other applicable law.                
+                </p>
+                <p class="qsb23">
+                    You agree to cooperate with us in causing any unauthorized framing or linking immediately to stop. We reserve the right to withdraw linking permission without 
+                    notice.
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">INDEMNIFICATION</h3>
+                <p class="qsb23">
+                    You agree to defend, indemnify and hold harmless Anthony and its subsidiaries, affiliates, contractors, and vendors, and each of their respective officers, 
+                    directors, contractors, suppliers, agents, employees and successors and assigns from and against any and all claims, losses, damages, liabilities, judgments, 
+                    awards, expenses, fees or costs , including but not limited to reasonable attorney&#39;s fees, arising out of or relating to (i) your violation  of these Terms of Use; 
+                    (ii) your violation of any law or the rights of any third party; (iii) your use of the Site, including, but not limited to, any information or material you submit, any use 
+                    of the Site&#39;s content, services, and products other than as expressly authorized in these Terms of Use, or your use of any information obtained from the Site; or 
+                    (iv) any activity to your Site account.  Anthony&#39;s failure to act with respect to any violation of these Terms of Use by you or any other party does not and shall 
+                    not be construed to waive Anthony&#39;s right to act with respect to subsequent or similar violations.            
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">LIMITATION OF LIABILITY</h3>
+                <p class="qsb23">
+                    UNDER NO CIRCUMSTANCES SHALL ANTHONY, ITS SUBSIDIARIES AND AFFILIATES, OR THEIR RESPECTIVE DIRECTORS, OFFICERS, EMPLOYEES OR AGENTS, ITS 
+                    SUPPLIERS OR THEIR RESPECTIVE DIRECTORS, OFFICERS, EMPLOYEES OR AGENTS BE LIABLE TO YOU OR TO ANY THIRD PARTY FOR ANY INDIRECT, 
+                    CONSEQUENTIAL, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO PERSONAL INJURY, EMOTIONAL DISTRESS, LOSS OF REVENUE, 
+                    LOSS OF DATA, LOSS OF USE, LOST PROFITS AND BUSINESS INTERRUPTION, WHETHER IN CONTRACT OR IN TORT, INCLUDING NEGLIGENCE, ARISING IN ANY WAY 
+                    FROM ANY PRODUCT OR SERVICE SOLD OR PROVIDED ON THE SITE OR IN CONNECTION WITH YOUR USE OR INABILITY TO USE THE WEBSITE, ANY WEBSITES 
+                    LINKED TO IT, ANY CONTENT ON THE WEBSITE OR SUCH OTHER WEBSITES, EVEN IF ANTHONY IS EXPRESSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+                    IN NO EVENT SHALL ANTHONY&#39;S LIABILITY EXCEED THE PRICE YOU PAID FOR THE PRODUCT OR SERVICE THAT IS THE SUBJECT OF THE CLAIM.                
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">GOVERNING LAW; JURISDICTION</h3>
+                <p class="qsb23">
+                    All matters relating to the Site and these Terms of Use, and any dispute or claim arising therefrom or related thereto (in each case, including non-contractual 
+                    disputes or claims), shall be governed by and construed in accordance with the internal laws of the State of New York without giving effect to any choice or 
+                    conflict of law provision or rule (whether of the State of New York or any other jurisdiction). Any legal suit, action, or proceeding arising out of, or related to, 
+                    these Terms of Use or the Site shall be instituted exclusively in the federal courts of the United States or the courts of the State of New York, in each case located 
+                    in the City of New York and County of New York, although we retain the right to bring any suit, action, or proceeding against you for breach of these Terms of 
+                    Use in your country of residence or any other relevant country. You waive any and all objections to the exercise of jurisdiction over you by such courts and to 
+                    venue in such courts. The parties each waive any right to a jury trial.                
+                </p>
+            </li>
+            <li>
+                <h3 class="qsb35">ENTIRE AGREEMENT</h3>
+                <p class="qsb23">
+                    The Terms of Use, our Privacy Policy and Terms of Sale constitute the sole and entire agreement between you and Anthony Brand regarding the Site and 
+                    supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Site.                
+                </p>
+            </li>
+        </ul>
+    </article>
+    <!-- ?shippingReturnsContainer Fin -->
+
+    <footer>
+        <div class="qrg16">
+            <div>
+                <h3 class="qsb16">ABOUT US</h3>
+                <ul>
+                    <li><a href="Our_Story.html">OUR STORY</a></li>
+                    <li><a href="Contact_Us.html">CONTACT US</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">ONLINE SERVICES</h3>
+                <ul>
+                    <li><a href="Auto_Replenishment.html">AUTO REPLENISHMENT</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">SUPPORT</h3>
+                <ul>
+                    <li><a href="Shipping_Returns.html">SHIPPING &#43; RETURNS</a></li>
+                    <li><a href="Privacy_Policy.html">PRIVACY POLICY</a></li>
+                    <li><a href="Terms_Of_Use.html">TERMS OF USE</a></li>
+                    <li><a href="Become_Retailer.html">BECOME A RETAILER</a></li>
+                    <li><a href="Accessibility.html">ACCESSIBILITY</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">CONNECT WITH US</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/AnthonySkincare">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/anthonyskincare/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@anthony.skincare">Tiktok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb25">JOIN ANTHONY'S MAILING LIST</h3>
+                <p>Be the first one to know about new products & promotions</p>
+                <form>
+                    <input type="email" placeholder="Enter Email" title="Enter Email" class="qrg14">
+                    <input type="button" value="submit" title="submit" class="qrg14" data-panel="submit"> 
+                </form>
+                <p id="submit">Thanks, Subscribe Successed!</p>
+            </div>
+            <div>
+                <h3>
+                    <img src="images/logo.png" alt="Anthony Logo">
+                </h3>
+                <span>© 2023, Anthony</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ? footer Fin -->
+</body>
+</html>

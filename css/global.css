@@ -1,0 +1,4143 @@
+body{
+    background-color: var(--gs11); color: var(--gs1);
+}
+.btn_close{
+    border: none; background-repeat: no-repeat; background-position: center;
+    background-color: transparent; padding: 0; text-indent: -9999px; 
+}
+input[type="button"]{
+    cursor: pointer;
+}
+a{
+    text-decoration: none; color: inherit;
+}
+.selectBox{
+    display: inline-block; box-sizing: border-box; position: relative;
+}
+.selectBox:after{
+    transform: rotate(0deg);  transition: transform ease-in 0.35s; position: absolute; 
+}
+.selectBox select{
+    appearance: none; border: none; box-shadow: none; background-image: none;
+    background-color: transparent; font-family: inherit; font-weight: inherit;
+}
+
+@media screen and (max-width:767px){
+    .searchPanel{
+        position: fixed; z-index: 100; background-color: var(--gs9); width: 100%; top: 0%;
+        text-align: center; display: none; padding: 30px 0;
+    }
+    .searchPanel input[type='search']{
+    margin-right: 10%; border: none; border-radius: 25px;
+    width: 60%; padding: 0 20px; line-height: 45px; background-color: var(--gs1); font-size: 14px;
+    }
+    .searchPanel input[type='button']{
+        background: url('../images/bul_close.png') right 15px / contain no-repeat;
+        line-height: 40px; width: 10px;
+    }
+    .searchPanel input[type='search']::placeholder{
+        font-size: 14px;
+    }
+    .searchPanel.active{
+        display: block; 
+    }
+    /* ? searchPanel Fin */
+
+    .cartFill{
+        position: fixed; z-index: 100; top: 0; right: -100%; background-color: var(--gs8);
+        width: 100%; padding: 50px 4%; height: 100vh; box-sizing:border-box;
+        transition: all ease-in 0.5s; visibility: hidden;
+    }
+    .cartFill > h2{
+        margin-bottom: 35px; font-size: 20px;
+    }
+    .cartFill > h2 .btn_close{
+        width: 15px; line-height: 20px; background: url('../images/bul_close.png') right top / contain no-repeat; 
+        float: right;
+    }
+    .cartFill > ul{
+        margin-bottom: 80px; width: 100%; position: relative;
+    }
+    .cartFill > ul li::after{
+        content: ''; display: block; clear: both;
+    }
+    .cartFill > ul li{
+        display: block; background-color: var(--gs1); border-radius: 10px; padding: 15px 2.8%;
+        box-sizing: border-box; width: 100%; 
+    }
+    .cartFill > ul li img{
+        float: left; border: 1px solid #a1a1a1; box-sizing: border-box; width: 20%; 
+    }
+    .cartFill > ul li div{
+        float: left; width: 70%; margin-left: 10%; 
+    }
+    .cartFill > ul li div h3{
+        color: var(--gs11); font-size: 14px;
+    }
+    .cartFill > ul li div h3 input[type='button']{
+        border: none; text-indent: -9999px; background-color: transparent; cursor: pointer; padding: 0; 
+        width: 15px; background: url('../images/bul_delete_black.png') center / contain no-repeat;
+        line-height:26px; float: right;
+    }
+    .cartFill > ul li div h3{
+        line-height: 27px; font-size: 14px;
+    }
+    .cartFill > ul li div strong{
+        color: var(--ocs3); font-size: 14px; position: absolute; right: 2.8%; bottom: 15px;
+    }
+    .cartFill > form,
+    .cartFill > p,
+    .cartFill > a{
+        text-align: center;
+    }
+    .cartFill > form input[type='text']{
+        line-height: 48px; width: 70%; padding: 0 2%; background-color: transparent; border: 1px solid #ffffff;
+        border-radius: 10px; color: var(--gs1); box-sizing: border-box; font-size: 14px;
+    }
+    .cartFill > form input[type='text']::placeholder{
+        color: var(--gs1);
+    }
+    .cartFill > form input[type='button']{
+        border: none; border-radius: 10px; margin-left: 10px; 
+        line-height: 48px; padding: 0 3%; font-size: 14px;
+    }
+    .cartFill > form input[type='button'],
+    .cartFill > a{
+        background-color: var(--gs11); color: var(--gs1);
+    }
+    .cartFill > form input[type='button'],
+    .cartFill > a{
+        transition: all 0.35s;
+    }
+    .cartFill > form input[type='button']:active,
+    .cartFill > a:active{
+        background-color: var(--gs1); color: var(--gs11);
+    }
+    .cartFill > p{
+        margin-top: 20px; color: var(--gcs4); display: none;
+    }
+    .cartFill > p.active{
+        display: block;
+    }
+    .cartFill > div{
+        margin: 60px 0 30px; font-size: 16px;
+    }
+    .cartFill > div strong{
+        float: right; font-weight: 500;
+    }
+    .cartFill > a{
+        display: block; line-height: 48px; border-radius: 25px; max-width: 180px; margin: 0 auto;
+        padding: 0 5.7%; box-sizing: border-box; font-size: 20px;
+    }
+    .cartFill.active{
+        right: 0%; visibility: visible;
+    }
+    /* ? cartFill Panel Fin */
+
+    .mainContainer .bx-wrapper,
+    .mainContainer > figure:first-of-type,
+    .mainContainer > ul,
+    .mainContainer > ul+div,
+    .mainContainer > div:nth-of-type(3),
+    .mainContainer > div:nth-of-type(5),
+    .mainContainer > figure:nth-of-type(2),
+    .listContainer,
+    .detailContainer,
+    .wishContainer,
+    .cartContainer,
+    .checkout,
+    .ourStoryContainer,
+    .contactContainer,
+    .faqContainer,
+    .blogContainer,
+    .blogDetailContainer,
+    .replenishmentContainer,
+    .retailerContainer,
+    .supportContainer{
+        padding: 0 4%; box-sizing: border-box; margin: 0 auto;
+    }
+    .mainContainer,
+    .listContainer,
+    .detailContainer,
+    .wishContainer,
+    .cartContainer,
+    .checkout,
+    .ourStoryContainer,
+    .contactContainer,
+    .faqContainer,
+    .blogContainer,
+    .blogDetailContainer,
+    .replenishmentContainer,
+    .retailerContainer,
+    .supportContainer{
+     padding-top: 125px;
+    }
+    
+    header{
+        padding: 30px 3% 0; box-sizing: border-box; 
+        position: fixed; width: 100%; z-index: 10;
+    }
+    footer > div{
+        margin: 0 auto;
+    }
+    header > div{
+        position: relative; padding-right: 68.7%;
+    }
+    header> div h1{
+        max-width: 85px; 
+    }
+    header> div h1 a{
+        display: block;
+    }
+    header> div h1 a img{
+        width: 100%; 
+    }
+    header > div > div{
+        position: absolute; right: 0; top: 0; width: 68.7%; text-align: right;
+        box-sizing: border-box;
+    }
+    header > div > div >*{
+        display: inline-block; vertical-align: middle;
+    }
+    header > div > div input[type='button'],
+    header > div > div a.qm23{
+        margin-left: 5%;
+    }
+    header > div > div a.qm23{
+        font-size: 15px; line-height: 20px;
+    }
+    header > div > div input[type='button']{
+        border: none; text-indent: -9999px; width: 15px; background-repeat: no-repeat; background-size: contain;
+        background-color: transparent; background-position: center;  padding: 0;
+        line-height: 20px;
+    }
+    header > div > div :nth-child(1){
+        background-image: url('../images/bul_search.png');
+    }
+    header > div > div :nth-child(2){
+        background-image: url('../images/bul_cart.png');
+    }
+    header > div > div :nth-child(4){
+        background-image: url('../images/bul_hamburger.png');
+    }
+    header > div aside{
+        position: fixed; top: 0; right: -100%; width: 100%; background-color: var(--gs11);
+        height: 100%; z-index: 100; padding: 90px 4% 0; visibility: hidden;
+        transition: all ease-in 0.5s; box-sizing:border-box;
+    }
+    header > div aside input{
+        background: url('../images/bul_close.png') right top / contain no-repeat; max-width: 15px; line-height: 20px; 
+        position: absolute; top: 30px; right: 4%; width:100%;
+    }
+    header > div aside nav{
+        text-align: center; display: flex; justify-content: center; align-items: center;
+    }
+    header > div aside nav ul{
+        flex-direction: column; justify-content: center; align-items: center;
+    } 
+    header > div aside nav ul li a{
+        display: block; padding: 25px 0; font-size: 30px;
+    }
+    header > div aside nav ul li a:active{
+        color: var(--ocs3);
+    }
+    header > div aside.active{
+        right: 0; visibility: visible;
+    }
+    /* ?header Fin*/
+
+    ul.way4 li:not(:last-of-type){
+        margin-bottom: 80px;
+    }
+    /* ? productList way4, way3 Fin */
+
+    ul.listBox li{
+        min-height: 430px; text-align: center; list-style: none;
+    }
+    ul.listBox li > div:first-child{
+        padding: 20px 8.9%; border-radius: 25px; background-color: var(--gs1); position: relative; margin-bottom: 15px;
+    }
+    ul.listBox li >div:first-child mark{
+        position: absolute; left: 8.9%; top: 20px; background: url('../images/ico_awardwinner.png') left top / contain no-repeat;
+        text-indent: -9999px; line-height: 45px; width: 50%; max-width: 52px;
+    }
+    ul.listBox li > div:first-child img{
+        max-width: 335px; width: 100%;
+    }
+    ul.listBox li >div:first-child input.heartIco{
+        position: absolute; right: 8.9%; top: 20px;  border: none; background-color: transparent;
+        text-indent: -9999px; background: url('../images/heart_ico_outline_black.png') right 10px / contain no-repeat;
+        line-height: 52px; width: 100%; max-width: 25px; 
+    }
+    ul.listBox li >div:first-child input.heartIco.active{
+        background-image: url('../images/heart_ico_filled_black.png');
+    }
+    ul.listBox li > div:first-child span{
+        position: absolute; bottom: 20px; left: 0; width: 100%; text-align: center;
+        display: none;
+       
+    }
+    ul.listBox li > div:first-child span > *{
+        display: block; background-color: var(--ocs3); border-radius: 22.5px;
+        margin: 0 auto; line-height: 45px;  max-width: 142px; box-sizing: border-box; 
+       
+    }
+    ul.listBox li > div:first-child span a{
+        margin-bottom: 25px; max-width: 145px;
+    }
+    ul.listBox li > div:first-child span input[type='button']{
+        border: none; color: var(--gs1); padding: 0 30px;
+    }
+    ul.listBox li:hover > div:first-child span{
+        display: block;
+    }
+    ul.listBox li > h3{
+        line-height: 25px; max-width: 335px; margin: 0 auto;
+    }
+    ul.listBox li > h3,
+    ul.listBox li > div:nth-of-type(2){
+        text-align: center;
+    }
+    ul.listBox li > h3,
+    ul.listBox li > div:nth-of-type(2) > *:not(span){
+        margin-bottom: 15px;
+    }
+    ul.listBox li > div:nth-of-type(2) > *:not(span){
+        display: inline-block; 
+    }
+    ul.listBox li > div:nth-of-type(2) del,
+    ul.listBox li > div:nth-of-type(2) > span{
+        color: var(--gs5);
+    }
+    ul.listBox li > div:nth-of-type(2) > span{
+        display: block;
+    }
+    ul.listBox li > div:nth-of-type(2) del{
+        color: var(--gs5); margin-right: 10px; 
+    }
+    ul.listBox li > div:nth-of-type(2) mark{
+        background: transparent; color: var(--rcs3); font-style: normal;
+    }
+    /* ?productList listBox Fin */
+
+    .listContainer > div:first-of-type{
+        background-position: center; background-repeat: no-repeat; background-size: cover;
+        padding: 60px 8%; box-sizing: border-box; min-height: 440px;
+        border-radius: 50px; margin-bottom: 120px;
+    }
+    .listContainer.ShopList > div:first-of-type{
+        background-image: url('../images/list/shopAll/bg_shop_banner.png');
+    }
+    .listContainer.FaceList > div:first-of-type{
+        background-image: url('../images/list/faceList/bg_face_banner.png');
+    }
+    .listContainer.ShaveList > div:first-of-type{
+        background-image: url('../images/list/shaveList/bg_shave_banner.png');
+    }
+    .listContainer.BodyList > div:first-of-type{
+        background-image: url('../images/list/bodyList/bg_body_banner.png');
+    }
+    .listContainer.KitList > div:first-of-type{
+        background-image: url('../images/list/kits/bg_kits_banner.png');
+    }
+    .listContainer > div:first-of-type h2{
+        margin-bottom: 30px; font-size: 30px;
+    }
+    .listContainer > div:first-of-type p{
+        line-height: 25px; max-width: 830px; font-size: 14px;
+    }
+    /* ? listContainer Banner Fin */
+
+    .listContainer aside{
+        margin-bottom: 100px;
+    }
+    .listContainer aside ul li,
+    .listContainer > .listBox{
+        list-style: none;
+    }
+    .listContainer aside div h3{
+        margin-bottom: 30px; font-size: 28px;
+    }
+    .listContainer aside > div nav h3{
+        margin-bottom: 5px;
+    }
+    .listContainer aside > div nav{
+        margin-bottom: 30px;
+    }
+    .listContainer aside > div nav ul{
+        text-align: center; white-space: nowrap; overflow-x: scroll;
+        padding: 20px 0;
+    }
+    .listContainer aside > div nav ul li{
+        font-size: 16px; display: inline-block;
+    }
+    .listContainer aside > div nav ul li:not(:first-of-type){
+        margin-left: 2%;
+    }
+    .listContainer aside > div nav ul li a{
+        display: block; 
+    }
+    .listContainer aside > div nav ul li a:hover,
+    .listContainer aside > div nav ul li.active{
+        color: var(--ocs3);
+    }
+    .listContainer aside > div .foldComponent{
+        background-color: var(--gs8); border-radius: 15px; position: relative;
+    }
+    .listContainer aside > div .foldComponent:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+    .listContainer aside > div .foldComponent b{
+        padding: 0 5%; display: block; cursor: pointer; box-sizing: border-box;
+        line-height: 50px; font-size: 16px;
+    }
+    .listContainer aside > div .foldComponent b::after{
+        content: url('../images/list/bul_aside_Expand_More.png'); 
+        transform: rotate(0deg); transition: transform ease-in 0.35s; 
+        position: absolute; right: 5%; top: 0;
+        
+    }
+    .listContainer aside > div .foldComponent b.active::after{
+        transform: rotate(180deg);
+    }
+    .listContainer aside > div .foldComponent b+ul{
+         box-sizing: border-box; display: none; 
+    }
+    .listContainer aside > div .foldComponent b.active+ul{
+        display: block; padding: 15px 0 30px;
+    }
+    .listContainer aside > div .foldComponent b.active+ul li{
+        line-height: 26px; font-size: 18px;
+    }
+    .listContainer aside > div .foldComponent ul li:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    .listContainer aside > div .foldComponent ul li input[type='checkbox']{
+        display: none;
+    }
+    .listContainer aside > div .foldComponent ul li input[type='checkbox']+label{
+        background: url('../images/list/bul_check_off.png') no-repeat 10% center; padding-left: 23%;
+        width: 100%; box-sizing: border-box; display: inline-block; background-size: contain; line-height: 26px;
+    }
+    .listContainer aside > div .foldComponent ul li input[type='checkbox']:checked+label{
+        background: url('../images/list/bul_check_on.png') no-repeat 10% center; background-size: contain; 
+    }
+    /* ?listContainer aside Fin */
+
+    .listContainer .way3 li{
+        margin-bottom: 50px; text-align: center;
+    }
+    /* ? way3 listContainer Fin */
+
+    .detailContainer > div:first-of-type{
+        margin-bottom: 30px;
+    }
+    .detailContainer > div:first-of-type div{
+        margin-bottom: 20px;
+    }
+    .detailContainer > div:first-of-type div img{
+        width: 100%;
+    }
+    .detailContainer > div:first-of-type ul{
+        width: 100%;
+    }
+    .detailContainer > div:first-of-type ul::after{
+        display: block; clear: both; content: '';
+    }
+    .detailContainer > div:first-of-type ul li{
+       float: left; display: block; width: 22.4%; cursor: pointer;
+    }
+    .detailContainer > div:first-of-type ul li:not(:nth-of-type(4n+1)){
+        margin-left: 3.46%;
+    }
+    .detailContainer > div:first-of-type ul li img{
+        width: 100%;
+    }
+    .detailContainer > div:first-of-type ul li:nth-of-type(-n+4){
+        margin-bottom: 20px;
+    }
+    .detailContainer > div:nth-of-type(2),
+    .detailContainer> article,
+    .detailContainer .videoBox,
+    .detailContainer .key_Ingredients,
+    .detailContainer .banner_Ingredients{
+        margin-bottom: 180px;
+    }
+    .detailContainer > div:nth-of-type(2) h2,
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1),
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2),
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3){
+        margin-bottom: 30px;
+    }
+    .detailContainer > div:nth-of-type(2) h2{
+        font-size: 28px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) del,
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) mark{
+        margin-bottom: 25px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) del{
+        display: inline-block; margin-right: 10px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) mark{
+        color: var(--rcs3); background-color: transparent; font-style: normal;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) strong{
+        margin-bottom: 15px; display: block; font-size: 28px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) p{
+        font-size: 14px; line-height: 20px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2){
+        font-size: 15px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) h3{
+        color: var(--gs5); margin-bottom: 10px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck{
+        white-space: nowrap; overflow-x: scroll; padding: 20px 0;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li{
+         list-style: none; display: inline-block;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li:not(:first-of-type){
+        margin-left: 2%;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li input[type='radio']+label{
+        background: url('../images/dt_bul_radio_uncheck.png') no-repeat left center; 
+        padding-left: 25px;
+    }    
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li input[type='radio']:checked+label{
+        background-image: url('../images/dt_bul_radio_check.png');
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li input[type='radio']{
+        display: none;
+    }
+    .count{
+        position: relative; display: inline-block; text-align: center;
+        line-height: 50px; background-color: var(--gs8);  border: none;
+        box-sizing: border-box; width: 100%; border-radius: 30px; display: block; font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .count input[type='button']{
+        background: transparent; border: none; position: absolute;
+        color: var(--gs1); top: 12px;
+    }
+    .count .qc{
+        text-align: center;
+        border: none; background-color: transparent;
+        color: var(--gs1); 
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    .count .countMinus{
+        left: 13px; cursor: pointer; 
+    }
+    .count .countPlus{
+        right: 13px; cursor: pointer;
+    }
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3) .detail_addCart{
+        border: none; color: var(--gs1); background-color: var(--ocs3); line-height: 50px;
+        width: 70%; box-sizing: border-box;  border-radius: 25px; font-size: 20px;
+        float: left;
+    }
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3) .heartIco{
+        background-color: transparent; border: none; line-height: 50px; text-indent: -9999px;
+        background: url('../images/dt_ico_heart_outline.png') no-repeat center;
+        width: 30%; background-size: 32%;
+    }
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3) .heartIco.active{
+        background: url('../images/dt_ico_heart_filled.png') no-repeat center;
+        background-size: 32%;
+    }
+    .detailContainer .detail_panel{
+        position: relative; clear: both;
+    }
+    .detailContainer .detail_panel > ul{
+        list-style: none; 
+    }
+    .detailContainer .detail_panel > ul li{
+        font-size: 14px;
+    }
+    .detailContainer .detail_panel > ul li:after{
+        content: '>'; padding-left: 5px;
+    }
+    .detailContainer .detail_panel > ul li:not(:last-of-type){
+        margin-bottom: 10px;
+    }
+    .detailContainer .detail_panel > ul li input[type='button']{
+        border: none; background: transparent; color: var(--gs1);
+    }
+    .detailContainer .detail_panel > div{
+        position: absolute; right: 0; top: 100px;
+        background-color: var(--gs8); padding: 50px 5%; border-radius: 30px;
+        width: 100%; box-sizing: border-box;
+    }
+    .detailContainer .detail_panel > div h3{
+        margin-bottom: 30px; line-height: 25px; font-size: 25px;
+    }
+    .detailContainer .detail_panel .btn_close{
+        border: none; text-indent: -9999px; line-height: 25px;
+        background: url('../images/dt_bul_close.png') center / contain no-repeat;
+        max-width: 15px; position: absolute; right: 5%; top: 50px; padding: 0;
+        width: 100%; background-size: 100%;
+    }
+    .detailContainer .detail_panel > div p{
+        line-height: 30px; font-size: 15px;
+    }
+    .detailContainer .detail_panel > div p strong{
+        font-size: 15px;
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1) p:not(:last-of-type),
+    .detailContainer .detail_panel > div:nth-of-type(2) p:not(:last-of-type),
+    .detailContainer .detail_panel > div:last-of-type p:not(:last-of-type){
+        margin-bottom: 20px;
+    }    
+    .detailContainer .detail_panel > div:nth-of-type(1).active,
+    .detailContainer .detail_panel > div:nth-of-type(2).active,
+    .detailContainer .detail_panel > div:last-of-type.active{
+        display: block;
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1),
+    .detailContainer .detail_panel > div:nth-of-type(2),
+    .detailContainer .detail_panel > div:last-of-type{
+        display: none;
+    }
+    .detailContainer > article h3,
+    .detailContainer .key_Ingredients h3,
+    .detailContainer > div:last-of-type > h3{
+        margin-bottom: 40px; font-size: 30px; text-align: center;
+    }
+    .detailContainer > article{
+        text-align: center;
+    }
+    .detailContainer > article strong{
+        font-size: 14px;
+    }
+    .detailContainer > article > div{
+        margin-bottom: 40px;
+    }
+    .detailContainer > article > div p,
+    .detailContainer > article > ul li{
+        line-height: 25px; font-size: 14px;
+    }
+    .detailContainer > article > div p:not(:last-of-type){
+        margin-bottom: 40px;
+    }
+    .detailContainer > article > ul{
+        list-style: none;
+    }
+    .detailContainer > article > ul li{
+        margin-bottom: 15px;
+    }
+    .detailContainer .videoBox video{
+        width: 100%; height: 200px;
+    }
+
+    .detailContainer .key_Ingredients{
+        text-align: center;
+    }
+    .detailContainer .key_Ingredients > div p{
+        padding: 40px 3%; box-sizing: border-box; line-height: 27px;
+        border-radius: 40px; width: 100%; font-size: 18px;
+    }
+    .detailContainer .key_Ingredients > div p:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+    .detailContainer .key_Ingredients > div p:first-of-type{
+        background-color: var(--ocs3); 
+    }
+    .detailContainer .key_Ingredients > div p:nth-of-type(2){
+        background-color: #00adc8; 
+    }
+    .detailContainer .key_Ingredients > div p:last-of-type{
+        background-color: #5c068c;
+    }
+    .detailContainer .key_Ingredients > div p b{
+        display: block; margin-bottom: 35px; font-size: 25px;
+    }
+    .detailContainer .banner_Ingredients h3{
+        font-size: 25px; line-height: 35px; margin-bottom: 20px;
+    }
+    .detailContainer .banner_Ingredients ul li{
+        background-color: var(--gs4); color: var(--gs11);
+        padding: 40px 3%; box-sizing: border-box; border-radius: 30px;
+    }
+    .detailContainer .banner_Ingredients ul li:not(:last-of-type){
+        margin-bottom: 30px; 
+    }
+    .detailContainer .banner_Ingredients ul li span{
+        background: url('../images/dt_ico_banner_01.png') left top / contain no-repeat;
+        padding-left: 8%; margin-bottom: 10px; display: block;
+    }
+    .detailContainer .banner_Ingredients ul li p{
+        font-size: 15px; line-height: 20px; 
+    }
+    /* ? detailContainr Fin */
+
+    .wishContainer h2,
+    .cartContainer h2{
+        margin-bottom: 50px; font-size: 40px; line-height: 45px;
+    }
+    .marketlistTable > li:first-of-type{
+        display: none;
+    }  
+    .marketlistTable li:not(:first-of-type) > div a{
+        line-height: 30px;
+    }
+    .marketlistTable li{
+        list-style: none; font-size: 20px;
+    }
+    .marketlistTable li:nth-of-type(2){
+        border-top: 3px solid var(--gs5);
+    }
+    .marketlistTable li:not(:first-of-type){
+        padding: 30px 0; border-bottom: 1px solid var(--gs5);
+    }
+    .marketlistTable li:not(:first-of-type) > div:first-of-type{
+        display: flex; justify-content: flex-start; align-items: center; margin-bottom: 30px;
+    }
+    .marketlistTable li:not(:first-of-type) > div:first-of-type img{
+        max-width: 90px; width: 100%; 
+    }
+    .marketlistTable li:not(:first-of-type) > div:first-of-type > a{
+        display: block; margin-left: 3%;
+    }
+    .marketlistTable li:not(:first-of-type) > *:not(div:first-of-type){
+        text-align: center; 
+    }
+    .marketlistTable li:not(:first-of-type) > strong:first-of-type{
+        float: left; width: 20%; line-height: 50px; display: block; text-align: left; margin-bottom: 30px;
+    }
+    .marketlistTable li:not(:first-of-type) > div:nth-of-type(2){
+        float: left; width: 70%; margin-bottom: 30px; margin-left: 10%;
+    }
+    .marketlistTable .count{
+        margin: 0 auto; position: relative; display: inline-block; text-align: center; line-height: 50px; 
+        background-color: var(--gs8); border: none; box-sizing: border-box; width: 100%; border-radius: 30px; font-size: 14px;
+    }
+    .marketlistTable li:not(:first-of-type) > span input[type='button']{
+        background-color: transparent; border: none;
+        background: url('../images/bul_delete_white.png') no-repeat center;
+        text-indent: -9999px; max-width: 20px; width: 100%; background-size: 100%;
+        min-height: 22px;
+    }
+    .marketlistTable li:not(:first-of-type) > span{
+        clear: both;
+    }
+    /* ? marketlistTable Fin */
+
+    .paySuccessPopup{
+        position: fixed; width: 90%; top: 14%; left: 5%; background-color: var(--gs8);
+        border-radius: 20px; padding: 0 3.4% 70px; box-sizing: border-box; text-align: center;
+        z-index: 100;
+    }
+    .paySuccessPopup span{
+        display: block; margin-bottom: 25px;
+        background: url('../images/payment_ico_checkout_success.png') no-repeat center 60px; padding-top: 155px;
+    }
+    .paySuccessPopup p{
+        line-height: 25px; margin-bottom: 40px; font-size: 16px;
+    }
+    .paySuccessPopup > a{
+        display: block; background-color: var(--ocs3); padding: 15px 5%; border-radius: 25px; max-width: 190px; margin: 0 auto; width: 100%;
+    }
+    .checkoutPopup{
+        position: fixed; width: 90%; top: 30px; left: 5%; z-index: 100; 
+    }
+    .checkoutPopup h2{
+        background-color: var(--ocs3); padding: 40px 11%; border-radius: 25px 25px 0 0;
+        position: relative; box-sizing: border-box; font-size: 25px; 
+    }
+    .checkoutPopup h2 input{
+        background: url('../images/payment_bul_close.png') no-repeat center;
+        width: 100%; right: 11%; top: 40px; position: absolute; min-height: 28px;
+        max-width: 28px; background-size: 60%;
+    }
+    .checkoutPopup > div{
+        background-color: var(--gs8); padding: 40px 5%; border-radius: 0 0 25px 25px;
+        box-sizing: border-box; height: 460px; overflow-y: scroll; font-size: 18px;
+    }
+    .checkoutPopup > div > p:not(:last-of-type){
+        margin-bottom: 60px;
+    }
+    .checkoutPopup > div > p:not(strong){
+        line-height: 35px;
+    }
+    .checkoutPopup > div > p > strong{
+        display: block; margin-bottom: 10px;
+    }
+    .checkoutPopup.refund > div > div{
+        margin-bottom: 60px;
+    }
+    .checkoutPopup.refund > div > div strong{
+        margin-bottom: 10px; display: block;
+    }
+    .checkoutPopup.refund > div > div address{
+        font-style: normal; line-height: 35px;
+    }
+    .paySuccessPopup,
+    .checkoutPopup.refund,
+    .checkoutPopup.termOfsvc,
+    .checkoutPopup.subscribtion{
+        display: none;
+    }
+    .paySuccessPopup.active,
+    .checkoutPopup.refund.active,
+    .checkoutPopup.termOfsvc.active,
+    .checkoutPopup.subscribtion.active{
+        display: block;
+    }
+    .checkout > div{
+        margin-bottom: 70px;
+    }
+    .checkout > div > ol{
+         text-align: center; 
+    }
+    .checkout > div > ol li{
+        list-style: none; display: inline-block;
+    }
+    .checkout > div > ol li a{
+        display: block;
+    }
+    .checkout > div > ol li:first-of-type a::after,
+    .checkout > div > ol li:nth-of-type(2) a::after{
+        content: '>'; padding-left: 8px;
+    }
+    .checkout > div > ol li:nth-of-type(3) a::before{
+        content: '>'; padding-right: 8px;
+    }
+    .checkout > div > ol li:active,
+    .checkout > div > ol li.active{
+        color: var(--ocs3);
+    }
+    .checkout > div > ul:last-of-type{
+        padding: 15px 0; border-style: solid; border-color: var(--gs5); border-width: 1px 0 1px 0;
+    }
+    .checkout > div > ul:last-of-type li{
+        display: block;
+    }
+    .checkout > div > ul:last-of-type li:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+    .checkout > div > ul:last-of-type li input[type='button']{
+        background-color: transparent; border: none; color: var(--gs1);
+    }
+    .CheckoutaddrForm li{
+        display: block; 
+    }
+    .CheckoutaddrForm li:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+    .CheckoutaddrForm input{
+        width: 100%; line-height: 63px; border: 1px solid var(--gs5); box-sizing: border-box;
+        border-radius: 8px; padding: 0 10px; color: var(--gs11); font-size: 4.5vw;
+    }
+    .CheckoutaddrForm li input::placeholder{
+        color: var(--gs5);
+    }
+    .CheckoutaddrForm li .paymentForm{
+        width: 100%; font-family: 'Quicksand', sans-serif; background-color: var(--gs1); border: 1px solid var(--gs5);
+        border-radius: 8px; color: var(--gs11);
+    }
+    .CheckoutaddrForm li .paymentForm:after{
+        content: url('../images/payment_bul_arrow_down.png'); right: 15px; top: 20px;
+    }
+    .CheckoutaddrForm li .paymentForm.active:after{
+        transform: rotate(180deg);
+    }
+    .CheckoutaddrForm li .paymentForm select{
+        line-height: 63px; width: 100%; padding: 0 15px; color: var(--gs11); font-size: 4.5vw;
+    }
+    .CheckoutaddrForm li input:focus{
+        outline: none !important; border-color: var(--ocs3);
+    }
+    .informationContainer > div > div:nth-of-type(2) fieldset > input[type='submit'],
+    .paymentContainer > div > div:nth-of-type(2) > input[type='button']{
+        background-color: transparent; border: 1px solid var(--gs5); border-radius: 25px; 
+        line-height: 48px; box-sizing: border-box; padding: 0 7%; float: right; color: var(--gs1);
+    }
+    .informationContainer > div > div:nth-of-type(2) fieldset > input[type='submit']:active,
+    .paymentContainer > div > div:nth-of-type(2) > input[type='button']:active{
+        background-color: var(--ocs3); transition-duration: 0.35s;
+    }
+    .checkout > aside > ul:first-of-type{
+        padding-bottom: 30px; border-bottom: 1px solid var(--gs5);
+    }
+    .checkout > aside > ul:first-of-type li{
+        display: block; position: relative;
+    }
+    .checkout > aside > ul:first-of-type li:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    .checkout > aside > ul:first-of-type li img{
+        width: 100%; max-width: 98px;
+    }
+    .checkout > aside > ul:first-of-type li dl{
+        position: absolute; right: 0; top: 0; width: 100%; padding-left: 120px; box-sizing: border-box;
+    }
+    .checkout > aside > ul:first-of-type li dl dt,
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(1){
+        margin-bottom: 15px;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(1){
+        text-align: right;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(1) strong{
+        display: block;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(2) span{
+        display: inline-block;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(2){
+        color: var(--gs5);
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(2) span:last-of-type{
+        float: right;
+    }
+    .checkout > aside > ul:last-of-type{
+        padding-top: 30px;
+    }
+    .checkout > aside > ul li{
+        display: block;
+    }
+    .checkout > aside > ul li:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+    .checkout > aside > ul li > *{
+        display: inline-block;
+    }
+    .checkout > aside > ul li > strong{
+        float: right;
+    }
+    /* ? checkoutContainer Fin */
+
+    .gridshopList{
+        position: relative;
+    }
+    .gridshopList li{
+        list-style: none; position: relative;
+    }
+    .gridshopList li div{
+        position: absolute; left: 3.6%; bottom: 20px; max-width: 150px; width: 100%;
+    }
+    .gridshopList li div h3{
+        margin-bottom: 18px; font-size: 34px;
+    }
+    .gridshopList li div a{
+        display: block; box-sizing: border-box; text-align: center; padding: 15px 5%;
+        background-color: var(--gs1); color: var(--gs11); border-radius: 40px; font-size: 18px;
+    }
+    .gridshopList li div a:active{
+        background-color: var(--ocs3); color: var(--gs1); transition: 0.35s;
+    }
+    .gridshopList li{
+        width:100%;
+    }
+    .gridshopList li:not(:last-of-type){
+        margin-bottom: 40px;
+    }
+    .gridshopList li img{
+        width: 100%;
+    }
+    /* ?ourStoryContainer Fin */
+
+    .contactPopup,
+    .retailerPopup{
+        position: fixed; width: 90%; top: 26%; left: 5%; background-color: var(--gs8);
+        border-radius: 20px; padding: 0 3.4% 120px; box-sizing: border-box; text-align: center;
+        z-index: 100; display: none;
+    }
+    .contactPopup input,
+    .retailerPopup input{
+        background: url('../images/Contact_Us_bul_close.png') right top / contain no-repeat;
+        position: absolute; top: 60px; right: 7.4%; width: 100%; max-width: 16px;
+    }
+    .contactPopup p,
+    .retailerPopup p{
+        background: url('../images/Contact_Us_ico_popupCheck.png') no-repeat center 60px; padding-top: 155px;
+        line-height: 28px;
+    }
+    .contactPopup.active,
+    .retailerPopup.active{
+        display: block;
+    }
+    /* ? contactContainer Fin */
+
+    .blogDetailContainer > div:first-of-type{
+        margin-bottom: 150px; text-align: center; 
+    }
+    .blogDetailContainer > div:first-of-type h2{
+        margin-bottom: 40px; line-height: 38px; font-size: 30px;
+    }
+    .blogDetailContainer > div:first-of-type time{
+        color: var(--gs5); margin-bottom: 30px; display: block; font-size: 18px;
+    }
+    .blogDetailContainer > div:first-of-type ul{
+        margin-bottom: 75px; 
+    }
+    .blogDetailContainer > div:first-of-type ul li{
+        list-style: none; display: inline-block; background-repeat: no-repeat; text-indent: -9999px;
+        min-height: 24px; background-size: 70%;
+    }
+    .blogDetailContainer > div:first-of-type ul li:not(:first-of-type){
+        margin-left: 1.5%;
+    }
+    .blogDetailContainer > div:first-of-type ul li:nth-of-type(1){
+        background-image: url('../images/blog_ico_sns_01.png'); width: 13px; 
+    }
+    .blogDetailContainer > div:first-of-type ul li:nth-of-type(2){
+        background-image: url('../images/blog_ico_sns_02.png'); width: 28px; 
+    }
+    .blogDetailContainer > div:first-of-type ul li:nth-of-type(3){
+        background-image: url('../images/blog_ico_sns_03.png'); width: 24px;
+    }
+    .blogDetailContainer > div:first-of-type ul li a{
+        display: block;
+    }
+    .blogDetailContainer > div:first-of-type img{
+        width: 100%; margin-bottom: 40px;
+    }
+    .blogDetailContainer > div:first-of-type p{
+        line-height: 30px; font-size: 20px;
+    }
+    .blogDetailContainer > ul li{
+        list-style: none; align-items: center;
+    }
+    .blogDetailContainer > ul li:not(:last-of-type){
+        margin-bottom: 150px;
+    }
+    .blogDetailContainer > ul li img{
+        margin-bottom: 40px; width: 100%;
+    }
+    .blogDetailContainer > ul li > div{
+        overflow: hidden;
+    }
+    .blogDetailContainer > ul li > div h3{
+        margin-bottom: 30px; font-size: 28px; line-height: 35px;
+    }
+    .blogDetailContainer > ul li > div p{
+        line-height: 30px; font-size: 18px;
+    }
+    .blogDetailContainer > ul li > div p:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    .blogDetailContainer > ul li > div a{
+        display: block; padding: 20px 10%; box-sizing: border-box; background-color: var(--gs1);
+        color: var(--gs11); border-radius: 37.5px; max-width: 180px; text-align: center;
+        margin-top: 20px; transition: 0.35s; float: right; font-size: 18px;
+    }
+    .blogDetailContainer > ul li > div a:active{
+        background-color: var(--ocs3); color: var(--gs1);
+    }
+    /* ?blogDetailContainer Fin */
+
+    .supportContainer h2{
+        text-align: center; margin-bottom: 85px; font-size: 35px;
+    }
+    .supportContainer > span{
+        display: block; color: var(--gs5); margin-bottom: 80px; text-align: center;
+    }
+    .supportContainer > p{
+        margin-bottom: 100px;
+    }
+    .supportContainer li{
+        display:block;
+    }
+    .supportContainer > ul > li:not(:last-of-type),
+    .supportContainer > ol > li:not(:last-of-type){
+        margin-bottom: 60px;
+    }
+    .supportContainer li,
+    .supportContainer p{
+        line-height: 35px; font-size: 18px; 
+    }
+    .supportContainer ol li h3,
+    .supportContainer ul li h3{
+        margin-bottom: 25px; color: var(--ocs3); font-size: 25px;
+    }
+    .supportContainer.shippingReturns ol li p:not(:last-of-type),
+    .supportContainer > ul li p:not(:last-of-type),
+    .supportContainer.privacyPolicy > ul li:nth-of-type(5) > p,
+    .supportContainer.privacyPolicy > ul li:nth-of-type(2) > ol,
+    .supportContainer.privacyPolicy > ul li:nth-of-type(7) > ul,
+    .supportContainer.privacyPolicy > ul li:nth-of-type(8) > ul,
+    .supportContainer.termsofUse > ul li > ul{
+        margin-bottom: 35px;
+    }
+    .supportContainer.shippingReturns ol li address{
+        font-style: normal;
+    }
+    .supportContainer li a{
+        text-decoration: underline; color: var(--gs5); font-size: 18px;
+    }
+    .supportContainer > ul li > ul,
+    .supportContainer > ul li > ol{
+        padding-left: 4%; box-sizing: border-box;
+    }
+    .supportContainer.privacyPolicy > ul li > ul li:not(:last-of-type),
+    .supportContainer.privacyPolicy > ul li > ol li:not(:last-of-type),
+    .supportContainer.termsofUse > ul li > ul li:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    .supportContainer.privacyPolicy > ul li:nth-of-type(8) > ul li a{
+        overflow: hidden; text-overflow: ellipsis; display: block;
+    }
+    /* ? supportContainer Fin */
+
+    .paging{
+        clear: both; position: relative; background-color: var(--gs1); border-radius: 50px;
+        width: 100%; margin: 0 auto;
+    }
+    .paging > a {
+        position: absolute; top: 0; text-align: center;
+        width: 10%; color: var(--ocs3); box-sizing: border-box; line-height: 50px;
+    }
+    .paging > a:first-of-type{
+        left: 0%;
+    }
+    .paging > a:last-of-type{
+        right: 0%;
+    }
+    .paging ol{
+        padding: 10px 10%; box-sizing: border-box; text-align: center; width: 100%;
+    }
+    .paging ol li{
+        display: inline-block; list-style: none; margin-left: 4%;
+    }
+    .paging ol li:first-of-type{
+        margin-left: 0;
+    }
+    .paging ol li a{
+        display: block; line-height: 30px; color: var(--ocs3); background-color: #ffffff;
+        transition: all 0.3s; border-radius: 20px;
+    }
+    .paging ol li a:active{
+        color: #ffffff; background-color: var(--ocs3);
+    }
+    /* ? paging Fin */
+
+    .account{
+        max-width: 1610px; margin: 0 auto;
+        padding: 165px 4% 0 4%;
+    }
+    .account > h2{
+        margin-bottom: 30px; font-size: 30px;
+    }
+    .account > aside{
+        text-align: center; margin-bottom: 70px;
+    }
+    .account > aside ul{
+        margin-bottom: 30px; white-space: nowrap; overflow-x: scroll;
+        padding: 20px 0;
+    }
+    .account > aside ul li{
+        list-style: none; display: inline-block; 
+    }
+    .account > aside ul li.active{
+        color: var(--ocs3);
+    }
+    .account > aside ul li:not(:first-of-type){
+        margin-left: 3%;
+    }
+    .account > aside ul li a{
+        display: block;
+    }
+    .account > aside > a{
+        display: block; line-height: 50px; box-sizing: border-box;
+        border: 1px solid var(--gs5); border-radius: 25px; text-align: center;
+        min-width: 140px; width: 100%;
+    }
+    /* ? account Container Fin */
+
+    .updateInfoContainer form ul li,
+    .addressFormContainer form ul li{
+        margin-bottom: 75px; list-style: none;
+    }
+    .updateInfoContainer form ul li label,
+    .addressFormContainer form ul li label{
+        display: block; margin-bottom: 15px; color: var(--ocs3);
+    }
+    .updateInfoContainer form input,
+    .addressFormContainer form input{
+        background-color: transparent; border: none;
+    }
+    .updateInfoContainer form ul li input,
+    .addressFormContainer form ul li input{
+        color: var(--gs5); padding: 0 10px; width: 100%; box-sizing: border-box; line-height: 40px; max-width: 470px;
+        border-bottom: 1px solid var(--gs5);
+    }
+    .updateInfoContainer form > input[type='submit'],
+    .addressFormContainer form > input[type='submit']{
+        border: 1px solid var(--gs5); color: var(--gs1); line-height: 49px; max-width: 155px;
+        border-radius: 25px; width: 100%; box-sizing: border-box; cursor: pointer;
+    }
+    .updateInfoContainer form > input[type='submit']:active,
+    .addressFormContainer form > input[type='submit']:active{
+        background-color: var(--ocs3); 
+    }
+    /* ? UpdateContainer, addressFormContainer Fin */
+
+    .account .accSelect{
+        width: 100%; font-family: 'Quicksand', sans-serif;
+    }
+    .account .accSelect:after{
+        content: url('../images/account_arrow_down.png'); right: 10px; top: 15px;
+    }
+    .account .accSelect.active::after{
+        transform: rotate(180deg);
+    }
+    .account .accSelect select{
+        padding: 15px; color: var(--gs1); width: 100%; 
+    }
+    .account .accSelect select option{
+        color: var(--gs11); padding: 0;
+    }
+    /* ? addressFormContainer select Fin */
+
+    .orderList{
+        padding: 30px 2.5%;
+    }
+    .orderList{
+        border: 1px solid var(--gs5); border-radius: 20px; box-sizing: border-box;
+    }
+    .orderList > h3{
+        margin-bottom: 30px; font-size: 22px; border-bottom: 3px solid var(--gs5);
+        padding-bottom: 30px;
+    }
+    .orderList > h3 a{
+        display: block; color: var(--gcs4); font-size: 22px; padding-top: 15px;
+    }
+    .orderList > ul li{
+        display: block; box-sizing: border-box; 
+    }
+    .orderList > ul li:not(:last-of-type){
+        margin-bottom: 30px; border-bottom: 3px solid var(--gs5); padding-bottom: 20px;
+    }
+    .orderList > ul li > strong{
+        margin-bottom: 20px; display: block;
+    }
+    .orderList > ul li div > img{
+        width: 100%; max-width: 125px; display: block; margin-bottom: 20px;
+    }
+    .orderList > ul li div > div > *{
+        display: block;
+    }
+    .orderList > ul li div > div span{
+        line-height: 25px;
+    }
+    .orderList > ul li div > div > *:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .orderList > ul li div > div > a{
+        padding: 15px 3%;  text-align: center; border: 1px solid var(--gs5);
+        max-width: 160px; box-sizing: border-box; border-radius: 25px;
+    }
+    .orderList > ul li div > div > a:active{
+        background-color: var(--ocs3);
+    }
+    /* ? orderHistoryContainer orderList Fin */
+
+
+    footer{
+        background-color: var(--gs9); padding: 40px 4%; 
+    }
+    footer > div div:nth-of-type(1),
+    footer > div div:nth-of-type(2),
+    footer > div div:nth-of-type(3){
+        margin-bottom: 40px;
+    }
+    footer > div div:nth-of-type(4),
+    footer > div div:nth-of-type(5){
+        margin-bottom: 40px;
+    }
+
+    footer > div div:nth-of-type(1) h3,
+    footer > div div:nth-of-type(2) h3,
+    footer > div div:nth-of-type(3) h3,
+    footer > div div:nth-of-type(4) h3{
+        margin-bottom: 25px;
+    }
+    footer > div div:nth-of-type(5) h3{
+        margin-bottom: 15px;
+    }
+    footer > div div:nth-of-type(5) h3+p{
+        line-height: 26px; 
+    }
+    footer > div div ul{
+        list-style: none;
+    }
+    footer > div div ul li a{
+        font-size: 14px;
+    }
+    footer > div div:nth-of-type(5) h3+p,
+    footer > div div:nth-of-type(1) ul li,
+    footer > div div:nth-of-type(2) ul li,
+    footer > div div:nth-of-type(3) ul li{
+        margin-bottom: 18px;
+    }
+    footer > div div:nth-of-type(4) ul li{
+        display: inline-block; width: 20px; line-height: 20px;
+    }
+    footer > div div:nth-of-type(4) ul li:not(:first-child){
+        margin-left: 25px;
+    }
+    footer > div div:nth-of-type(4) ul li a{
+        display: block; text-indent: -9999px; background-repeat: no-repeat; background-size: contain; background-position: center;
+    }
+    footer > div div:nth-of-type(4) ul li:nth-child(1) a{background-image: url('../images/ico_sns_01.png');}
+    footer > div div:nth-of-type(4) ul li:nth-child(2) a{background-image: url('../images/ico_sns_02.png');}    
+    footer > div div:nth-of-type(4) ul li:nth-child(3) a{background-image: url('../images/ico_sns_03.png');}
+
+    footer > div div:nth-of-type(5) h3{
+        font-size: 23px; line-height: 30px;
+    }
+    footer > div div:nth-of-type(5) h3+p{
+        font-size: 14px; line-height: 20px;
+    }
+    footer > div div:nth-of-type(5) input{
+        margin-bottom: 20px;
+    }
+    footer > div div:nth-of-type(5) form input[type="email"]{
+        color: var(--gs1); line-height: 45px; padding: 0 30px; box-sizing: border-box;
+        border: none; background-color: var(--gs8); border-radius: 25px; text-align: left;
+        float: left; width: 70%;
+    }
+    footer > div div:nth-of-type(5) form input[type="email"]::placeholder{
+        color: inherit; text-align: left;
+    }
+    footer > div div:nth-of-type(5) form input[type="button"]{
+        line-height: 45px; padding: 0 2%; box-sizing: border-box; background-color: var(--ocs3);
+        border: none; color: var(--gs1); text-transform: uppercase; border-radius: 25px;
+        text-align: center; float: left; width: 25%; margin-left: 5%;
+    }
+    footer > div div:nth-of-type(5) form+p.active{
+        display: block; margin-top: 10px;
+    }
+    footer > div div:nth-of-type(5) form+p{
+        clear: left; color: var(--gcs4);
+    }
+    footer > div div:nth-of-type(5) form+p{
+        display: none;
+    }
+    footer > div div:last-of-type{
+        position: relative; clear: both;
+    }
+    footer > div div:last-of-type h3{
+        max-width: 178px; width: 40%;
+    }
+    footer > div div:last-of-type h3 img{
+        width: 100%;
+    }
+    footer > div div:last-of-type span{
+        float: right; font-size: 14px; position: absolute; right: 0; top: 5px;
+    }      
+}
+/* ? mobile */
+
+@media screen and (min-width:768px) and (max-width:1279px) {
+    .searchPanel{
+        position: fixed; z-index: 100; background-color: var(--gs9); width: 100%; top: 0%;
+        text-align: center; display: none; padding: 45px 0;
+    }
+    .searchPanel input[type='search']{
+    margin-right: 10%; border: none; border-radius: 25px;
+    width: 44.4%; padding: 0 30px; line-height: 45px; background-color: var(--gs1);
+    }
+    .searchPanel input[type='search']::placeholder{
+        font-size: 18px;
+    }
+    .searchPanel input[type='button']{
+        background: url('../images/bul_close.png') right 15px / contain no-repeat;
+        line-height: 45px; width: 15px;
+    }
+    .searchPanel.active{
+        display: block; 
+    }
+    /* ? searchPanel Fin */
+
+    .cartFill{
+        position: fixed; z-index: 100; top: 0; right: -100%; background-color: var(--gs8);
+        width: 60%; padding: 50px 4%; height: 100vh; border-radius: 50px; box-sizing:border-box;
+        transition: all ease-in 0.5s; visibility: hidden;
+    }
+    .cartFill > h2{
+        margin-bottom: 35px;
+    }
+    .cartFill > h2 .btn_close{
+        width: 15px; line-height: 35px; background: url('../images/bul_close.png') right 10px / contain no-repeat; 
+        float: right;
+    }
+    .cartFill > ul{
+        margin-bottom: 100px; width: 100%; position: relative;
+    }
+    .cartFill > ul li::after{
+        content: ''; display: block; clear: both;
+    }
+    .cartFill > ul li{
+        display: block; background-color: var(--gs1); border-radius: 15px; padding: 20px 2.8%;
+        box-sizing: border-box; width: 100%; 
+    }
+    .cartFill > ul li img{
+        float: left; border: 1px solid #a1a1a1; box-sizing: border-box; width: 20%;
+    }
+    .cartFill > ul li div{
+        float: left; width: 70%; margin-left: 10%;
+    }
+    .cartFill > ul li div h3{
+        color: var(--gs11);
+    }
+    .cartFill > ul li div h3 input[type='button']{
+        border: none; text-indent: -9999px; background-color: transparent; cursor: pointer; padding: 0; 
+        width: 20px; background: url('../images/bul_delete_black.png') center / contain no-repeat;
+        line-height:27px;
+        float: right; 
+    }
+    .cartFill > ul li div h3{
+        line-height: 27px; 
+    }
+    .cartFill > ul li div strong{
+        color: var(--ocs3); position: absolute; right: 2.8%; bottom: 20px;
+    }
+    .cartFill > form,
+    .cartFill > p,
+    .cartFill > a{
+        text-align: center;
+    }
+    .cartFill > form input[type='text']{
+        line-height: 48px; width: 50%; padding: 0 1.7%; background-color: transparent; border: 1px solid #ffffff;
+        border-radius: 10px; color: var(--gs1); box-sizing: border-box;
+    }
+    .cartFill > form input[type='text']::placeholder{
+        color: var(--gs1);
+    }
+    .cartFill > form input[type='button']{
+        border: none; line-height: 50px; border-radius: 10px; margin-left: 10px; 
+        line-height: 48px; padding: 0 3%;
+    }
+    .cartFill > form input[type='button'],
+    .cartFill > a{
+        background-color: var(--gs11); color: var(--gs1);
+    }
+    .cartFill > form input[type='button'],
+    .cartFill > a{
+        transition: all 0.35s;
+    }
+    .cartFill > form input[type='button']:active,
+    .cartFill > a:active{
+        background-color: var(--gs1); color: var(--gs11);
+    }
+    .cartFill > p{
+        margin-top: 20px; color: var(--gcs4); display: none;
+    }
+    .cartFill > p.active{
+        display: block;
+    }
+    .cartFill > div{
+        margin: 60px 0 30px;
+    }
+    .cartFill > div strong{
+        float: right; font-weight: 500; color: var(--ocs3);
+    }
+    .cartFill > a{
+        display: block; line-height: 60px; border-radius: 30px; max-width: 185px; margin: 0 auto;
+        padding: 0 5.7%; box-sizing: border-box;
+    }
+    .cartFill.active{
+        right: 0%; visibility: visible;
+    }
+    /* ? cartFill Panel Fin */
+
+    .mainContainer .bx-wrapper,
+    .mainContainer > figure:first-of-type,
+    .mainContainer > ul,
+    .mainContainer > ul+div,
+    .mainContainer > div:nth-of-type(3),
+    .mainContainer > div:nth-of-type(5),
+    .mainContainer > figure:nth-of-type(2),
+    .listContainer,
+    .detailContainer,
+    .wishContainer,
+    .cartContainer,
+    .checkout,
+    .ourStoryContainer,
+    .contactContainer,
+    .faqContainer,
+    .blogContainer,
+    .blogDetailContainer,
+    .replenishmentContainer,
+    .retailerContainer,
+    .supportContainer{
+        padding: 0 4%; box-sizing: border-box; margin: 0 auto;
+    }
+    .mainContainer,
+    .listContainer,
+    .detailContainer,
+    .wishContainer,
+    .cartContainer,
+    .checkout,
+    .ourStoryContainer,
+    .contactContainer,
+    .faqContainer,
+    .blogContainer,
+    .blogDetailContainer,
+    .replenishmentContainer,
+    .retailerContainer,
+    .supportContainer{
+     padding-top: 140px;   
+    }
+    header{
+        padding: 45px 4% 0; box-sizing: border-box; 
+        position: fixed; width: 100%; z-index: 10;
+    }
+    footer > div{
+        margin: 0 auto;
+    }
+    header > div{
+        position: relative; padding-right: 78.7%;
+    }
+    header> div h1{
+        max-width: 150px; 
+    }
+    header> div h1 a{
+        display: block; 
+    }
+    header> div h1 a img{
+        width: 100%;
+    }
+    header > div > div{
+        position: absolute; right: 0; top: 0; width: 78.7%; text-align: right;
+        box-sizing: border-box; 
+    }
+    header > div > div >*{
+        line-height: 40px; display: inline-block; vertical-align: middle;
+    }
+    header > div > div *:not(:first-child){
+        margin-left: 2.3%;
+    }
+    header > div > div input[type='button']{
+        border: none; text-indent: -9999px; width: 15px; background-repeat: no-repeat; background-size: contain;
+        background-color: transparent; background-position: center; padding: 0;
+    }
+    header > div > div :nth-child(1){
+        background-image: url('../images/bul_search.png');
+    }
+    header > div > div :nth-child(2){
+        background-image: url('../images/bul_cart.png');
+    }
+    header > div > div :nth-child(4){
+        background-image: url('../images/bul_hamburger.png');
+    }
+    header > div aside{
+        position: fixed; top: 0; right: -100%; width: 100%; background-color: var(--gs11);
+        height: 100%; z-index: 100; padding: 155px 4% 0; visibility: hidden;
+        transition: all ease-in 0.5s; box-sizing:border-box;
+    }
+    header > div aside input{
+        background: url('../images/bul_close.png') right top / contain no-repeat; 
+        max-width: 15px; line-height: 25px; position: absolute; top: 45px; right: 4%; 
+        width:100%;
+    }
+    header > div aside nav{
+        text-align: center; display: flex; justify-content: center; align-items: center;
+        margin-top: 50px;
+    }
+    header > div aside nav ul{
+        flex-direction: column; justify-content: center; align-items: center;
+    } 
+    header > div aside nav ul li a{
+        display: block; padding: 30px 0;
+    }
+    header > div aside nav ul li a:active{
+        color: var(--ocs3);
+    }
+    header > div aside.active{
+        right: 0; visibility: visible;
+    }
+    /* ?header Fin*/
+
+    ul.way4::after{
+        display: block; content: ''; clear: both;
+    }
+    ul.way4 li,
+    .listContainer .way3 li{
+        display: block; float: left; width: 45%; text-align: center;
+    }
+    ul.way4 li:not(:nth-of-type(2n+1)),
+    .listContainer .way3 li:not(:nth-of-type(2n+1)){
+        margin-left: 10%;
+    }
+    ul.way4 li:nth-of-type(-n+2){
+        margin-bottom: 100px;
+    }
+    /* ? productList way4, way3 Fin */
+
+    ul.listBox li{
+        min-height: 600px;
+    }
+    ul.listBox li > div:first-child{
+        padding: 30px 8.9%; border-radius: 25px; background-color: var(--gs1); position: relative; margin-bottom: 15px;
+    }
+    ul.listBox li >div:first-child mark{
+        position: absolute; left: 8.9%; top: 30px; background: url('../images/ico_awardwinner.png') no-repeat left top;
+        text-indent: -9999px; max-width: 52px; line-height: 52px; width: 100%;
+    }
+    ul.listBox li > div:first-child img{
+        max-width: 335px; width: 100%;
+    }
+    ul.listBox li >div:first-child input.heartIco{
+        position: absolute; right: 8.9%; top: 30px;  border: none; background-color: transparent;
+        text-indent: -9999px; background: url('../images/heart_ico_outline_black.png') center / contain no-repeat;
+        line-height: 52px; width: 100%; max-width: 27px; padding: 0;
+    }
+    ul.listBox li >div:first-child input.heartIco.active{
+        background-image: url('../images/heart_ico_filled_black.png');
+    }
+    ul.listBox li > div:first-child span{
+        position: absolute; bottom: 30px; left: 0; width: 100%; text-align: center;
+        display: none;
+    }
+    ul.listBox li > div:first-child span > *{
+        display: block; background-color: var(--ocs3); border-radius: 22.5px; width: 100%;
+        margin: 0 auto; line-height: 45px;  max-width: 140px; box-sizing: border-box; 
+    }
+    ul.listBox li > div:first-child span a{
+        margin-bottom: 25px; 
+    }
+    ul.listBox li > div:first-child span input[type='button']{
+        border: none; color: var(--gs1); padding: 0 6%;
+    }
+    ul.listBox li:hover > div:first-child span{
+        display: block;
+    }
+    ul.listBox li > h3{
+        line-height: 25px; max-width: 335px; margin: 0 auto;
+    }
+    ul.listBox li > h3,
+    ul.listBox li > div:nth-of-type(2){
+        text-align: center;
+    }
+    ul.listBox li > h3,
+    ul.listBox li > div:nth-of-type(2) > *:not(span){
+        margin-bottom: 15px;
+    }
+    ul.listBox li > div:nth-of-type(2) > *:not(span){
+        display: inline-block; 
+    }
+    ul.listBox li > div:nth-of-type(2) del,
+    ul.listBox li > div:nth-of-type(2) > span{
+        color: var(--gs5);
+    }
+    ul.listBox li > div:nth-of-type(2) > span{
+        display: block;
+    }
+    ul.listBox li > div:nth-of-type(2) del{
+        color: var(--gs5); margin-right: 10px; 
+    }
+    ul.listBox li > div:nth-of-type(2) mark{
+        background: transparent; color: var(--rcs3); font-style: normal;
+    }
+    /* ?productList listBox Fin */
+
+    .listContainer > div:first-of-type{
+        background-position: center; background-repeat: no-repeat; background-size: cover;
+        padding: 80px 8%; box-sizing: border-box; min-height: 420px;
+        border-radius: 50px; margin-bottom: 150px;
+    }
+    .listContainer.ShopList > div:first-of-type{
+        background-image: url('../images/list/shopAll/bg_shop_banner.png');
+    }
+    .listContainer.FaceList > div:first-of-type{
+        background-image: url('../images/list/faceList/bg_face_banner.png');
+    }
+    .listContainer.ShaveList > div:first-of-type{
+        background-image: url('../images/list/shaveList/bg_shave_banner.png');
+    }
+    .listContainer.BodyList > div:first-of-type{
+        background-image: url('../images/list/bodyList/bg_body_banner.png');
+    }
+    .listContainer.KitList > div:first-of-type{
+        background-image: url('../images/list/kits/bg_kits_banner.png');
+    }
+    .listContainer > div:first-of-type h2{
+        margin-bottom: 30px; font-size: 40px;
+    }
+    .listContainer > div:first-of-type p{
+        line-height: 35px; max-width: 830px; 
+    }
+    /* ? listContainer Banner Fin */
+
+    .listContainer aside{
+        margin-bottom: 100px;
+    }
+    .listContainer aside::after{
+        clear: both; content: ''; display: block;
+    }
+    .listContainer aside > div nav{
+        float: left; width: 17%;
+    }
+    .listContainer aside > div > div{
+        float: left; width: 78%; margin-left: 5%;
+    }
+    .listContainer aside ul li,
+    .listContainer > .listBox{
+        list-style: none;
+    }
+    .listContainer aside div h3{
+        margin-bottom: 35px; font-size: 28px;
+    }
+    .listContainer aside > div nav ul li{
+        margin-bottom: 20px; font-size: 16px;
+    }
+    .listContainer aside > div nav ul li:last-of-type{
+        margin-bottom: 60px;
+    }
+    .listContainer aside > div nav ul li a{
+        display: block;
+    }
+    .listContainer aside > div nav ul li a:hover,
+    .listContainer aside > div nav ul li.active{
+        color: var(--ocs3);
+    }
+    .listContainer aside > div .foldComponent{
+        float: left; width: 32%; margin-left: 2%;
+        background-color: var(--gs8); border-radius: 15px; position: relative;
+    }
+    .listContainer aside > div .foldComponent:first-of-type{
+        margin-left: 0;
+    }
+    .listContainer aside > div .foldComponent:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+    .listContainer aside > div .foldComponent b{
+        padding: 0 5%; display: block; cursor: pointer; box-sizing: border-box;
+        line-height: 50px; font-size: 16px;
+    }
+    .listContainer aside > div .foldComponent b::after{
+        content: url('../images/list/bul_aside_Expand_More.png'); 
+        transform: rotate(0deg); transition: transform ease-in 0.35s; 
+        position: absolute; right: 5%; top: 0;
+        
+    }
+    .listContainer aside > div .foldComponent b.active::after{
+        transform: rotate(180deg);
+    }
+    .listContainer aside > div .foldComponent b+ul{
+         box-sizing: border-box; display: none; 
+    }
+    .listContainer aside > div .foldComponent b.active+ul{
+        display: block; padding: 15px 0 30px;
+    }
+    .listContainer aside > div .foldComponent b.active+ul li{
+        line-height: 26px; font-size: 18px;
+    }
+    .listContainer aside > div .foldComponent ul li:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    .listContainer aside > div .foldComponent ul li input[type='checkbox']{
+        display: none;
+    }
+    .listContainer aside > div .foldComponent ul li input[type='checkbox']+label{
+        background: url('../images/list/bul_check_off.png') no-repeat 10% center; padding-left: 27%;
+        width: 100%; box-sizing: border-box; display: inline-block; background-size: 12%;
+        line-height: 26px;
+    }
+    .listContainer aside > div .foldComponent ul li input[type='checkbox']:checked+label{
+        background: url('../images/list/bul_check_on.png') no-repeat 10% center; background-size: 12%;
+    }
+    /* ?listContainer aside Fin */
+
+    .listContainer .way3 li{
+        margin-bottom: 1.9vw;
+    }
+    /* ? way3 listContainer Fin */
+
+    .detailContainer > div:first-of-type{
+        margin-bottom: 85px;
+    }
+    .detailContainer > div:first-of-type div{
+        margin-bottom: 30px;
+    }
+    .detailContainer > div:first-of-type div img{
+        width: 100%;
+    }
+    .detailContainer > div:first-of-type ul{
+        width: 100%;
+    }
+    .detailContainer > div:first-of-type ul::after{
+        display: block; clear: both; content: '';
+    }
+    .detailContainer > div:first-of-type ul li{
+       float: left; display: block; width: 22.4%; cursor: pointer;
+    }
+    .detailContainer > div:first-of-type ul li:not(:nth-of-type(4n+1)){
+        margin-left: 3.46%;
+    }
+    .detailContainer > div:first-of-type ul li img{
+        width: 100%;
+    }
+    .detailContainer > div:first-of-type ul li:nth-of-type(-n+4){
+        margin-bottom: 30px;
+    }
+    .detailContainer > div:nth-of-type(2){
+        margin-bottom: 250px;
+    }
+    .detailContainer > div:nth-of-type(2) h2,
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1),
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2),
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3){
+        margin-bottom: 50px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) del,
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) mark{
+        margin-bottom: 25px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) del{
+        display: inline-block; margin-right: 10px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) mark{
+        color: var(--rcs3); background-color: transparent; font-style: normal;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) strong{
+        margin-bottom: 15px; display: block;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) h3,
+    .detailContainer > div:nth-of-type(2) .purchaseOptions h3{
+        color: var(--gs5); margin-bottom: 25px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck{
+        display: flex; flex-wrap: wrap; justify-content: flex-end;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li{
+        flex: 1 25%; list-style: none;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li input[type='radio']+label{
+        background: url('../images/dt_bul_radio_uncheck.png') no-repeat left center; 
+        padding-left: 25px;
+    }    
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li input[type='radio']:checked+label{
+        background-image: url('../images/dt_bul_radio_check.png');
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li input[type='radio']{
+        display: none;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(3)::after{
+        display: block; clear: both; content: '';
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(3) > *{
+        float: left; 
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(3) > *:not(div){
+        margin-left: 7.5%;
+    }
+    .count{
+        position: relative; display: inline-block; text-align: center;
+        line-height: 60px; background-color: var(--gs8);  border: none;
+        box-sizing: border-box; width: 25%; border-radius: 30px;
+    }
+    .count input[type='button']{
+        background: transparent; border: none; position: absolute;
+        color: var(--gs1); top: 12px;
+    }
+    .count .qc{
+        text-align: center;
+        border: none; background-color: transparent;
+        color: var(--gs1); 
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    .count .countMinus{
+        left: 13px; cursor: pointer; 
+    }
+    .count .countPlus{
+        right: 13px; cursor: pointer;
+    }
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3) .detail_addCart{
+        border: none; color: var(--gs1); background-color: var(--ocs3); line-height: 60px;
+        width: 50%; box-sizing: border-box;  border-radius: 30px;
+    }
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3) .heartIco{
+        background-color: transparent; border: none; line-height: 60px; text-indent: -9999px;
+        background: url('../images/dt_ico_heart_outline.png') no-repeat center;
+        width: 10%;
+    }
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3) .heartIco.active{
+        background: url('../images/dt_ico_heart_filled.png') no-repeat center;
+    }
+    .detailContainer .detail_panel{
+        position: relative;
+    }
+    .detailContainer .detail_panel > ul{
+        list-style: none;
+    }
+    .detailContainer .detail_panel > ul li{
+        display: inline-block;
+    }
+    .detailContainer .detail_panel > ul li:after{
+        content: '>'; padding-left: 10px;
+    }
+    .detailContainer .detail_panel > ul li input[type='button']{
+        border: none; background: transparent; color: var(--gs1);
+    }
+    .detailContainer .detail_panel > div{
+        position: absolute; right: 0; top: 50px;
+        background-color: var(--gs8); padding: 50px 5%; border-radius: 30px;
+        width: 100%; box-sizing: border-box;
+    }
+    .detailContainer .detail_panel > div h3{
+        margin-bottom: 30px; line-height: 25px;
+    }
+    .detailContainer .detail_panel .btn_close{
+        border: none; text-indent: -9999px; line-height: 25px;
+        background: url('../images/dt_bul_close.png') center / contain no-repeat;
+        width: 25px; position: absolute; right: 5%; top: 50px; padding: 0;
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1) p,
+    .detailContainer .detail_panel > div:nth-of-type(2) p,
+    .detailContainer .detail_panel > div:nth-of-type(3) p{
+        line-height: 35px; 
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1) p:not(:last-of-type),
+    .detailContainer .detail_panel > div:nth-of-type(2) p:not(:last-of-type){
+        margin-bottom: 25px;
+    }    
+    .detailContainer .detail_panel > div:last-of-type p:not(:last-of-type){
+        margin-bottom: 25px; 
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1).active,
+    .detailContainer .detail_panel > div:nth-of-type(2).active,
+    .detailContainer .detail_panel > div:last-of-type.active{
+        display: block;
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1),
+    .detailContainer .detail_panel > div:nth-of-type(2),
+    .detailContainer .detail_panel > div:last-of-type{
+        display: none;
+    }
+
+    .detailContainer> article,
+    .detailContainer .videoBox,
+    .detailContainer .key_Ingredients,
+    .detailContainer .banner_Ingredients{
+        margin-bottom: 230px;
+    }
+    .detailContainer > article h3,
+    .detailContainer .key_Ingredients h3{
+        margin-bottom: 65px;
+    }
+    .detailContainer > article > div{
+        margin-bottom: 40px;
+    }
+    .detailContainer > article > div p,
+    .detailContainer > article > ul li{
+        line-height: 40px;
+    }
+    .detailContainer > article > div p:not(:last-of-type){
+        margin-bottom: 55px;
+    }
+    .detailContainer > article > ul{
+        list-style: none;
+    }
+    .detailContainer > article > ul li{
+        margin-bottom: 20px;
+    }
+    .detailContainer .videoBox video{
+        width: 100%; height: 300px;
+    }
+
+    .detailContainer .key_Ingredients > div p{
+        padding: 60px 3%; box-sizing: border-box; line-height: 30px;
+        border-radius: 50px; width: 100%;
+    }
+    .detailContainer .key_Ingredients > div p:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+    .detailContainer .key_Ingredients > div p:first-of-type{
+        background-color: var(--ocs3); 
+    }
+    .detailContainer .key_Ingredients > div p:nth-of-type(2){
+        background-color: #00adc8; 
+    }
+    .detailContainer .key_Ingredients > div p:last-of-type{
+        background-color: #5c068c;
+    }
+    .detailContainer .key_Ingredients > div p b{
+        display: block; margin-bottom: 50px;
+    }
+    .detailContainer .banner_Ingredients{
+        color: var(--gs11); padding: 100px 4%;
+        background: var(--gs4) url('../images/dt_sample_banner_liquid.png') 90% 90% / 40% no-repeat;
+    }
+    .detailContainer .banner_Ingredients.bluekelp{
+        background: var(--gs4) url('../images/dt_sample_banner_blueLiquid.png') 90% 90% / 40% no-repeat;
+    }
+    .detailContainer .banner_Ingredients h3{
+        max-width: 650px; margin-bottom: 65px;
+    }
+    .detailContainer .banner_Ingredients ul::after{
+        content: ''; clear: both; display: block;
+    }
+    .detailContainer .banner_Ingredients ul li{
+        float: left; width: 50%; display: block; 
+        background: url('../images/dt_ico_banner_01.png') no-repeat left top; padding-left: 5%; box-sizing: border-box; 
+        min-height: 160px;
+    }
+    .detailContainer .banner_Ingredients ul li:nth-of-type(-n+2){
+        margin-bottom: 5vh;
+    }
+    .detailContainer .banner_Ingredients ul li span{
+        margin-bottom: 15px; display: block;
+    }
+    .detailContainer .banner_Ingredients ul li p{
+        line-height: 25px;
+    }
+    .detailContainer > div:last-of-type > h3{
+        text-align: center; margin-bottom: 100px;
+    }
+    /* ? detailContainr Fin */
+
+    .account{
+        max-width: 1610px; margin: 0 auto;
+        padding: 165px 2% 0 2%;
+    }
+    .account > h2{
+        margin-bottom: 130px; font-size: 50px;
+    }
+    .account::after{
+        display: block; clear: both; content: '';
+    }
+    .account > aside{
+        float: left; width: 9.6%; text-align: center; 
+    }
+    .account > aside ul{
+        margin-bottom: 45px;
+    }
+    .account > aside ul li{
+        list-style: none; line-height: 30px; box-sizing: border-box;
+        border-radius: 17px; min-width: 140px; width: 100%; padding: 0 9%; box-sizing: border-box;
+    }
+    .account > aside ul li:not(:last-of-type){
+        margin-bottom: 35px;
+    }
+    .account > aside ul li a{
+        display: block;
+    }
+    .account > aside ul li:active,
+    .account > aside ul li.active,
+    .account > aside > a:active{
+        background-color: var(--gs1); color: var(--gs11); 
+    }
+    .account > aside > a{
+        display: block; padding: 0 9%; line-height: 50px; box-sizing: border-box;
+        border: 1px solid var(--gs5); border-radius: 25px; text-align: center;
+        min-width: 140px; width: 100%;
+    }
+    .account > div,
+    .account > form{
+        float: left; width: 72.2%; margin-left: 18.2%;
+    }
+    /* ? account Container Fin */
+
+    .updateInfoContainer form ul::after,
+    .addressFormContainer form ul::after{
+        display: block; clear: both; content: '';
+    }
+    .updateInfoContainer form ul li:not(:last-of-type),
+    .addressFormContainer form ul li:not(:last-of-type){
+        float: left;
+    }
+    .updateInfoContainer form ul li,
+    .addressFormContainer form ul li{
+        width: 40.3%; display: block; margin-bottom: 75px;
+    }
+    .updateInfoContainer form ul li:nth-of-type(2n),
+    .addressFormContainer form ul li:nth-of-type(2n){
+        margin-left: 19.4%;
+    }
+    .updateInfoContainer form ul li label,
+    .addressFormContainer form ul li label{
+        display: block; margin-bottom: 15px; color: var(--ocs3);
+    }
+    .updateInfoContainer form input,
+    .addressFormContainer form input{
+        background-color: transparent; border: none;
+    }
+    .updateInfoContainer form ul li input,
+    .addressFormContainer form ul li input{
+        color: var(--gs5); padding: 0 10px; width: 100%; box-sizing: border-box; line-height: 40px; max-width: 470px;
+        border-bottom: 1px solid var(--gs5);
+    }
+    .updateInfoContainer form > input[type='submit'],
+    .addressFormContainer form > input[type='submit']{
+        border: 1px solid var(--gs5); color: var(--gs1); line-height: 49px; max-width: 155px;
+        border-radius: 25px; width: 100%; box-sizing: border-box; cursor: pointer;
+    }
+    .updateInfoContainer form > input[type='submit']:active,
+    .addressFormContainer form > input[type='submit']:active{
+        background-color: var(--ocs3); 
+    }
+    /* ? UpdateContainer, addressFormContainer Fin */
+
+    .account .accSelect{
+        width: 100%; font-family: 'Quicksand', sans-serif;
+    }
+    .account .accSelect:after{
+        content: url('../images/account_arrow_down.png'); right: 10px; top: 15px;
+    }
+    .account .accSelect.active::after{
+        transform: rotate(180deg);
+    }
+    .account .accSelect select{
+        padding: 15px; color: var(--gs1); width: 100%; 
+    }
+    .account .accSelect select option{
+        color: var(--gs11); padding: 0;
+    }
+    /* ? addressFormContainer select Fin */
+
+    .orderList{
+        padding: 30px 2.5%;
+    }
+    .orderList,
+    .orderList > ul li{
+        border: 1px solid var(--gs5); border-radius: 30px; box-sizing: border-box;
+    }
+    .orderList > h3{
+        margin-bottom: 30px; font-size: 22px;
+    }
+    .orderList > h3 a{
+        display: block; float: right; color: var(--gcs4); font-size: 22px;
+    }
+    .orderList > ul li{
+        padding: 20px 2.7%; display: block;
+    }
+    .orderList > ul li:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+    .orderList > ul li > strong{
+        margin-bottom: 20px; display: block;
+    }
+    .orderList > ul li > div{
+        display: flex; align-items: center; flex: 1 1;
+    }
+    .orderList > ul li div > img{
+        width: 100%; max-width: 125px; display: block;
+    }
+    .orderList > ul li div > div{
+        margin-left: 4%;
+    }
+    .orderList > ul li div > div > *{
+        display: block;
+    }
+    .orderList > ul li div > div > *:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .orderList > ul li div > div > a{
+        padding: 10px 11.7%;  text-align: center; border: 1px solid var(--gs5);
+        max-width: 160px; box-sizing: border-box; border-radius: 20px;
+    }
+    .orderList > ul li div > div > a:active{
+        background-color: var(--ocs3);
+    }
+    /* ? orderHistoryContainer orderList Fin */
+
+    .wishContainer h2,
+    .cartContainer h2{
+        margin-bottom: 100px; font-size: 68px;
+    }
+    .marketlistTable > li:first-of-type::after{
+        clear: both; content: ''; display: block;
+    }
+    .marketlistTable li:first-of-type b{
+        text-align: center;
+    }
+    .marketlistTable li:nth-of-type(1) b:first-of-type{
+        float: left; width: 28%;
+    }
+    .marketlistTable li:nth-of-type(1) b:not(:first-of-type){
+        float: left; width: 18%;
+    }    
+    .marketlistTable li:not(:first-of-type) > div a{
+        line-height: 30px;
+    }
+    .marketlistTable li{
+        list-style: none; font-size: 18px;
+    }
+    .marketlistTable li:first-of-type{
+        padding: 20px 0; border-top: 1px solid var(--gs5);
+        border-bottom: 1px solid var(--gs5);
+    }
+    .marketlistTable li:not(:first-of-type){
+        padding: 30px 0; border-bottom: 1px solid var(--gs5);
+    }
+    .marketlistTable li:not(:first-of-type){
+        display: flex; justify-content: center; align-items: center;
+        flex: 1; flex-wrap: wrap;
+    } 
+    .marketlistTable li:not(:first-of-type) > div:first-of-type{
+        width: 28%;
+    }
+    .marketlistTable li:not(:first-of-type) > *:not(div:first-of-type){
+        width: 18%;
+    }
+    .marketlistTable li:not(:first-of-type) > div:first-of-type{
+        display: flex; justify-content: flex-start; flex: 1 1;
+        align-items: center;
+    }
+    .marketlistTable li:not(:first-of-type) > div:first-of-type img{
+        max-width: 90px; width: 100%; 
+    }
+    .marketlistTable li:not(:first-of-type) > div:first-of-type > a{
+        display: block; margin-left: 3%;
+    }
+    .marketlistTable li:not(:first-of-type) > *:not(div:first-of-type){
+        text-align: center; 
+    }
+    .marketlistTable li:not(:first-of-type) .count{
+        width: 100%;
+    }
+    .marketlistTable li:not(:first-of-type) > span input[type='button']{
+        background-color: transparent; border: none;
+        background: url('../images/bul_delete_white.png') no-repeat center;
+        text-indent: -9999px; max-width: 20px; width: 100%; background-size: 100%;
+        min-height: 22px;
+    }
+    /* ? marketlistTable Fin */
+
+    .paySuccessPopup{
+        position: fixed; width: 80%; top: 26%; left: 10%; background-color: var(--gs8);
+        border-radius: 20px; padding: 0 3.4% 70px; box-sizing: border-box; text-align: center;
+        z-index: 100;
+    }
+    .paySuccessPopup span{
+        display: block; margin-bottom: 25px;
+        background: url('../images/payment_ico_checkout_success.png') no-repeat center 60px; padding-top: 155px;
+    }
+    .paySuccessPopup p{
+        line-height: 25px; margin-bottom: 40px;
+    }
+    .paySuccessPopup > a{
+        display: block; background-color: var(--ocs3); padding: 15px 5%; border-radius: 25px; max-width: 190px; margin: 0 auto; width: 100%;
+    }
+    .checkoutPopup{
+        position: fixed; width: 80%; top: 100px; left: 10%; z-index: 100; 
+    }
+    .checkoutPopup h2{
+        background-color: var(--ocs3); padding: 45px 5%; border-radius: 50px 50px 0 0;
+        position: relative; box-sizing: border-box;
+    }
+    .checkoutPopup h2 input{
+        background: url('../images/payment_bul_close.png') no-repeat right top;
+        width: 100%; right: 5%; top: 45px; position: absolute; min-height: 28px;
+        max-width: 28px;
+    }
+    .checkoutPopup > div{
+        background-color: var(--gs8); padding: 45px 5%; border-radius: 0 0 50px 50px;
+        box-sizing: border-box; height: 600px; overflow-y: scroll;
+    }
+    .checkoutPopup > div > p:not(:last-of-type){
+        margin-bottom: 60px;
+    }
+    .checkoutPopup > div > p:not(strong){
+        line-height: 35px;
+    }
+    .checkoutPopup > div > p > strong{
+        display: block; margin-bottom: 10px;
+    }
+    .checkoutPopup.refund > div > div{
+        margin-bottom: 60px;
+    }
+    .checkoutPopup.refund > div > div strong{
+        margin-bottom: 10px; display: block;
+    }
+    .checkoutPopup.refund > div > div address{
+        font-style: normal; line-height: 35px;
+    }
+    .paySuccessPopup,
+    .checkoutPopup.refund,
+    .checkoutPopup.termOfsvc,
+    .checkoutPopup.subscribtion{
+        display: none;
+    }
+    .paySuccessPopup.active,
+    .checkoutPopup.refund.active,
+    .checkoutPopup.termOfsvc.active,
+    .checkoutPopup.subscribtion.active{
+        display: block;
+    }
+    .checkout > div{
+        margin-bottom: 50px;
+    }
+    .checkout > div > ol{
+         text-align: center; 
+    }
+    .checkout > div > ol li{
+        list-style: none; display: inline-block; 
+    }
+    .checkout > div > ol li:not(:first-of-type){
+        margin-left: 15px;
+    }
+    .checkout > div > ol li a{
+        display: block;
+    }
+    .checkout > div > ol li:first-of-type a::after,
+    .checkout > div > ol li:nth-of-type(2) a::after{
+        content: '>'; padding-left: 15px;
+    }
+    .checkout > div > ol li:nth-of-type(3) a::before{
+        content: '>'; padding-right: 15px;
+    }
+    .checkout > div > ol li:active,
+    .checkout > div > ol li.active{
+        color: var(--ocs3);
+    }
+    .checkout > div > ul:last-of-type{
+        padding: 20px 0; 
+        border-style: solid; border-color: var(--gs5); border-width: 1px 0 1px 0;
+    }
+    .checkout > div > ul:last-of-type li{
+        list-style: none; display: inline-block;
+    }
+    .checkout > div > ul:last-of-type li:not(:first-of-type){
+        margin-left: 4.1%;
+    }
+    .checkout > div > ul:last-of-type li input[type='button']{
+        background-color: transparent; border: none; color: var(--gs1);
+    }
+    .CheckoutaddrForm::after{
+        display: block; clear: both; content: '';
+    }
+    .informationContainer > div > div:nth-of-type(2) fieldset ul{
+        margin-bottom: 70px; 
+    }
+    .CheckoutaddrForm li{
+        display: block; 
+    }
+    .CheckoutaddrForm li:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+    .CheckoutaddrForm input{
+        width: 100%; line-height: 63px; border: 1px solid var(--gs5); box-sizing: border-box;
+        border-radius: 8px; padding: 0 15px; color: var(--gs11); font-size: 2vw;
+    }
+    .CheckoutaddrForm li input::placeholder{
+        color: var(--gs5);
+    }
+    .CheckoutaddrForm li .paymentForm{
+        width: 100%; font-family: 'Quicksand', sans-serif; background-color: var(--gs1); border: 1px solid var(--gs5);
+        border-radius: 8px; color: var(--gs5); 
+    }
+    .CheckoutaddrForm li .paymentForm:after{
+        content: url('../images/payment_bul_arrow_down.png'); right: 15px; top: 20px;
+    }
+    .CheckoutaddrForm li .paymentForm.active:after{
+        transform: rotate(180deg);
+    }
+    .CheckoutaddrForm li .paymentForm select{
+        line-height: 63px; width: 100%; padding: 0 15px; color: var(--gs11); font-size: 2vw;
+    }
+    .CheckoutaddrForm li:nth-of-type(3),
+    .CheckoutaddrForm li:nth-of-type(4){
+        float: left; width: 47%; display: block;
+    }
+    .CheckoutaddrForm li:nth-of-type(4){
+        margin-left: 6%;
+    }
+    .CheckoutaddrForm li:nth-of-type(6),
+    .CheckoutaddrForm li:nth-of-type(7),
+    .CheckoutaddrForm li:nth-of-type(8){
+        float: left; width: 32%; display: block;
+    }
+    .CheckoutaddrForm li:nth-of-type(7),
+    .CheckoutaddrForm li:nth-of-type(8){
+        margin-left: 2%;
+    }
+    .CheckoutaddrForm li input:focus{
+        outline: none !important; border-color: var(--ocs3);
+    }
+    .informationContainer > div > div:nth-of-type(2) fieldset > input[type='submit'],
+    .paymentContainer > div > div:nth-of-type(2) > input[type='button']{
+        background-color: transparent; border: 1px solid var(--gs5); border-radius: 25px;
+        line-height: 48px; box-sizing: border-box; padding: 0 2.7%; float: right; color: var(--gs1);
+    }
+    .informationContainer > div > div:nth-of-type(2) fieldset > input[type='submit']:active,
+    .paymentContainer > div > div:nth-of-type(2) > input[type='button']:active{
+        background-color: var(--ocs3); transition-duration: 0.35s;
+    }
+    .checkout > aside > ul:first-of-type{
+        padding-bottom: 30px; border-bottom: 1px solid var(--gs5);
+    }
+    .checkout > aside > ul:first-of-type li{
+        display: block; position: relative;
+    }
+    .checkout > aside > ul:first-of-type li:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+    .checkout > aside > ul:first-of-type li img{
+        width: 100%; max-width: 98px;
+    }
+    .checkout > aside > ul:first-of-type li dl{
+        position: absolute; right: 0; top: 10px; width: 100%; padding-left: 120px; box-sizing: border-box;
+    }
+    .checkout > aside > ul:first-of-type li dl dt,
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(1){
+        margin-bottom: 15px;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(1){
+        text-align: right;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(1) strong{
+        display: block;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(2) span{
+        display: inline-block;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(2){
+        color: var(--gs5);
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(2) span:last-of-type{
+        float: right;
+    }
+    .checkout > aside > ul:last-of-type{
+        padding-top: 30px;
+    }
+    .checkout > aside > ul li{
+        display: block;
+    }
+    .checkout > aside > ul li:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+    .checkout > aside > ul li > *{
+        display: inline-block;
+    }
+    .checkout > aside > ul li > strong{
+        float: right;
+    }
+    /* ? checkoutContainer Fin */
+
+    .gridshopList{
+        position: relative;
+    }
+    .gridshopList li{
+        list-style: none; position: relative;
+    }
+    .gridshopList li div{
+        position: absolute; left: 3.6%; bottom: 30px; max-width: 180px; width: 100%;
+    }
+    .gridshopList li div h3{
+        margin-bottom: 18px; font-size: 34px;
+    }
+    .gridshopList li div a{
+        display: block; box-sizing: border-box; text-align: center; padding: 15px 5%;
+        background-color: var(--gs1); color: var(--gs11); border-radius: 40px; font-size: 22px;
+    }
+    .gridshopList li div a:active{
+        background-color: var(--ocs3); color: var(--gs1); transition: 0.35s;
+    }
+    .gridshopList li:first-of-type{
+        width: 49.1%;
+    }
+    .gridshopList li:not(:first-of-type){
+        position: absolute; right: 0; max-width: 867px; width: 49.1%; 
+    }
+    .gridshopList li:nth-of-type(2){
+        top: 0; 
+    }
+    .gridshopList li:nth-of-type(3){
+        bottom: 0;
+    }
+    .gridshopList li img{
+        width: 100%;
+    }
+    /* ?ourStoryContainer Fin */
+
+    .contactPopup,
+    .retailerPopup{
+        position: fixed; width: 55%; top: 26%; left: 20%; background-color: var(--gs8);
+        border-radius: 20px; padding: 0 3.4% 120px; box-sizing: border-box; text-align: center;
+        z-index: 100; display: none;
+    }
+    .contactPopup input,
+    .retailerPopup input{
+        background: url('../images/Contact_Us_bul_close.png') right top / contain no-repeat;
+        position: absolute; top: 60px; right: 7.4%; width: 100%; max-width: 16px;
+    }
+    .contactPopup p,
+    .retailerPopup p{
+        background: url('../images/Contact_Us_ico_popupCheck.png') no-repeat center 60px; padding-top: 155px;
+        line-height: 28px;
+    }
+    .contactPopup.active,
+    .retailerPopup.active{
+        display: block;
+    }
+    /* ? contactContainer Fin */
+
+    .blogDetailContainer > div:first-of-type{
+        margin-bottom: 230px; text-align: center; 
+    }
+    .blogDetailContainer > div:first-of-type h2{
+        max-width: 610px; margin: 0 auto 40px; line-height: 50px; font-size: 40px;
+    }
+    .blogDetailContainer > div:first-of-type time{
+        color: var(--gs5); margin-bottom: 30px; display: block;
+    }
+    .blogDetailContainer > div:first-of-type ul{
+        margin-bottom: 75px; 
+    }
+    .blogDetailContainer > div:first-of-type ul li{
+        list-style: none; display: inline-block; background-repeat: no-repeat; text-indent: -9999px;
+        min-height: 24px; background-size: 80%;
+    }
+    .blogDetailContainer > div:first-of-type ul li:not(:first-of-type){
+        margin-left: 1.5%;
+    }
+    .blogDetailContainer > div:first-of-type ul li:nth-of-type(1){
+        background-image: url('../images/blog_ico_sns_01.png'); width: 13px; 
+    }
+    .blogDetailContainer > div:first-of-type ul li:nth-of-type(2){
+        background-image: url('../images/blog_ico_sns_02.png'); width: 28px; 
+    }
+    .blogDetailContainer > div:first-of-type ul li:nth-of-type(3){
+        background-image: url('../images/blog_ico_sns_03.png'); width: 24px;
+    }
+    .blogDetailContainer > div:first-of-type ul li a{
+        display: block;
+    }
+    .blogDetailContainer > div:first-of-type img{
+        width: 100%; margin-bottom: 40px;
+    }
+    .blogDetailContainer > div:first-of-type p{
+        line-height: 45px; font-size: 25px;
+    }
+    .blogDetailContainer > ul li{
+        list-style: none; align-items: center;
+    }
+    .blogDetailContainer > ul li:not(:last-of-type){
+        margin-bottom: 185px;
+    }
+    .blogDetailContainer > ul li img{
+        margin-bottom: 40px; width: 100%;
+    }
+    .blogDetailContainer > ul li > div{
+        overflow: hidden;
+    }
+    .blogDetailContainer > ul li > div h3{
+        margin-bottom: 35px;
+    }
+    .blogDetailContainer > ul li > div p{
+        line-height: 35px;
+    }
+    .blogDetailContainer > ul li > div p:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    .blogDetailContainer > ul li > div a{
+        display: block; padding: 25px 4%; box-sizing: border-box; background-color: var(--gs1);
+        color: var(--gs11); border-radius: 40px; max-width: 200px; text-align: center;
+        margin-top: 45px; transition: 0.35s; float: right;
+    }
+    .blogDetailContainer > ul li > div a:active{
+        background-color: var(--ocs3); color: var(--gs1);
+    }
+    /* ?blogDetailContainer Fin */
+
+    .supportContainer h2{
+        text-align: center; margin-bottom: 85px;
+    }
+    .supportContainer > span{
+        display: block; color: var(--gs5); margin-bottom: 80px; text-align: center;
+    }
+    .supportContainer > p{
+        margin-bottom: 100px;
+    }
+    .supportContainer li{
+        list-style: none;
+    }
+    .supportContainer > ul > li:not(:last-of-type),
+    .supportContainer > ol > li:not(:last-of-type){
+        margin-bottom: 70px;
+    }
+    .supportContainer li,
+    .supportContainer p{
+        line-height: 40px; font-size: 20px;
+    }
+    .supportContainer ol li h3,
+    .supportContainer ul li h3{
+        margin-bottom: 30px; color: var(--ocs3); 
+    }
+    .supportContainer.shippingReturns ol li p:not(:last-of-type),
+    .supportContainer > ul li p:not(:last-of-type),
+    .supportContainer.privacyPolicy > ul li:nth-of-type(5) > p,
+    .supportContainer.privacyPolicy > ul li:nth-of-type(2) > ol,
+    .supportContainer.privacyPolicy > ul li:nth-of-type(7) > ul,
+    .supportContainer.privacyPolicy > ul li:nth-of-type(8) > ul,
+    .supportContainer.termsofUse > ul li > ul{
+        margin-bottom: 45px;
+    }
+    .supportContainer.shippingReturns ol li address{
+        font-style: normal;
+    }
+    .supportContainer > ul li > ul,
+    .supportContainer > ul li > ol{
+        padding-left: 4%; box-sizing: border-box;
+    }
+    .supportContainer li a{
+        text-decoration: underline; color: var(--gs5); font-size: 20px;
+    }
+    .supportContainer.privacyPolicy > ul li > ul li:not(:last-of-type),
+    .supportContainer.privacyPolicy > ul li > ol li:not(:last-of-type),
+    .supportContainer.termsofUse > ul li > ul li:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    /* ? supportContainer Fin */
+
+    .paging{
+        clear: both; position: relative; background-color: var(--gs1); border-radius: 50px;
+        width: 70%; margin: 0 auto;
+    }
+    .paging > a {
+        position: absolute; top: 0; text-align: center;
+        width: 10%; color: var(--ocs3); box-sizing: border-box; line-height: 100px;
+    }
+    .paging > a:first-of-type{
+        left: 0%;
+    }
+    .paging > a:last-of-type{
+        right: 0%;
+    }
+    .paging ol{
+        padding: 30px 10%; box-sizing: border-box; text-align: center; width: 100%;
+    }
+    .paging ol li{
+        display: inline-block; list-style: none; margin-left: 2%;
+    }
+    .paging ol li a{
+        display: block; line-height: 40px; color: var(--ocs3); width: 40px; background-color: #ffffff;
+        transition: all 0.3s; border-radius: 20px;
+    }
+    .paging ol li a:active{
+        color: #ffffff; background-color: var(--ocs3);
+    }
+    /* ? paging Fin */
+
+  
+    footer{
+        background-color: var(--gs9); padding: 80px 4%; 
+    }
+    footer > div div:not(:last-of-type){
+        float: left;
+    }
+    footer > div div:first-of-type{
+        margin-left: 0;
+    }
+    footer > div div:nth-of-type(1){
+        width: 25%;
+    }
+    footer > div div:nth-of-type(2){
+        width: 33%;
+    }
+    footer > div div:nth-of-type(3){
+        width: 27%;
+    }
+    footer > div div:nth-of-type(2),
+    footer > div div:nth-of-type(3){
+        margin-left: 7.5%;
+    }
+    footer > div div:nth-of-type(1),
+    footer > div div:nth-of-type(2),
+    footer > div div:nth-of-type(3){
+        margin-bottom: 50px;
+    }
+    footer > div div:nth-of-type(4),
+    footer > div div:nth-of-type(5){
+        margin-bottom: 40px;
+    }
+    footer > div div:nth-of-type(4){
+        width: 25%; margin-left: 0;
+    }
+    footer > div div:nth-of-type(5){
+        width: 67.5%; margin-left: 7.5%;
+    }
+    footer > div div:nth-of-type(1) h3,
+    footer > div div:nth-of-type(2) h3,
+    footer > div div:nth-of-type(3) h3,
+    footer > div div:nth-of-type(4) h3{
+        margin-bottom: 35px;
+    }
+    footer > div div:nth-of-type(5) h3{
+        margin-bottom: 15px;
+    }
+    footer > div div:nth-of-type(5) h3+p{
+        line-height: 26px; 
+    }
+    footer > div div ul{
+        list-style: none;
+    }
+    footer > div div:nth-of-type(5) h3+p,
+    footer > div div:nth-of-type(1) ul li,
+    footer > div div:nth-of-type(2) ul li,
+    footer > div div:nth-of-type(3) ul li{
+        margin-bottom: 25px;
+    }
+    footer > div div:nth-of-type(4) ul li{
+        display: inline-block; width: 20px; line-height: 20px;
+    }
+    footer > div div:nth-of-type(4) ul li:not(:first-child){
+        margin-left: 25px;
+    }
+    footer > div div:nth-of-type(4) ul li a{
+        display: block; text-indent: -9999px; background-repeat: no-repeat; background-size: contain; background-position: center;
+    }
+    footer > div div:nth-of-type(4) ul li:nth-child(1) a{background-image: url('../images/ico_sns_01.png');}
+    footer > div div:nth-of-type(4) ul li:nth-child(2) a{background-image: url('../images/ico_sns_02.png');}    
+    footer > div div:nth-of-type(4) ul li:nth-child(3) a{background-image: url('../images/ico_sns_03.png');}
+
+    footer > div div:nth-of-type(5) input{
+        float: left; display: block; margin-bottom: 15px;
+    }
+    footer > div div:nth-of-type(5) form input[type="email"]{
+        width: 70%; color: var(--gs1); line-height: 50px; padding: 0 30px; box-sizing: border-box;
+        border: none; background-color: var(--gs8); border-radius: 25px; text-align: left;
+    }
+    footer > div div:nth-of-type(5) form input[type="email"]::placeholder{
+        color: inherit; text-align: left;
+    }
+    footer > div div:nth-of-type(5) form input[type="button"]{
+        width: 25%; margin-left: 5%; line-height: 50px; padding: 0 25px; box-sizing: border-box; background-color: var(--ocs3);
+        border: none; color: var(--gs1); text-transform: uppercase; border-radius: 25px;
+    }
+    footer > div div:nth-of-type(5) form+p.active{
+        display: block;
+    }
+    footer > div div:nth-of-type(5) form+p{
+        clear: left; color: var(--gcs4);
+    }
+    footer > div div:nth-of-type(5) form+p{
+        display: none;
+    }
+    footer > div div:last-of-type{
+        clear: both;
+    }
+    footer > div div:last-of-type h3{
+        max-width: 150px;
+    }
+    footer > div div:last-of-type h3 img{
+        width: 100%;
+    }
+    footer > div div:last-of-type span{
+        float: right;
+    }            
+}
+/* ? tablet */
+
+@media screen and (min-width:1280px){
+    .searchPanel{
+        position: fixed; z-index: 100; background-color: var(--gs9); width: 100%; top: 0%;
+        text-align: center; display: none; padding: 100px 0;
+    }
+    .searchPanel input[type='search']{
+    margin-right: 10%; border: none; border-radius: 25px;
+    width: 44.4%; padding: 0 30px; line-height: 45px; background-color: var(--gs1);
+    }
+    .searchPanel input[type='search']::placeholder{
+        font-size: 18px;
+    }
+    .searchPanel input[type='button']{
+        background: url('../images/bul_close.png') right top / contain no-repeat;
+        line-height: 45px; width: 25px;
+    }
+    .searchPanel.active{
+        display: block; 
+    }
+    /* ? searchPanel Fin */
+
+    .cartFill{
+        position: fixed; z-index: 100; top: 0; right: -39%; background-color: var(--gs8);
+        width: 39%; padding: 50px 2.8%; height: 100vh; border-radius: 50px; 
+        transition: all ease-in 0.5s; visibility: hidden; box-sizing: border-box;
+    }
+    .cartFill > h2{
+        margin-bottom: 35px;
+    }
+    .cartFill > h2 .btn_close{
+        width: 25px; line-height: 35px; background-image: url('../images/bul_close.png'); 
+        float: right;
+    }
+    .cartFill > ul{
+        margin-bottom: 100px; width: 100%;
+        position: relative;
+    }
+    .cartFill > ul li::after{
+        content: ''; display: block; clear: both;
+    }
+    .cartFill > ul li{
+        display: block; background-color: var(--gs1); border-radius: 15px; padding: 20px 2.8%;
+        box-sizing: border-box; width: 100%; 
+    }
+    .cartFill > ul li img{
+        width: 21%; float: left; border: 1px solid #a1a1a1; box-sizing: border-box;
+    }
+    .cartFill > ul li div{
+        float: left; width: 70%; margin-left: 9%;
+    }
+    .cartFill > ul li div h3{
+        color: var(--gs11);
+    }
+    .cartFill > ul li div h3 input[type='button']{
+        border: none; text-indent: -9999px; background-color: transparent; cursor: pointer; padding: 0; 
+        width: 25px; line-height: 27px; background: url('../images/bul_delete_black.png') center / contain no-repeat;
+        float: right;
+    }
+    .cartFill > ul li div h3{
+        line-height: 27px;
+    }
+    .cartFill > ul li div strong{
+        color: var(--ocs3); position: absolute; right: 2.8%; bottom: 20px;
+    }
+    .cartFill > form,
+    .cartFill > p,
+    .cartFill > a{
+        text-align: center;
+    }
+    .cartFill > form input[type='text']{
+        line-height: 48px; width: 34.2%; padding: 0 1.7%; background-color: transparent; border: 1px solid #ffffff;
+        border-radius: 10px; color: var(--gs1);
+    }
+    .cartFill > form input[type='text']::placeholder{
+        color: var(--gs1);
+    }
+    .cartFill > form input[type='button']{
+        border: none; line-height: 50px; border-radius: 10px;
+        margin-left: 10px; padding: 0 2%; text-align: center;
+    }
+    .cartFill > form input[type='button'],
+    .cartFill > a{
+        background-color: var(--gs11); color: var(--gs1);
+    }
+    .cartFill > form input[type='button'],
+    .cartFill > a{
+        transition: all 0.35s;
+    }
+    .cartFill > form input[type='button']:hover,
+    .cartFill > a:hover{
+        background-color: var(--gs1); color: var(--gs11);
+    }
+    .cartFill > p{
+        margin-top: 20px; color: var(--gcs4); display: none;
+    }
+    .cartFill > p.active{
+        display: block;
+    }
+    .cartFill > div{
+        margin: 60px 0 30px;
+    }
+    .cartFill > div strong{
+        float: right; font-weight: 500; color: var(--gs1);
+    }
+    .cartFill > a{
+        display: block; line-height: 60px; border-radius: 30px; max-width: 250px; margin: 0 auto;
+        padding: 0 5.7%; box-sizing: border-box;
+    }
+    .cartFill.active{
+        right: 0%; visibility: visible;
+    }
+    /* ? cartFill Panel Fin */
+
+    .mainContainer .bx-wrapper,
+    .mainContainer > ul+div,
+    .mainContainer > div:nth-of-type(3),
+    .mainContainer > div:nth-of-type(5),
+    .mainContainer > figure:nth-of-type(2),
+    .listContainer,
+    .detailContainer,
+    .wishContainer,
+    .cartContainer,
+    .contactContainer,
+    .faqContainer,
+    .blogContainer,
+    .blogDetailContainer,
+    .replenishmentContainer,
+    .supportContainer{
+        padding: 0 4%; box-sizing: border-box; max-width: 1765px; margin: 0 auto;
+    }
+    .mainContainer,
+    .listContainer,
+    .detailContainer,
+    .memberContainer,
+    .wishContainer,
+    .cartContainer,
+    .checkout,
+    .contactContainer,
+    .faqContainer,
+    .blogContainer,
+    .blogDetailContainer,
+    .replenishmentContainer,
+    .retailerContainer,
+    .supportContainer{
+     padding-top: 165px;   
+    }
+    .mainContainer > ul,
+    .mainContainer > figure:first-of-type{
+        max-width: 1280px; margin: 0 auto;
+    }
+    header{
+        padding: 45px 4%; box-sizing: border-box;
+        position: fixed; width: 100%; z-index: 10; 
+    }
+    header > div{
+        position: relative; max-width: 1765px; margin: 0 auto;
+    }
+    header> div h1{
+        max-width: 217px;  padding-right: 87.7%;
+    }
+    header> div h1 a{
+        display: block;
+    }
+    header> div h1 a img{
+        width: 100%; 
+    }
+    header > div > div{
+        position: absolute; right: 0; top: 0; width: 87.7%; text-align: right;
+        box-sizing: border-box; 
+    }
+    header > div > div >*{
+        line-height: 50px; display: inline-block; vertical-align: middle;
+    }
+    header > div > div *:not(:first-child){
+        margin-left: 2.3%;
+    }
+    header > div > div input[type='button']{
+        border: none; text-indent: -9999px; width: 1.5%; background-repeat: no-repeat; background-size: contain;
+        background-color: transparent; background-position: center; line-height: 50px; padding: 0;
+    }
+    header > div > div :nth-child(1){
+        background-image: url('../images/bul_search.png');
+    }
+    header > div > div :nth-child(2){
+        background-image: url('../images/bul_cart.png');
+    }
+    header > div > div :nth-child(4){
+        background-image: url('../images/bul_hamburger.png');
+    }
+    header > div aside{
+        position: fixed; top: 0; right: -100%; width: 100%; background-color: var(--gs11);
+        height: 100%; z-index: 100; padding: 45px 4% 155px; visibility: hidden;
+        transition: all ease-in 0.5s; box-sizing:border-box;
+    }
+    header > div aside input{
+        background-image: url('../images/bul_close.png'); max-width: 25px; line-height: 25px; 
+        position: absolute; top: 45px; right: 4%; width:100%;
+    }
+    header > div aside nav{
+        text-align: center; display: flex; justify-content: center; align-items: center;
+        margin-top: 125px;
+    }
+    header > div aside nav ul{
+        flex-direction: column; justify-content: center; align-items: center;
+    } 
+    header > div aside nav ul li a{
+        display: block; padding: 30px 0; 
+    }
+    header > div aside nav ul li a:hover{
+        color: var(--ocs3);
+    }
+    header > div aside.active{
+        right: 0; visibility: visible;
+    }
+    /* ?header Fin*/
+
+    ul.way4::after{
+        display: block; content: ''; clear: both;
+    }
+    ul.way4 li{
+        display: block; float: left; width: 21.5%;
+    }
+    ul.way4 li:not(:first-of-type){
+        margin-left: 4.66%;
+    }
+    /* ? productList way4 Fin */
+
+    ul.listBox li{
+        min-height: 490px; text-align: center;
+    }
+    ul.listBox li > div:first-child{
+        padding: 30px 8.9%; border-radius: 25px; background-color: var(--gs1); position: relative; margin-bottom: 15px;
+    }
+    ul.listBox li >div:first-child mark{
+        position: absolute; left: 8.9%; top: 30px; background: url('../images/ico_awardwinner.png') no-repeat left top;
+        text-indent: -9999px; max-width: 52px; line-height: 52px; width: 100%;
+    }
+    ul.listBox li > div:first-child img{
+        max-width: 335px; width: 100%;
+    }
+    ul.listBox li >div:first-child input.heartIco{
+        position: absolute; right: 8.9%; top: 30px;  border: none; background-color: transparent;
+        text-indent: -9999px; background: url('../images/heart_ico_outline_black.png') center / contain no-repeat;
+        line-height: 52px; width: 100%; max-width: 27px;
+    }
+    ul.listBox li >div:first-child input.heartIco.active{
+        background-image: url('../images/heart_ico_filled_black.png');
+    }
+
+    ul.listBox li > div:first-child span{
+        position: absolute; bottom: 30px; left: 0; width: 100%; text-align: center;
+        opacity: 0; transition: opacity 0.35s ease-in;
+    }
+    ul.listBox li > div:first-child span > *{
+        display: block; background-color: var(--ocs3); border-radius: 22.5px;
+        margin: 0 auto; line-height: 45px; padding: 0 11.9%; max-width: 160px; box-sizing: border-box; 
+    }
+    ul.listBox li > div:first-child span a{
+        margin-bottom: 25px; 
+    }
+    ul.listBox li > div:first-child span input[type='button']{
+        border: none; color: var(--gs1); 
+    }
+    ul.listBox li:hover > div:first-child span{
+        opacity: 1;
+    }
+    ul.listBox li > h3{
+        line-height: 25px; max-width: 335px; margin: 0 auto;
+    }
+    ul.listBox li > h3,
+    ul.listBox li > div:nth-of-type(2){
+        text-align: center;
+    }
+    ul.listBox li > h3,
+    ul.listBox li > div:nth-of-type(2) > *:not(span){
+        margin-bottom: 15px;
+    }
+    ul.listBox li > div:nth-of-type(2) > *:not(span){
+        display: inline-block; 
+    }
+    ul.listBox li > div:nth-of-type(2) del,
+    ul.listBox li > div:nth-of-type(2) > span{
+        color: var(--gs5);
+    }
+    ul.listBox li > div:nth-of-type(2) > span{
+        display: block;
+    }
+    ul.listBox li > div:nth-of-type(2) del{
+        color: var(--gs5); margin-right: 10px; 
+    }
+    ul.listBox li > div:nth-of-type(2) mark{
+        background: transparent; color: var(--rcs3); font-style: normal;
+    }
+    /* ?productList listBox Fin */
+
+    .listContainer > div:first-of-type{
+        background-position: center; background-repeat: no-repeat; background-size: cover;
+        padding: 180px 13.5% 185px; box-sizing: border-box; border-radius: 80px; margin-bottom: 220px; min-height: 585px;
+    }
+    .listContainer.ShopList > div:first-of-type{
+        background-image: url('../images/list/shopAll/bg_shop_banner.png');
+    }
+    .listContainer.FaceList > div:first-of-type{
+        background-image: url('../images/list/faceList/bg_face_banner.png');
+    }
+    .listContainer.ShaveList > div:first-of-type{
+        background-image: url('../images/list/shaveList/bg_shave_banner.png');
+    }
+    .listContainer.BodyList > div:first-of-type{
+        background-image: url('../images/list/bodyList/bg_body_banner.png');
+    }
+    .listContainer.KitList > div:first-of-type{
+        background-image: url('../images/list/kits/bg_kits_banner.png');
+    }
+    .listContainer > div:first-of-type h2{
+        margin-bottom: 20px;
+    }
+    .listContainer > div:first-of-type p{
+        line-height: 40px; max-width: 830px;
+    }
+    /* ? listContainer Banner Fin */
+
+    .listContainer::after{
+        display: block; content: ''; clear: both;
+    }
+    .listContainer aside ul li,
+    .listContainer > .listBox{
+        list-style: none;
+    }
+    .listContainer aside{
+        float: left; display: block; width: 20.1%;
+    }
+    .listContainer aside div h3{
+        margin-bottom: 50px;
+    }
+    .listContainer aside > div nav ul li{
+        margin-bottom: 30px;
+    }
+    .listContainer aside > div nav ul li:last-of-type{
+        margin-bottom: 60px;
+    }
+    .listContainer aside > div nav ul li a{
+        display: block;
+    }
+    .listContainer aside > div nav ul li a:hover,
+    .listContainer aside > div nav ul li.active{
+        color: var(--ocs3);
+    }
+    .listContainer aside > div .foldComponent{
+        background-color: var(--gs8); border-radius: 15px; position: relative;
+    }
+    .listContainer aside > div .foldComponent:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+    .listContainer aside > div .foldComponent b{
+        padding: 0 5.7%; display: block; cursor: pointer; box-sizing: border-box;
+        line-height: 65px; 
+    }
+    .listContainer aside > div .foldComponent b::after{
+        content: url('../images/list/bul_aside_Expand_More.png'); 
+        transform: rotate(0deg); transition: transform ease-in 0.35s; position: absolute; right: 5.7%;top: 0;
+    }
+    .listContainer aside > div .foldComponent b.active::after{
+        transform: rotate(180deg);
+    }
+    .listContainer aside > div .foldComponent b+ul{
+         box-sizing: border-box; display: none; 
+    }
+    .listContainer aside > div .foldComponent b.active+ul{
+        display: block; padding: 15px 0 30px;
+    }
+    .listContainer aside > div .foldComponent b.active+ul li{
+        line-height: 26px;
+    }
+    .listContainer aside > div .foldComponent ul li:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    .listContainer aside > div .foldComponent ul li input[type='checkbox']{
+        display: none;
+    }
+    .listContainer aside > div .foldComponent ul li input[type='checkbox']+label{
+        background: url('../images/list/bul_check_off.png') no-repeat 10.5% center; padding-left: 22.5%;
+        width: 100%; box-sizing: border-box; display: inline-block; 
+    }
+    .listContainer aside > div .foldComponent ul li input[type='checkbox']:checked+label{
+        background: url('../images/list/bul_check_on.png') no-repeat 10.5% center;
+    }
+    /* ?listContainer aside Fin */
+
+    .listContainer > .listBox{
+        float: left; width: 68.5%; margin-left: 11.4%; 
+    }
+    .listContainer .way3 li{
+        display: block; float: left; width: 27.6%; margin-left: 8.6%; text-align: center;
+    }
+    .listContainer .way3 li:nth-of-type(3n+1){
+        margin-left: 0;
+    }
+    .listContainer .way3 li{
+        margin-bottom: 1.9vw;
+    }
+    /* ? way3 listContainer Fin */
+
+    .detailContainer::after{
+        content: ''; display: block; clear: both;
+    }
+    .detailContainer > div:first-of-type{
+        float: left; width: 50.4%; margin-bottom: 245px;
+    }
+    .detailContainer > div:first-of-type div{
+        margin-bottom: 30px;
+    }
+    .detailContainer > div:first-of-type div img{
+        width: 100%;
+    }
+    .detailContainer > div:first-of-type ul{
+        width: 100%;
+    }
+    .detailContainer > div:first-of-type ul::after{
+        display: block; clear: both; content: '';
+    }
+    .detailContainer > div:first-of-type ul li{
+       float: left; display: block; width: 22.4%; cursor: pointer;
+    }
+    .detailContainer > div:first-of-type ul li:not(:nth-of-type(4n+1)){
+        margin-left: 3.46%;
+    }
+    .detailContainer > div:first-of-type ul li img{
+        width: 100%;
+    }
+    .detailContainer > div:first-of-type ul li:nth-of-type(-n+4){
+        margin-bottom: 30px;
+    }
+    .detailContainer > div:nth-of-type(2){
+        float: left; width: 32.2%; margin-left: 17.4%; padding-top: 85px;
+    }
+    .detailContainer > div:nth-of-type(2) h2,
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1),
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2),
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3){
+        margin-bottom: 60px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) del,
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) mark{
+        margin-bottom: 25px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) del{
+        display: inline-block; margin-right: 10px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) mark{
+        color: var(--rcs3); background-color: transparent; font-style: normal;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(1) strong{
+        margin-bottom: 15px; display: block;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) h3,
+    .detailContainer > div:nth-of-type(2) .purchaseOptions h3{
+        color: var(--gs5); margin-bottom: 25px;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck{
+        display: flex; flex-wrap: wrap; justify-content: flex-end;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li{
+        flex: 1 25%; list-style: none;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li input[type='radio']+label{
+        background: url('../images/dt_bul_radio_uncheck.png') no-repeat left center; 
+        padding-left: 25px;
+    }    
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li input[type='radio']:checked+label{
+        background-image: url('../images/dt_bul_radio_check.png');
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(2) .sizeCheck li input[type='radio']{
+        display: none;
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(3)::after{
+        display: block; clear: both; content: '';
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(3) > *{
+        float: left; 
+    }
+    .detailContainer > div:nth-of-type(2) > div:nth-of-type(3) > *:not(div){
+        margin-left: 7.5%;
+    }
+    .count{
+        position: relative; display: inline-block; text-align: center;
+        line-height: 60px; background-color: var(--gs8);  border: none;
+        box-sizing: border-box; width: 25%; border-radius: 30px;
+    }
+    .count input[type='button']{
+        background: transparent; border: none; position: absolute;
+        color: var(--gs1); top: 12px;
+    }
+    .count .qc{
+        text-align: center;
+        border: none; background-color: transparent;
+        color: var(--gs1); 
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    .count .countMinus{
+        left: 13px; cursor: pointer; 
+    }
+    .count .countPlus{
+        right: 13px; cursor: pointer;
+    }
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3) .detail_addCart{
+        border: none; color: var(--gs1); background-color: var(--ocs3); line-height: 60px;
+        width: 50%; box-sizing: border-box;  border-radius: 30px;
+    }
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3) .heartIco{
+        background-color: transparent; border: none; line-height: 60px; text-indent: -9999px;
+        background: url('../images/dt_ico_heart_outline.png') no-repeat center;
+        width: 10%;
+    }
+    .detailContainer > div:nth-of-type(2) div:nth-of-type(3) .heartIco.active{
+        background: url('../images/dt_ico_heart_filled.png') no-repeat center;
+    }
+    .detailContainer .detail_panel{
+        position: relative;
+    }
+    .detailContainer .detail_panel > ul{
+        list-style: none;
+    }
+    .detailContainer .detail_panel > ul li{
+        display: inline-block;
+    }
+    .detailContainer .detail_panel > ul li:after{
+        content: '>'; padding-left: 10px;
+    }
+    .detailContainer .detail_panel > ul li input[type='button']{
+        border: none; background: transparent; color: var(--gs1);
+    }
+    .detailContainer .detail_panel > div{
+        position: absolute; right: 0; top: 50px;
+        background-color: var(--gs8); padding: 60px 14%; border-radius: 50px;
+        width: 100%; box-sizing: border-box;
+    }
+    .detailContainer .detail_panel > div h3{
+        margin-bottom: 30px; line-height: 25px;
+    }
+    .detailContainer .detail_panel .btn_close{
+        border: none; text-indent: -9999px; line-height: 25px;
+        background: url('../images/dt_bul_close.png') center / contain no-repeat;
+        width: 25px; position: absolute; right: 14%; top: 60px; padding: 0;
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1) p,
+    .detailContainer .detail_panel > div:nth-of-type(2) p,
+    .detailContainer .detail_panel > div:nth-of-type(3) p{
+        line-height: 35px; 
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1) p:not(:last-of-type),
+    .detailContainer .detail_panel > div:nth-of-type(2) p:not(:last-of-type){
+        margin-bottom: 25px;
+    }    
+    .detailContainer .detail_panel > div:last-of-type p:not(:last-of-type){
+        margin-bottom: 25px; 
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1).active,
+    .detailContainer .detail_panel > div:nth-of-type(2).active,
+    .detailContainer .detail_panel > div:last-of-type.active{
+        display: block;
+    }
+    .detailContainer .detail_panel > div:nth-of-type(1),
+    .detailContainer .detail_panel > div:nth-of-type(2),
+    .detailContainer .detail_panel > div:last-of-type{
+        display: none;
+    }
+
+    .detailContainer> article,
+    .detailContainer .videoBox,
+    .detailContainer .key_Ingredients,
+    .detailContainer .banner_Ingredients{
+        margin-bottom: 250px;
+    }
+    .detailContainer> article{
+        clear: both; 
+    }
+    .detailContainer > article::after{
+        content: ''; display: block; clear: both;
+    }
+    .detailContainer > article h3{
+        margin-bottom: 85px;
+    }
+    .detailContainer > article > *:not(h3){
+        float: left;
+    }
+    .detailContainer > article > div:first-of-type{
+        width: 49%;
+    }
+    .detailContainer > article > div:nth-of-type(2),
+    .detailContainer > article > ul{
+        width: 40%; margin-left: 11%;
+    }
+    .detailContainer > article > div p,
+    .detailContainer > article > ul li{
+        line-height: 40px;
+    }
+    .detailContainer > article > div p:not(:last-of-type){
+        margin-bottom: 55px;
+    }
+    .detailContainer > article > ul{
+        list-style: none;
+    }
+    .detailContainer > article > ul li{
+        margin-bottom: 20px;
+    }
+    .detailContainer .videoBox video{
+        width: 49%; height: 410px;
+    }
+    .detailContainer .key_Ingredients h3{
+        margin-bottom: 80px;
+    }
+    .detailContainer .key_Ingredients > div{
+        display: flex;
+    }
+    .detailContainer .key_Ingredients > div p{
+        flex: 1 30%; padding: 90px 1.6%; box-sizing: border-box; line-height: 30px;
+        border-radius: 45px;
+    }
+    .detailContainer .key_Ingredients > div p:not(:first-child){
+        margin-left: 5%;
+    }
+    .detailContainer .key_Ingredients > div p:first-of-type{
+        background-color: var(--ocs3); 
+    }
+    .detailContainer .key_Ingredients > div p:nth-of-type(2){
+        background-color: #00adc8; 
+    }
+    .detailContainer .key_Ingredients > div p:last-of-type{
+        background-color: #5c068c;
+    }
+    .detailContainer .key_Ingredients > div p b{
+        display: block; margin-bottom: 60px;
+    }
+    .detailContainer .banner_Ingredients{
+        color: var(--gs11); padding: 125px 4.7%; 
+        background: var(--gs4) url('../images/dt_sample_banner_liquid.png') 90% 370px / 20% no-repeat;
+    }
+    .detailContainer .banner_Ingredients.bluekelp{
+        background: var(--gs4) url('../images/dt_sample_banner_blueLiquid.png') 90% 370px / 20% no-repeat;
+    }
+    .detailContainer .banner_Ingredients h3{
+        max-width: 650px; margin-bottom: 65px;
+    }
+    .detailContainer .banner_Ingredients ul{
+        max-width: 1080px; width: 100%;
+    }
+    .detailContainer .banner_Ingredients ul::after{
+        content: ''; clear: both; display: block;
+    }
+    .detailContainer .banner_Ingredients ul li{
+        float: left; width: 45%; display: block; max-width: 490px;
+        background: url('../images/dt_ico_banner_01.png') no-repeat left top; padding-left: 3.2%;
+        box-sizing: border-box; min-height: 135px;
+    }
+    .detailContainer .banner_Ingredients ul li:not(:nth-of-type(2n+1)){
+        margin-left: 10%;
+    }
+    .detailContainer .banner_Ingredients ul li:nth-of-type(-n+2){
+        margin-bottom: 4.48vh;
+    }
+    .detailContainer .banner_Ingredients ul li span{
+        margin-bottom: 15px; display: block;
+    }
+    .detailContainer .banner_Ingredients ul li p{
+        line-height: 25px;
+    }
+    .detailContainer > div:last-of-type > h3{
+        text-align: center; margin-bottom: 100px;
+    }
+    /* ? detailContainr Fin */
+
+    .account{
+        max-width: 1610px; margin: 0 auto;
+        padding: 165px 2% 0 2%;
+    }
+    .account > h2{
+        margin-bottom: 140px;
+    }
+    .account::after{
+        display: block; clear: both; content: '';
+    }
+    .account > aside{
+        float: left; width: 9.6%; text-align: center; 
+    }
+    .account > aside ul{
+        margin-bottom: 45px;
+    }
+    .account > aside ul li{
+        list-style: none;  box-sizing: border-box; line-height: 30px;
+        border-radius: 17px; min-width: 155px; width: 100%;
+        padding: 0 11%; box-sizing: border-box;
+    }
+    .account > aside ul li:not(:last-of-type){
+        margin-bottom: 35px;
+    }
+    .account > aside ul li a{
+        display: block;
+    }
+    .account > aside ul li:hover,
+    .account > aside ul li.active,
+    .account > aside > a:hover{
+        background-color: var(--gs1); color: var(--gs11); transition: 0.35s; 
+    }
+    .account > aside > a{
+        display: block; line-height: 50px; box-sizing: border-box;
+        border: 1px solid var(--gs5); border-radius: 25px; text-align: center;
+        min-width: 155px; width: 100%; padding: 0 12%; box-sizing: border-box;
+    }
+    .account > div,
+    .account > form{
+        float: left; width: 72.2%; margin-left: 18.2%;
+    }
+    /* ? account Container Fin */
+
+    .updateInfoContainer form ul::after,
+    .addressFormContainer form ul::after{
+        display: block; clear: both; content: '';
+    }
+    .updateInfoContainer form ul li:not(:last-of-type),
+    .addressFormContainer form ul li:not(:last-of-type){
+        float: left;
+    }
+    .updateInfoContainer form ul li,
+    .addressFormContainer form ul li{
+        width: 40.3%; display: block; margin-bottom: 75px;
+    }
+    .updateInfoContainer form ul li:nth-of-type(2n),
+    .addressFormContainer form ul li:nth-of-type(2n){
+        margin-left: 19.4%;
+    }
+    .updateInfoContainer form ul li label,
+    .addressFormContainer form ul li label{
+        display: block; margin-bottom: 15px; color: var(--ocs3);
+    }
+    .updateInfoContainer form input,
+    .addressFormContainer form input{
+        background-color: transparent; border: none;
+    }
+    .updateInfoContainer form ul li input,
+    .addressFormContainer form ul li input{
+        color: var(--gs5); padding: 0 10px; width: 100%; box-sizing: border-box; line-height: 40px; max-width: 470px;
+        border-bottom: 1px solid var(--gs5);
+    }
+    .updateInfoContainer form > input[type='submit'],
+    .addressFormContainer form > input[type='submit']{
+        border: 1px solid var(--gs5); color: var(--gs1); line-height: 49px; max-width: 155px;
+        border-radius: 25px; width: 100%; box-sizing: border-box;
+    }
+    .updateInfoContainer form > input[type='submit']:hover,
+    .addressFormContainer form > input[type='submit']:hover{
+        background-color: var(--ocs3); transition-duration: 0.35s;
+    }
+    /* ? UpdateContainer, addressFormContainer Fin */
+
+    .account .accSelect{
+        width: 100%; font-family: 'Quicksand', sans-serif;
+    }
+    .account .accSelect:after{
+        content: url('../images/account_arrow_down.png'); right: 10px; top: 15px;
+    }
+    .account .accSelect.active::after{
+        transform: rotate(180deg);
+    }
+    .account .accSelect select{
+        padding: 15px 10px; color: var(--gs1); width: 100%; 
+    }
+    .account .accSelect select option{
+        color: var(--gs11); 
+    }
+    /* ? addressFormContainer select Fin */
+
+    .orderList{
+        padding: 30px 2.5%;
+    }
+    .orderList,
+    .orderList > ul li{
+        border: 1px solid var(--gs5); border-radius: 30px; box-sizing: border-box;
+    }
+    .orderList > h3{
+        margin-bottom: 30px; 
+    }
+    .orderList > h3 a{
+        display: block; float: right; color: var(--gcs4);
+    }
+    .orderList > ul li{
+        padding: 20px 2.7%; display: block;
+    }
+    .orderList > ul li:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+    .orderList > ul li > strong{
+        margin-bottom: 20px; display: block;
+    }
+    .orderList > ul li > div{
+        display: flex; align-items: center; flex: 1 1;
+    }
+    .orderList > ul li div > img{
+        width: 100%; max-width: 125px; display: block;
+    }
+    .orderList > ul li div > div{
+        margin-left: 1.3%;
+    }
+    .orderList > ul li div > div > *{
+        display: block;
+    }
+    .orderList > ul li div > div > *:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .orderList > ul li div > div > a{
+        padding: 10px 11.7%;  text-align: center; border: 1px solid var(--gs5);
+        max-width: 160px; box-sizing: border-box; border-radius: 20px;
+    }
+    .orderList > ul li div > div > a:hover{
+        background-color: var(--ocs3);
+    }
+    /* ? orderHistoryContainer orderList Fin */
+
+    .wishContainer h2,
+    .cartContainer h2{
+        margin-bottom: 100px;
+    }
+    .marketlistTable > li:first-of-type::after{
+        clear: both; content: ''; display: block;
+    }
+    .marketlistTable li:first-of-type b{
+        text-align: center;
+    }
+    .marketlistTable li:nth-of-type(1) b:first-of-type{
+        float: left; width: 32%;
+    }
+    .marketlistTable li:nth-of-type(1) b:not(:first-of-type){
+        float: left; width: 17%;
+    }    
+    .marketlistTable li:not(:first-of-type) > div a{
+        line-height: 30px;
+    }
+    .marketlistTable li{
+        list-style: none;
+    }
+    .marketlistTable li:first-of-type{
+        padding: 20px 0; border-top: 1px solid var(--gs5);
+        border-bottom: 1px solid var(--gs5);
+    }
+    .marketlistTable li:not(:first-of-type){
+        padding: 30px 0; border-bottom: 1px solid var(--gs5);
+    }
+    .marketlistTable li:not(:first-of-type){
+        display: flex; justify-content: center; align-items: center;
+        flex: 1; flex-wrap: wrap;
+    } 
+    .marketlistTable li:not(:first-of-type) > div:first-of-type{
+        width: 32%;
+    }
+    .marketlistTable li:not(:first-of-type) > *:not(div:first-of-type){
+        width: 17%;
+    }
+    .marketlistTable li:not(:first-of-type) > div:first-of-type{
+        display: flex; justify-content: flex-start; flex: 1 1;
+        align-items: center;
+    }
+    .marketlistTable li:not(:first-of-type) > div:first-of-type img{
+        max-width: 210px; width: 100%; 
+    }
+    .marketlistTable li:not(:first-of-type) > div:first-of-type > a{
+        display: block; margin-left: 3%;
+    }
+    .marketlistTable li:not(:first-of-type) > *:not(div:first-of-type){
+        text-align: center; 
+    }
+    .marketlistTable li:not(:first-of-type) .count{
+        width: 60%;
+    }
+    .marketlistTable li:not(:first-of-type) > span input[type='button']{
+        background-color: transparent; border: none;
+        background: url('../images/bul_delete_white.png') no-repeat center;
+        text-indent: -9999px; max-width: 20px; width: 100%; background-size: 100%;
+        min-height: 22px;
+    }
+    /* ? marketlistTable Fin */
+
+    .paySuccessPopup{
+        position: fixed; width: 28%; top: 26%; left: 35%; background-color: var(--gs8);
+        border-radius: 20px; padding: 0 3.4% 70px; box-sizing: border-box; text-align: center;
+        z-index: 100;
+    }
+    .paySuccessPopup span{
+        display: block; margin-bottom: 25px;
+        background: url('../images/payment_ico_checkout_success.png') no-repeat center 60px; padding-top: 155px;
+    }
+    .paySuccessPopup p{
+        line-height: 25px; margin-bottom: 40px;
+    }
+    .paySuccessPopup > a{
+        display: block; background-color: var(--ocs3); padding: 15px 5%; border-radius: 25px; max-width: 190px; margin: 0 auto; width: 100%;
+    }
+    .checkoutPopup{
+        position: fixed; width: 50%; top: 45px; left: 25%; z-index: 100; 
+    }
+    .checkoutPopup h2{
+        background-color: var(--ocs3); padding: 45px 5%; border-radius: 50px 50px 0 0;
+        position: relative; box-sizing: border-box;
+    }
+    .checkoutPopup h2 input{
+        background: url('../images/payment_bul_close.png') no-repeat right top;
+        width: 100%; right: 5%; top: 45px; position: absolute; min-height: 28px;
+        max-width: 28px;
+    }
+    .checkoutPopup > div{
+        background-color: var(--gs8); padding: 45px 5%; border-radius: 0 0 50px 50px;
+        box-sizing: border-box; height: 1020px; overflow-y: scroll;
+    }
+    .checkoutPopup > div > p:not(:last-of-type){
+        margin-bottom: 60px;
+    }
+    .checkoutPopup > div > p:not(strong){
+        line-height: 35px;
+    }
+    .checkoutPopup > div > p > strong{
+        display: block; margin-bottom: 10px;
+    }
+    .checkoutPopup.refund > div > div{
+        margin-bottom: 60px;
+    }
+    .checkoutPopup.refund > div > div strong{
+        margin-bottom: 10px; display: block;
+    }
+    .checkoutPopup.refund > div > div address{
+        font-style: normal; line-height: 35px;
+    }
+    .paySuccessPopup,
+    .checkoutPopup.refund,
+    .checkoutPopup.termOfsvc,
+    .checkoutPopup.subscribtion{
+        display: none;
+    }
+    .paySuccessPopup.active,
+    .checkoutPopup.refund.active,
+    .checkoutPopup.termOfsvc.active,
+    .checkoutPopup.subscribtion.active{
+        display: block;
+    }
+    .checkout{
+        max-width: 1765px; margin: 0 auto;
+    }
+    .checkout::after{
+        display: block; clear: both; content: '';
+    }
+    .checkout > div{
+        padding-left: 15%; padding-right: 6%; float: left; width: 58%;
+        border-right: 1px solid var(--gs5); box-sizing: border-box; 
+    }
+    .checkout > div > ol{
+         text-align: center; 
+    }
+    .checkout > div > ol li{
+        list-style: none; display: inline-block; 
+    }
+    .checkout > div > ol li:not(:first-of-type){
+        margin-left: 15px;
+    }
+    .checkout > div > ol li a{
+        display: block;
+    }
+    .checkout > div > ol li:first-of-type a::after,
+    .checkout > div > ol li:nth-of-type(2) a::after{
+        content: '>'; padding-left: 15px;
+    }
+    .checkout > div > ol li:nth-of-type(3) a::before{
+        content: '>'; padding-right: 15px;
+    }
+    .checkout > div > ol li:hover,
+    .checkout > div > ol li.active{
+        color: var(--ocs3);
+    }
+    .checkout > div > ul:last-of-type{
+        border-top: 1px solid var(--gs5); padding-top: 20px;
+    }
+    .checkout > div > ul:last-of-type li{
+        list-style: none; display: inline-block;
+    }
+    .checkout > div > ul:last-of-type li:not(:first-of-type){
+        margin-left: 4.1%;
+    }
+    .checkout > div > ul:last-of-type li input[type='button']{
+        background-color: transparent; border: none; color: var(--gs1);
+    }
+    .CheckoutaddrForm::after{
+        display: block; clear: both; content: '';
+    }
+    .informationContainer > div > div:nth-of-type(2) fieldset ul{
+        margin-bottom: 70px; 
+    }
+    .CheckoutaddrForm li{
+        display: block; 
+    }
+    .CheckoutaddrForm li:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+    .CheckoutaddrForm input{
+        width: 100%; line-height: 63px; border: 1px solid var(--gs5); box-sizing: border-box;
+        border-radius: 8px; padding: 0 15px; color: var(--gs11);
+    }
+    .CheckoutaddrForm li input::placeholder{
+        color: var(--gs5);
+    }
+    .CheckoutaddrForm li .paymentForm{
+        width: 100%; font-family: 'Quicksand', sans-serif; background-color: var(--gs1); border: 1px solid var(--gs5);
+        border-radius: 8px; color: var(--gs5);
+    }
+    .CheckoutaddrForm li .paymentForm:after{
+        content: url('../images/payment_bul_arrow_down.png'); right: 15px; top: 20px;
+    }
+    .CheckoutaddrForm li .paymentForm.active:after{
+        transform: rotate(180deg);
+    }
+    .CheckoutaddrForm li .paymentForm select{
+        line-height: 63px; width: 100%; padding: 0 15px; color: var(--gs11);
+    }
+    .CheckoutaddrForm li:nth-of-type(3),
+    .CheckoutaddrForm li:nth-of-type(4){
+        float: left; width: 47%; display: block;
+    }
+    .CheckoutaddrForm li:nth-of-type(4){
+        margin-left: 6%;
+    }
+    .CheckoutaddrForm li:nth-of-type(6),
+    .CheckoutaddrForm li:nth-of-type(7),
+    .CheckoutaddrForm li:nth-of-type(8){
+        float: left; width: 32%; display: block;
+    }
+    .CheckoutaddrForm li:nth-of-type(7),
+    .CheckoutaddrForm li:nth-of-type(8){
+        margin-left: 2%;
+    }
+    .CheckoutaddrForm li input:focus{
+        outline: none !important; border-color: var(--ocs3);
+    }
+    .informationContainer > div > div:nth-of-type(2) fieldset > input[type='submit'],
+    .paymentContainer > div > div:nth-of-type(2) > input[type='button']{
+        background-color: transparent; border: 1px solid var(--gs5); border-radius: 25px;
+        line-height: 48px; box-sizing: border-box; padding: 0 2.7%; float: right; color: var(--gs1);
+        cursor: pointer;
+    }
+    .informationContainer > div > div:nth-of-type(2) fieldset > input[type='submit']:hover,
+    .paymentContainer > div > div:nth-of-type(2) > input[type='button']:hover{
+        background-color: var(--ocs3); transition-duration: 0.35s;
+    }
+
+    .checkout > aside{
+        padding-right: 15%; padding-left: 3.6%; float: left; width: 42%; box-sizing: border-box; 
+    }
+    .checkout > aside > ul:first-of-type{
+        padding-bottom: 30px; border-bottom: 1px solid var(--gs5);
+    }
+    .checkout > aside > ul:first-of-type li{
+        display: block; position: relative;
+    }
+    .checkout > aside > ul:first-of-type li:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+    .checkout > aside > ul:first-of-type li img{
+        width: 100%; max-width: 98px;
+    }
+    .checkout > aside > ul:first-of-type li dl{
+        position: absolute; right: 0; top: 10px; width: 100%; padding-left: 120px; box-sizing: border-box;
+    }
+    .checkout > aside > ul:first-of-type li dl dt,
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(1){
+        margin-bottom: 15px;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(1){
+        text-align: right;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(1) strong{
+        display: block;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(2) span{
+        display: inline-block;
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(2){
+        color: var(--gs5);
+    }
+    .checkout > aside > ul:first-of-type li dl dd:nth-of-type(2) span:last-of-type{
+        float: right;
+    }
+    .checkout > aside > ul:last-of-type{
+        padding-top: 30px;
+    }
+    .checkout > aside > ul li{
+        display: block;
+    }
+    .checkout > aside > ul li:not(:last-of-type){
+        margin-bottom: 15px;
+    }
+    .checkout > aside > ul li > *{
+        display: inline-block;
+    }
+    .checkout > aside > ul li > strong{
+        float: right;
+    }
+    /* ? checkoutContainer Fin */
+
+    .ourStoryContainer{
+        max-width: 1765px; margin: 0 auto; padding: 165px 0;
+    }
+    .gridshopList{
+        position: relative;
+    }
+    .gridshopList li{
+        list-style: none; position: relative;
+    }
+    .gridshopList li div{
+        position: absolute; left: 3.6%; bottom: 65px; max-width: 260px; width: 100%;
+    }
+    .gridshopList li div h3{
+        margin-bottom: 25px;
+    }
+    .gridshopList li div a{
+        display: block; box-sizing: border-box; text-align: center; padding: 30px 6.9%;
+        background-color: var(--gs1); color: var(--gs11); border-radius: 40px; 
+    }
+    .gridshopList li div a:hover{
+        background-color: var(--ocs3); color: var(--gs1); transition: 0.35s;
+    }
+    .gridshopList li:first-of-type{
+        width: 49.1%;
+    }
+    .gridshopList li:not(:first-of-type){
+        position: absolute; right: 0; max-width: 867px; width: 49.1%; 
+    }
+    .gridshopList li:nth-of-type(2){
+        top: 0; 
+    }
+    .gridshopList li:nth-of-type(3){
+        bottom: 0;
+    }
+    .gridshopList li img{
+        width: 100%;
+    }
+    /* ?ourStoryContainer Fin */
+
+    .contactPopup,
+    .retailerPopup{
+        position: fixed; width: 22%; top: 26%; left: 37%; background-color: var(--gs8);
+        border-radius: 20px; padding: 0 3.4% 120px; box-sizing: border-box; text-align: center;
+        z-index: 100; display: none;
+    }
+    .contactPopup input,
+    .retailerPopup input{
+        background: url('../images/Contact_Us_bul_close.png') right top / contain no-repeat;
+        position: absolute; top: 60px; right: 7.4%; width: 100%; max-width: 16px;
+    }
+    .contactPopup p,
+    .retailerPopup p{
+        background: url('../images/Contact_Us_ico_popupCheck.png') no-repeat center 60px; padding-top: 155px;
+        line-height: 28px;
+    }
+    .contactPopup.active,
+    .retailerPopup.active{
+        display: block;
+    }
+    /* ? contactContainer Fin */
+
+    .blogDetailContainer > div:first-of-type{
+        margin-bottom: 250px; text-align: center; 
+    }
+    .blogDetailContainer > div:first-of-type h2{
+        max-width: 610px; margin: 0 auto 45px; line-height: 55px;
+    }
+    .blogDetailContainer > div:first-of-type time{
+        color: var(--gs5); margin-bottom: 50px; display: block;
+    }
+    .blogDetailContainer > div:first-of-type ul{
+        margin-bottom: 85px; 
+    }
+    .blogDetailContainer > div:first-of-type ul li{
+        list-style: none; display: inline-block; background-repeat: no-repeat; text-indent: -9999px;
+        min-height: 24px;
+    }
+    .blogDetailContainer > div:first-of-type ul li:not(:first-of-type){
+        margin-left: 1.5%;
+    }
+    .blogDetailContainer > div:first-of-type ul li:nth-of-type(1){
+        background-image: url('../images/blog_ico_sns_01.png'); width: 13px; 
+    }
+    .blogDetailContainer > div:first-of-type ul li:nth-of-type(2){
+        background-image: url('../images/blog_ico_sns_02.png'); width: 28px; 
+    }
+    .blogDetailContainer > div:first-of-type ul li:nth-of-type(3){
+        background-image: url('../images/blog_ico_sns_03.png'); width: 24px;
+    }
+    .blogDetailContainer > div:first-of-type ul li a{
+        display: block;
+    }
+    .blogDetailContainer > div:first-of-type img{
+        width: 100%; margin-bottom: 80px;
+    }
+    .blogDetailContainer > div:first-of-type p{
+        line-height: 50px;
+    }
+    .blogDetailContainer > ul li{
+        list-style: none; display: flex; align-items: center;
+    }
+    .blogDetailContainer > ul li:not(:last-of-type){
+        margin-bottom: 185px;
+    }
+    .blogDetailContainer > ul li img{
+        width: 44.4%;
+    }
+    .blogDetailContainer > ul li > div{
+        width: 52.4%; margin-left: 3.2%;
+    }
+    .blogDetailContainer > ul li > div h3{
+        margin-bottom: 45px;
+    }
+    .blogDetailContainer > ul li > div p{
+        line-height: 35px;
+    }
+    .blogDetailContainer > ul li > div p:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+    .blogDetailContainer > ul li > div a{
+        display: block; padding: 30px 4%; box-sizing: border-box; background-color: var(--gs1);
+        color: var(--gs11); border-radius: 37.5px; max-width: 245px; text-align: center;
+        margin-top: 50px; transition: 0.35s;
+    }
+    .blogDetailContainer > ul li > div a:hover{
+        background-color: var(--ocs3); color: var(--gs1);
+    }
+    /* ?blogDetailContainer Fin */
+
+    .supportContainer h2{
+        text-align: center; margin-bottom: 85px;
+    }
+    .supportContainer > span{
+        display: block; color: var(--gs5); margin-bottom: 80px; text-align: center;
+    }
+    .supportContainer > p{
+        margin-bottom: 100px;
+    }
+    .supportContainer li{
+        list-style: none;
+    }
+    .supportContainer > ul > li:not(:last-of-type),
+    .supportContainer > ol > li:not(:last-of-type){
+        margin-bottom: 80px;
+    }
+    .supportContainer li,
+    .supportContainer p{
+        line-height: 45px;
+    }
+    .supportContainer ol li h3,
+    .supportContainer ul li h3{
+        margin-bottom: 30px; color: var(--ocs3);
+    }
+    .supportContainer.shippingReturns ol li p:not(:last-of-type),
+    .supportContainer > ul li p:not(:last-of-type),
+    .supportContainer.privacyPolicy > ul li:nth-of-type(5) > p,
+    .supportContainer.privacyPolicy > ul li:nth-of-type(2) > ol,
+    .supportContainer.privacyPolicy > ul li:nth-of-type(7) > ul,
+    .supportContainer.privacyPolicy > ul li:nth-of-type(8) > ul,
+    .supportContainer.termsofUse > ul li > ul{
+        margin-bottom: 50px;
+    }
+    .supportContainer.shippingReturns ol li address{
+        font-style: normal;
+    }
+    .supportContainer > ul li > ul,
+    .supportContainer > ul li > ol{
+        padding-left: 4%; box-sizing: border-box;
+    }
+    .supportContainer li a{
+        text-decoration: underline; color: var(--gs5); 
+    }
+    .supportContainer.privacyPolicy > ul li > ul li:not(:last-of-type),
+    .supportContainer.privacyPolicy > ul li > ol li:not(:last-of-type),
+    .supportContainer.termsofUse > ul li > ul li:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    /* ? supportContainer Fin */
+
+    .paging{
+        clear: both; position: relative; background-color: var(--gs1); border-radius: 50px;
+        width: 38.5%; margin: 0 auto;
+    }
+    .paging > a {
+        position: absolute; top: 0; text-align: center;
+        width: 10%; color: var(--ocs3); box-sizing: border-box; line-height: 100px;
+    }
+    .paging > a:first-of-type{
+        left: 0%;
+    }
+    .paging > a:last-of-type{
+        right: 0%;
+    }
+    .paging ol{
+        padding: 30px 10%; box-sizing: border-box; text-align: center; width: 100%;
+    }
+    .paging ol li{
+        display: inline-block; list-style: none; margin-left: 2%;
+    }
+    .paging ol li a{
+        display: block; line-height: 40px; color: var(--ocs3); width: 40px; background-color: #ffffff;
+        transition: all 0.3s; border-radius: 20px;
+    }
+    .paging ol li a:hover{
+        color: #ffffff; background-color: var(--ocs3);
+    }
+    /* ? paging Fin */
+
+    footer{
+        background-color: var(--gs9); padding: 95px 4%; 
+    }
+    footer > div{
+        max-width: 1765px; margin: 0 auto;
+    }
+    footer > div div:not(:last-of-type){
+        float: left; margin: 0 0 40px 2.5%;
+    }
+    footer > div div:first-of-type{
+        margin-left: 0;
+    }
+    footer > div div:not(:last-of-type){
+        width: 15%;
+    }
+    footer > div div:nth-of-type(5){
+        width: 30%;
+    }
+    footer > div div:nth-of-type(1) h3,
+    footer > div div:nth-of-type(2) h3,
+    footer > div div:nth-of-type(3) h3,
+    footer > div div:nth-of-type(4) h3{
+        margin-bottom: 35px;
+    }
+    footer > div div:nth-of-type(5) h3{
+        margin-bottom: 15px;
+    }
+    footer > div div:nth-of-type(5) h3+p{
+        line-height: 26px; 
+    }
+    footer > div div ul{
+        list-style: none;
+    }
+    footer > div div:nth-of-type(5) h3+p,
+    footer > div div:nth-of-type(1) ul li,
+    footer > div div:nth-of-type(2) ul li,
+    footer > div div:nth-of-type(3) ul li{
+        margin-bottom: 25px;
+    }
+    footer > div div:nth-of-type(4) ul li{
+        display: inline-block; width: 20px; line-height: 20px;
+    }
+    footer > div div:nth-of-type(4) ul li:not(:first-child){
+        margin-left: 25px;
+    }
+    footer > div div:nth-of-type(4) ul li a{
+        display: block; text-indent: -9999px; background-repeat: no-repeat; background-size: contain; background-position: center;
+    }
+    footer > div div:nth-of-type(4) ul li:nth-child(1) a{background-image: url('../images/ico_sns_01.png');}
+    footer > div div:nth-of-type(4) ul li:nth-child(2) a{background-image: url('../images/ico_sns_02.png');}    
+    footer > div div:nth-of-type(4) ul li:nth-child(3) a{background-image: url('../images/ico_sns_03.png');}
+
+    footer > div div:nth-of-type(5) input{
+        float: left; display: block; margin-bottom: 15px;
+    }
+    footer > div div:nth-of-type(5) form input[type="email"]{
+        width: 70%; color: var(--gs1); line-height: 50px; padding: 0 30px; box-sizing: border-box;
+        border: none; background-color: var(--gs8); border-radius: 25px; text-align: left;
+    }
+    footer > div div:nth-of-type(5) form input[type="email"]::placeholder{
+        color: inherit; text-align: left;
+    }
+    footer > div div:nth-of-type(5) form input[type="button"]{
+        width: 25%; margin-left: 5%; line-height: 50px; padding: 0 25px; box-sizing: border-box; background-color: var(--ocs3);
+        border: none; color: var(--gs1); text-transform: uppercase; border-radius: 25px;
+    }
+    footer > div div:nth-of-type(5) form+p.active{
+        display: block;
+    }
+    footer > div div:nth-of-type(5) form+p{
+        clear: left; color: var(--gcs4);
+    }
+    footer > div div:nth-of-type(5) form+p{
+        display: none;
+    }
+    footer > div div:last-of-type{
+        clear: both;
+    }
+    footer > div div:last-of-type h3{
+        max-width: 176px;
+    }
+    footer > div div:last-of-type h3 img{
+        width: 100%;
+    }
+    footer > div div:last-of-type span{
+        float: right;
+    }        
+    /* ? Footer Fin */
+}
+/* ? desktop */

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.fitvids.js"></script>
+    <script src="js/anthony.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="searchBar" class="searchPanel qsb18">
+        <input type="search" class="qm18" placeholder="Search Our Store">
+        <input type="button" value="close" class="btn_close">
+    </div>
+    <!-- ? searchBar Panel -->
+    <div id="cartPanel" class="cartFill">
+        <h2 class="qsb35">
+            Shopping Cart
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <ul>
+            <li>
+                <img src="images/cart_panel_sample_product_01.png" alt="cart panel product IMG">
+                <div>
+                    <h3 class="qsb16">
+                        Day Cream SPF 30 
+                        <input type="button" value="delete">
+                    </h3>
+                    <strong class="qsb20">$49.40</strong>
+                </div>
+            </li>
+        </ul>
+        <form>
+            <input class="qsb15" type="text" placeholder="Enter Discount Code" title="write code name">
+            <input type="button" value="APPLY" class="qsb15" title="code submit" data-panel="apply">
+        </form>
+        <p class="qsb15" id="apply">*Correct Code Number</p>
+        <div class="qm23">
+            <span>Sub total:</span>
+            <strong>$49.40</strong>
+        </div>
+        <a class="qsb23" href="CartPage.html">View Cart</a>
+    </div>
+    <!-- ?cartFill Panel -->
+    
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Welcome to Anthony!">
+                </a>
+            </h1>
+            <div>
+                <input type="button" value="searchBar" data-panel="searchBar">
+                <input type="button" value="cartPanel" data-panel="cartPanel">
+                <a href="SignIn.html" class="qm23">Account</a>
+                <input type="button" value="gnbPanel" data-panel="gnbPanel">
+            </div>
+            <aside id="gnbPanel" class="qsb50">
+                <input type="button" value="close" class="btn_close">
+                <nav>
+                    <ul>
+                        <li><a href="FaceList.html">Face</a></li>
+                        <li><a href="ShaveList.html">Shave</a></li>
+                        <li><a href="BodyList.html">Body</a></li>
+                        <li><a href="ShopAll.html">Shop All</a></li>
+                        <li><a href="KitsList.html">Kits</a></li>
+                        <li><a href="WishList.html">Wish List</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </header>
+    <!-- ? header Fin -->
+
+    <div class="mainContainer">
+        <ul class="mainSlider">
+            <li>
+                <img src="images/bg_slide_01.png" alt="Multi Packs Slider Img">
+                <div>
+                    <h2 class="qsb80">Multi Packs</h2>
+                    <a href="Shop_MultiPacks.html" class="qsb38">SHOP NOW</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/bg_slide_02.png" alt="Awards Winner Slider Img">
+                <div>
+                    <h2 class="qsb80">Awards Winners</h2>
+                    <a href="Shop_AwardsWinner.html" class="qsb38">SHOP NOW</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/bg_slide_03.png" alt="Shop All Slider Img">
+                <div>
+                    <h2 class="qsb80">Shop All</h2>
+                    <a href="ShopAll.html" class="qsb38">SHOP NOW</a>
+                </div>
+            </li>
+        </ul>
+        <!-- ? mainSlider Fin -->
+    
+        <figure>
+            <img src="images/logo.png" alt="Anthony CI">
+            <figcaption class="qm23">
+                <p>Created in 2000 in the heart of New York City, Anthony was born from men’s search for products crafted to their specific skin and grooming needs. The result is a collection of innovative, straightforward and benefits-driven skincare formulas.</p>
+            </figcaption>
+        </figure>
+        <!-- ? Figure CI Fin -->
+    
+        <ul class="qsb68">
+            <li>
+                <a href="FaceList.html">Face Collection</a>
+            </li>
+            <li>
+                <a href="ShaveList.html">Shave Collection</a>
+            </li>
+            <li>
+                <a href="BodyList.html">Body Collection</a>
+            </li>
+            <li>
+                <a href="ShopAll.html">Shop Collection</a>
+            </li>
+        </ul>
+        <!-- ? shopList Fin-->
+    
+        <div>
+            <h2 class="qsb65">Best Sellers</h2>
+            <ul class="listBox way4">
+                <li>
+                    <div>
+                        <mark>Awards Winners</mark>
+                        <img src="images/bs_sample_product_01.png" alt="bs sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Glycolic_Facial_Cleanser.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Glycolic Facial Cleanser</h3>
+                    <div class="qsb17">
+                        <span>From $24.90</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winners</mark>
+                        <img src="images/bs_sample_product_02.png" alt="bs sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="No_Sweat_Body_Defense.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">No Sweat Body Defense</h3>
+                    <div class="qsb17">
+                        <del>$43.91</del>
+                        <mark>-31%</mark>
+                        <span>$30.19</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winners</mark>
+                        <img src="images/bs_sample_product_03.png" alt="bs sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Ingrown_Hair_Treatment.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Ingrown Hair Treatment</h3>
+                    <div class="qsb17">
+                        <del>$60.37</del>
+                        <mark>-23%</mark>
+                        <span>$46.65</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="images/bs_sample_product_04.png" alt="bs sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="All_Purpose_Facial_Moisturizer.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">All Purpose Facial Moisturizer</h3>
+                    <div class="qsb17">
+                        <span>$43.91</span>                  
+                    </div>
+                </li>
+            </ul>
+            <a href="Shop_BestSellers.html" class="qsb23 btn_viewMore">View more</a>
+        </div>
+        <!-- ? bsList Fin -->
+    
+        <figure>
+            <img src="images/sample_Event.png" alt="code event sample">
+            <figcaption>
+                <p class="qsb50">DOUBLE UP ON SPRING SAVINGS</p>
+                <p class="qsb68">
+                    BUY ONE, GET ONE 50% OFF SITEWIDE
+                </p>
+                <span class="qb50">
+                    CODE: BOGO50
+                </span>
+                <a href="ShopAll.html" class="qsb23 btn_shopNow">Shop Now</a>
+            </figcaption>
+        </figure>
+        <!-- ? codeContainer Fin-->
+    
+        <div>
+            <h2 class="qsb65">Jumbos</h2>
+            <ul class="listBox way4">
+                <li>
+                    <div>
+                        <img src="images/jb_sample_product_01.png" alt="jb sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Glycolic_Facial_Cleanser_Jumbo.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Glycolic Facial Cleanser Jumbo</h3>
+                    <div class="qsb17">
+                        <span>$116.22</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/jb_sample_product_02.png" alt="jb sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Facial_Scrub_Jumbo.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Facial Scrub Jumbo</h3>
+                    <div class="qsb17">
+                        <span>$94.08</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="images/jb_sample_product_03.png" alt="jb sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Invigorating_Rush_Hair_Wash_Jumbo.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Invigorating Rush Hair &#43; Body Wash Jumbo</h3>
+                    <div class="qsb17">
+                        <span>$85.78</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/jb_sample_product_04.png" alt="jb sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="No_Sweat_Body_Defense_Jumbo.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">No Sweat Body Defense Jumbo</h3>
+                    <div class="qsb17">
+                        <span>$99.62</span>                    
+                    </div>
+                </li>
+            </ul>
+            <a href="Shop_Jumbos.html" class="qsb23 btn_viewMore">View more</a>
+        </div>
+        <!-- ? jbList Fin -->
+    
+        <div class="videoBox">
+            <video controls muted poster="images/bg_video_thumb.png">
+                <source src="mp4/Anthony_Main_Video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- ?videoBox Fin -->
+            
+        <div>
+            <h2 class="qsb65">Awards Winner</h2>
+            <ul class="listBox way4">
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/aw_sample_product_01.png" alt="aw sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="No_Sweat_Body_Defense.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">No Sweat Body Defense</h3>
+                    <div class="qsb17">
+                        <del>$43.91</del>
+                        <mark>-31%</mark>
+                        <span>$30.19</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/aw_sample_product_02.png" alt="aw sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Invigorating_Rush_Hair.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Invigorating Rush Hair &#43; Body Wash</h3>
+                    <div class="qsb17">
+                        <span>From $24.90</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/aw_sample_product_03.png" alt="aw sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Facial_Scrub.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Facial Scrub</h3>
+                    <div class="qsb17">
+                        <span>From $24.90</span>                   
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/aw_sample_product_04.png" alt="aw sample product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Ingrown_Hair_Treatment.htmll" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Ingrown Hair Treatment</h3>
+                    <div class="qsb17">
+                        <del>$60.37</del>
+                        <mark>-23%</mark>
+                        <span>$46.65</span>                   
+                    </div>
+                </li>
+            </ul>
+            <a href="Shop_AwardsWinner.html" class="qsb23 btn_viewMore">View more</a>
+        </div>
+        <!-- ? awList Fin -->
+    
+        <div>
+            <h2 class="qsb65">AS SEEN IN</h2>
+            <ul class="tickerSlider">
+                <li><img src="images/ban_slide_01.png" alt="ticker banner Img"></li>
+                <li><img src="images/ban_slide_02.png" alt="ticker banner Img"></li>
+                <li><img src="images/ban_slide_03.png" alt="ticker banner Img"></li>
+                <li><img src="images/ban_slide_04.png" alt="ticker banner Img"></li>
+                <li><img src="images/ban_slide_05.png" alt="ticker banner Img"></li>
+            </ul>
+        </div>
+        <!-- ? tickerSlider Fin -->
+    </div>
+    <!-- ? mainContainer Fin -->
+
+    <footer>
+        <div class="qrg16">
+            <div>
+                <h3 class="qsb16">ABOUT US</h3>
+                <ul>
+                    <li><a href="Our_Story.html">OUR STORY</a></li>
+                    <li><a href="Contact_Us.html">CONTACT US</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">ONLINE SERVICES</h3>
+                <ul>
+                    <li><a href="Auto_Replenishment.html">AUTO REPLENISHMENT</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">SUPPORT</h3>
+                <ul>
+                    <li><a href="Shipping_Returns.html">SHIPPING &#43; RETURNS</a></li>
+                    <li><a href="Privacy_Policy.html">PRIVACY POLICY</a></li>
+                    <li><a href="Terms_Of_Use.html">TERMS OF USE</a></li>
+                    <li><a href="Become_Retailer.html">BECOME A RETAILER</a></li>
+                    <li><a href="Accessibility.html">ACCESSIBILITY</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">CONNECT WITH US</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/AnthonySkincare">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/anthonyskincare/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@anthony.skincare">Tiktok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb25">JOIN ANTHONY'S MAILING LIST</h3>
+                <p>Be the first one to know about new products & promotions</p>
+                <form>
+                    <input type="email" placeholder="Enter Email" title="Enter Email" class="qrg14">
+                    <input type="button" value="submit" title="submit" class="qrg14" data-panel="submit"> 
+                </form>
+                <p id="submit">Thanks, Subscribe Successed!</p>
+            </div>
+            <div>
+                <h3>
+                    <img src="images/logo.png" alt="Anthony Logo">
+                </h3>
+                <span>© 2023, Anthony</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ? footer Fin -->
+</body>
+</html>

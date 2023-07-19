@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.fitvids.js"></script>
+    <script src="js/anthony.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <div id="searchBar" class="searchPanel qsb18">
+        <input type="search" class="qm18" placeholder="Search Our Store">
+        <input type="button" value="close" class="btn_close">
+    </div>
+    <!-- ? searchBar Panel -->
+    <div id="cartPanel" class="cartFill">
+        <h2 class="qsb35">
+            Shopping Cart
+            <input type="button" value="close" class="btn_close">
+        </h2>
+        <ul>
+            <li>
+                <img src="images/cart_panel_sample_product_01.png" alt="cart panel product IMG">
+                <div>
+                    <h3 class="qsb16">
+                        Day Cream SPF 30 
+                        <input type="button" value="delete">
+                    </h3>
+                    <strong class="qsb20">$49.40</strong>
+                </div>
+            </li>
+        </ul>
+        <form>
+            <input class="qsb15" type="text" placeholder="Enter Discount Code" title="write code name">
+            <input type="button" value="APPLY" class="qsb15" title="code submit" data-panel="apply">
+        </form>
+        <p class="qsb15" id="apply">*Correct Code Number</p>
+        <div class="qm23">
+            <span>Sub total:</span>
+            <strong>$49.40</strong>
+        </div>
+        <a class="qsb23" href="CartPage.html">View Cart</a>
+    </div>
+    <!-- ? cartPanel Open -->
+
+    <header>
+        <div>
+            <h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Welcome to Anthony!">
+                </a>
+            </h1>
+            <div>
+                <input type="button" value="searchBar" data-panel="searchBar">
+                <input type="button" value="cartPanel" data-panel="cartPanel">
+                <a href="SignIn.html" class="qm23">Account</a>
+                <input type="button" value="gnbPanel" data-panel="gnbPanel">
+            </div>
+            <aside id="gnbPanel" class="qsb50">
+                <input type="button" value="close" class="btn_close">
+                <nav>
+                    <ul>
+                        <li><a href="FaceList.html">Face</a></li>
+                        <li><a href="ShaveList.html">Shave</a></li>
+                        <li><a href="BodyList.html">Body</a></li>
+                        <li><a href="ShopAll.html">Shop All</a></li>
+                        <li><a href="KitsList.html">Kits</a></li>
+                        <li><a href="WishList.html">Wish List</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </header>
+    <!-- ? header Fin -->
+
+    <div class="detailContainer">
+        <div>
+            <div class="big_Content">
+                <img src="images/Blue_Sea_Kelp_Body_Scrub_01_big.png" alt="product big Img">
+            </div>
+            <ul class="thumb_Content">
+                <li><img src="images/Blue_Sea_Kelp_Body_Scrub_01_small.png" alt="product small Img"></li>
+                <li><img src="images/Blue_Sea_Kelp_Body_Scrub_02_small.png" alt="product small Img"></li>
+                <li><img src="images/Blue_Sea_Kelp_Body_Scrub_03_small.png" alt="product small Img"></li>
+                <li><img src="images/Blue_Sea_Kelp_Body_Scrub_04_small.png" alt="product small Img"></li>
+                <li><img src="images/Blue_Sea_Kelp_Body_Scrub_05_small.png" alt="product small Img"></li>
+                <li><img src="images/Blue_Sea_Kelp_Body_Scrub_06_small.png" alt="product small Img"></li>
+            </ul>
+        </div>
+        <!-- ? ImgGallery Fin -->
+
+        <div>
+            <h2 class="qsb33">Blue Sea Kelp Body Scrub</h2>
+            <div>
+                <strong class="qsb33" id="targetPrice">$41.51</strong>
+                <p class="qsb16">or 4 interest-free payments of $10.29 with afterpay</p>
+            </div>
+            <div class="qsb18">
+                <h3>Size</h3>
+                <ul class="sizeCheck">
+                    <li data-price="$41.51">
+                        <input type="radio" name="size" id="size_op1">
+                        <label for="size_op1">355 ml</label>
+                    </li>
+                    <li data-price="$24.90">
+                        <input type="radio" name="size" id="size_op2">
+                        <label for="size_op2">100 ml</label>
+                    </li>
+                    <li data-price="$85.78">
+                        <input type="radio" name="size" id="size_op3">
+                        <label for="size_op3">936 ml</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="qm23">
+                <div class="count">
+                    <input type="button" value="-" class="countMinus qm23">
+                    <input type="number" class="qc qm23" id="countNumb" value="1" min="1" max="99" step="1">
+                    <input type="button" value="+" class="countPlus qm23">
+                </div>
+                <input type="button" value="Add to cart" class="detail_addCart qm23" data-panel="cartPanel">
+                <input type="button" class="heartIco" value="like">
+            </div>
+            <div class="detail_panel">
+                <ul>
+                    <li><input type="button" value="HOW TO USE" data-panel="usePanel" class="qm16"></li>
+                    <li><input type="button" value="INGREDIENTS" data-panel="ingredientsPanel" class="qm16"></li>
+                    <li><input type="button" value="WHO'S IT FOR?" data-panel="whoPanel" class="qm16"></li>
+                </ul>
+                <div id="usePanel">
+                    <h3 class="mb35">How To Use</h3>
+                    <input type="button" value="close" class="btn_close">
+                    <p class="mrg20">
+                        Dampen skin. Apply a generous amount into 
+                        hands, massage gently in circular motions onto 
+                        skin. Target key areas such as hands, elbows,
+                         knees, ankles and feet. Rinse well and follow 
+                        with a body moisturizer. For best results use 2 or 
+                        3 times per week.    
+                    </p>
+                </div>
+                <div id="ingredientsPanel">
+                    <h3 class="mb35">INGREDIENTS</h3>
+                    <input type="button" value="close" class="btn_close">
+                    <p class="mrg20">
+                        Sea salt gently exfoliates. Sea kelp extract 
+                        nourishes. Aloe vera gel soothes. Nutmeg extract 
+                        tones skin. Vitamin C protects skin against free 
+                        radical damage from environmental aggressors.
+                        Water (Aqua), Sodium Lauryl Sulfate, Glycerin, 
+                        Fragrance (Parfum), Maris Sal (Sea Salt), Cocami-
+                        dopropyl Betaine, Pumice, Aloe Barbadensis 
+                        Leaf Extract, Cinnamomum Cassia Bark Extract, 
+                        Myristica Fragrans (Nutmeg) Extract
+                    </p>
+                </div>
+                <div id="whoPanel">
+                    <h3 class="mb35">WHO'S IT FOR?</h3>
+                    <input type="button" value="close" class="btn_close">
+                    <p class="mrg20">
+                        Free of parabens, phthalates, GMOs, DEA, 
+                        triclosan, and gluten. Allergy and dermatologist 
+                        tested. Cruelty-free. Made in USA. All skin types.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ? product detail Fin -->
+
+        <article>
+            <h3 class="msb60">DESCRIPTION</h3>
+            <div class="qm23">
+                <p>
+                    Loaded with high-performance exfoliants, our Blue Sea Kelp Body Scrub works 
+                    to remove impurities, dead skin cells and banish flaky rough areas. Our superp-
+                    owered blend of sea kelp, sea salt, vitamin c, aloe vera and nutmeg leaves your
+                    skin nourished, deeply moisturized, soothed and soft.
+                </p>
+            </div>
+            <ul class="qm23">
+                <li>• Clinically proven</li>
+                <li>• Dermatologist tested</li>
+                <li>• Cruelty-Free</li>
+                <li>• No sulfates, parabens, phthalates, GMOs, DEA, triclosan, or gluten.</li>
+                <li>• Responsibly made in USA</li>
+            </ul>
+        </article>
+        <!-- ? Description Fin-->
+
+        <div class="videoBox">
+            <video controls muted poster="images/dt_bg_video_thumb.png">
+                <source src="mp4/Blue_Sea_Kelp_Body_Scrub.mp4" type="video/mp4">
+            </video>
+            
+        </div>
+        <!-- ? videoBox Fin -->
+
+        <div class="banner_Ingredients bluekelp">
+            <h3 class="mbk45">SUPERCHARGED WITH SEA SALT AND SEA KELP</h3>
+            <ul>
+                <li>
+                    <span class="mbk18">SEA SALT + SEA KELP</span>
+                    <p class="msb18">GENTLY EXFOLIATES AND NOURISH YOUR SKIN WITH ITS ANTI-OXIDANT AND ANTI-INFLAMMAT-ORY PROPERTIES</p>
+                </li>
+                <li>
+                    <span class="mbk18">VITAMIN C</span>
+                    <p class="msb18">HELPS SLOW EARLY SKIN AGING, PREVENT SUN DAMAGE, AND IMPROVE THE APPEARANCE OF WRINKLES, DARK SPOTS, AND ACNE.</p>
+                </li>
+                <li>
+                    <span class="mbk18">NUTMEG</span>
+                    <p class="msb18">HELPS IN BALANCING OILY SKIN BY TIGHTENING PORES AND EXFOLIATING SKIN.</p>
+                </li>
+                <li>
+                    <span class="mbk18">ALOE VERA</span>
+                    <p class="msb18">HELPS TO RETAIN MOISTURE. RICH IN ANTIOXIDANTS AND MINERALS THAT BOOST THE HEALING PROCESS.</p>
+                </li>
+            </ul>
+        </div>
+        <!-- ? banner Ingredients Fin -->
+
+        <div>
+            <h3 class="msb60">PAIRS WELL WITH</h3>
+            <ul class="listBox way4">
+                <li>
+                    <div>
+                        <marK>Awards winner</marK>
+                        <img src="images/list/shopAll/all/sample_product_45.png" alt="detail sample list product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Shower_Sheets.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Shower Sheets</h3>
+                    <div class="qsb17">
+                        <span>$24.70</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/list/shopAll/all/sample_product_13.png" alt="detail sample list product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Invigorating_Rush_Hair.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Invigorating Rush Hair + Body Wash</h3>
+                    <div class="qsb17">
+                        <span>$41.51</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/list/shopAll/all/sample_product_05.png" alt="detail sample list product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Facial_Scrub.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Facial Scrub</h3>
+                    <div class="qsb17">
+                        <span>From $24.90</span>                    
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <mark>Awards Winner</mark>
+                        <img src="images/list/shopAll/all/sample_product_02.png" alt="detail sample list product">
+                        <input type="button" class="heartIco" value="like">
+                        <span>
+                            <a href="Glycolic_Facial_Cleanser.html" class="qsb15 btn_learnMore">learn more</a>
+                            <input type="button" class="qsb15 btn_addCart" data-panel="cartPanel" value="Add to cart">
+                        </span>
+                    </div>
+                    <h3 class="qsb18">Glycolic Facial Cleanser</h3>
+                    <div class="qsb17">
+                        <span>From $24.90</span>                    
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- ? product listbox Fin -->
+    </div>
+    <!-- ? detailContainer -->
+
+    <footer>
+        <div class="qrg16">
+            <div>
+                <h3 class="qsb16">ABOUT US</h3>
+                <ul>
+                    <li><a href="Our_Story.html">OUR STORY</a></li>
+                    <li><a href="Contact_Us.html">CONTACT US</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">ONLINE SERVICES</h3>
+                <ul>
+                    <li><a href="Auto_Replenishment.html">AUTO REPLENISHMENT</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">SUPPORT</h3>
+                <ul>
+                    <li><a href="Shipping_Returns.html">SHIPPING &#43; RETURNS</a></li>
+                    <li><a href="Privacy_Policy.html">PRIVACY POLICY</a></li>
+                    <li><a href="Terms_Of_Use.html">TERMS OF USE</a></li>
+                    <li><a href="Become_Retailer.html">BECOME A RETAILER</a></li>
+                    <li><a href="Accessibility.html">ACCESSIBILITY</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb16">CONNECT WITH US</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/AnthonySkincare">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/anthonyskincare/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@anthony.skincare">Tiktok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="qsb25">JOIN ANTHONY'S MAILING LIST</h3>
+                <p>Be the first one to know about new products & promotions</p>
+                <form>
+                    <input type="email" placeholder="Enter Email" title="Enter Email" class="qrg14">
+                    <input type="button" value="submit" title="submit" class="qrg14" data-panel="submit"> 
+                </form>
+                <p id="submit">Thanks, Subscribe Successed!</p>
+            </div>
+            <div>
+                <h3>
+                    <img src="images/logo.png" alt="Anthony Logo">
+                </h3>
+                <span>© 2023, Anthony</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ? footer Fin -->
