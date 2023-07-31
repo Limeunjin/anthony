@@ -417,10 +417,10 @@ a{
     }
     .listContainer aside > div .foldComponent ul li input[type='checkbox']+label{
         background: url('../images/list/bul_check_off.png') no-repeat 10% center; padding-left: 23%;
-        width: 100%; box-sizing: border-box; display: inline-block; background-size: contain; line-height: 26px;
+        width: 100%; box-sizing: border-box; display: inline-block; line-height: 26px;
     }
     .listContainer aside > div .foldComponent ul li input[type='checkbox']:checked+label{
-        background: url('../images/list/bul_check_on.png') no-repeat 10% center; background-size: contain; 
+        background: url('../images/list/bul_check_on.png') no-repeat 10% center; 
     }
     /* ?listContainer aside Fin */
 
@@ -2147,6 +2147,9 @@ a{
     }
     /* ? orderHistoryContainer orderList Fin */
 
+    .cartContainer{
+        overflow: hidden;
+    }
     .wishContainer h2,
     .cartContainer h2{
         margin-bottom: 100px; font-size: 68px;
@@ -3558,6 +3561,9 @@ a{
     }
     /* ? orderHistoryContainer orderList Fin */
 
+    .cartContainer{
+        overflow: hidden;
+    }
     .wishContainer h2,
     .cartContainer h2{
         margin-bottom: 100px;
