@@ -8,6 +8,11 @@ body{
 input[type="button"]{
     cursor: pointer;
 }
+.count{
+    position: relative; display: inline-block; text-align: center;
+    line-height: 60px; background-color: var(--gs8);  border: none;
+    box-sizing: border-box; width: 25%; border-radius: 30px;
+}
 a{
     text-decoration: none; color: inherit;
 }
@@ -417,10 +422,10 @@ a{
     }
     .listContainer aside > div .foldComponent ul li input[type='checkbox']+label{
         background: url('../images/list/bul_check_off.png') no-repeat 10% center; padding-left: 23%;
-        width: 100%; box-sizing: border-box; display: inline-block; line-height: 26px;
+        width: 100%; box-sizing: border-box; display: inline-block; background-size: contain; line-height: 26px;
     }
     .listContainer aside > div .foldComponent ul li input[type='checkbox']:checked+label{
-        background: url('../images/list/bul_check_on.png') no-repeat 10% center; 
+        background: url('../images/list/bul_check_on.png') no-repeat 10% center; background-size: contain; 
     }
     /* ?listContainer aside Fin */
 
@@ -3222,11 +3227,6 @@ a{
     }
     .detailContainer > div:nth-of-type(2) > div:nth-of-type(3) > *:not(div){
         margin-left: 7.5%;
-    }
-    .count{
-        position: relative; display: inline-block; text-align: center;
-        line-height: 60px; background-color: var(--gs8);  border: none;
-        box-sizing: border-box; width: 25%; border-radius: 30px;
     }
     .count input[type='button']{
         background: transparent; border: none; position: absolute;
